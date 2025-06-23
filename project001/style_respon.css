@@ -1,0 +1,280 @@
+
+/* 레이아웃설정 */
+
+#wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ################################################## */
+
+.header {
+  width: 100%;
+  height: 150px;
+  order: 1;
+  background-color: #FAF6EB;
+}
+
+
+.slider_main {
+  width: 100%;
+  height: 740px;
+  order: 2;
+  background-color: beige;
+}
+
+
+.reservation {
+  width: 100%;
+  height: 130px;
+  order: 3;
+  background-color: aquamarine;
+}
+
+.map {
+  width: 60%;
+  height: 1050px;
+  order: 4;
+  background-color: aqua;
+}
+
+.notice {
+  width: 40%;
+  height: 1050px;
+  order: 5;
+  background-color: cadetblue;
+}
+
+.newmember {
+  width: 100%;
+  height: 1010px;
+  order: 6;
+  background-color: cornflowerblue;
+}
+
+.slider_second {
+  width: 100%;
+  height: 790px;
+  order: 7;
+  background-color: darkcyan;
+}
+
+.find {
+  width: 100%;
+  height: 1230px;
+  order: 8;
+  background-color: darkslateblue;
+}
+
+.video {
+  width: 100%;
+  height: 850px;
+  order: 9;
+  background-color: darkblue;
+}
+
+.info {
+  width: 100%;
+  height: 3060px;
+  order: 10;
+  background-color: darkviolet;
+}
+
+
+
+
+/* 미디어쿼리 구간설정##################################################### */
+/* 1280px이상 */
+
+@media (min-width:1280px) {
+  #wrap {
+    max-width: 1200px
+  }
+}
+
+
+/* 1024px 이하일 때 */
+
+@media (max-width:1024px) {
+  #wrap {
+    width: 90%;
+  }
+
+
+
+  .header {
+    width: 100%;
+    height: 160px;
+    order: 1;
+    
+  }
+  
+  
+  .slider_main {
+    width: 60%;
+    height: 610px;
+    order: 2;
+   
+    
+  }
+  
+  
+  .reservation {
+    width: 40%;
+    height: 610px;
+    order: 3;
+    
+   
+  }
+  
+  .map {
+    width: 100%;
+    height: 695px;
+    order: 4;
+    
+  }
+  
+  .notice {
+    width: 100%;
+    height: 890px;
+    order: 5;
+    
+  }
+  
+  .newmember {
+    width: 100%;
+    height: 1010px;
+    order: 6;
+    
+  }
+  
+  .slider_second {
+    width: 100%;
+    height: 720px;
+    order: 7;
+   
+  }
+  
+  .find {
+    width: 100%;
+    height: 1070px;
+    order: 8;
+   
+  }
+  
+  .video {
+    width: 100%;
+    height: 890px;
+    order: 9;
+    
+  }
+  
+  .info {
+    width: 100%;
+    height: 2920px;
+    order: 10;
+    
+  }
+  
+
+
+
+
+}
+
+/* 600px 이하일 때 */
+
+@media (max-width:600px) {
+
+  #wrap {
+    width: 100%;
+  }
+
+
+
+
+
+  .header {
+    width: 100%;
+    height: 110px;
+    order: 1;
+    
+  }
+  
+  
+  .slider_main {
+    width: 100%;
+    height: 390px;
+    order: 2;
+   
+  }
+  
+  
+  .reservation {
+    width: 100%;
+    height: 695px;
+    order: 3;
+    
+  }
+  
+  .map {
+    width: 100%;
+    height: 280px;
+    order: 4;
+    
+  }
+
+
+  .newmember {
+    width: 100%;
+    height: 645px;
+    order: 5;
+   
+  }
+
+
+  .notice {
+    width: 100%;
+    height: 485px;
+    order: 6;
+    background-color: cadetblue;
+  }
+  
+  
+  
+  .slider_second {
+    width: 100%;
+    height: 710px;
+    order: 7;
+    
+  }
+  
+  .find {
+    width: 100%;
+    height: 820px;
+    order: 8;
+    
+  }
+  
+  .video {
+    width: 100%;
+    height: 540px;
+    order: 9;
+    
+  }
+  
+  .info {
+    width: 100%;
+    height: 670px;
+    order: 10;
+   
+  }
+  
+
+
+
+
+}

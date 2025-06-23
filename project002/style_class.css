@@ -1,0 +1,865 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+@font-face {
+   font-family: 'Pretendard-Regular';
+   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+   font-weight: 400;
+   font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+
+/* reset css*/
+* {margin: 0;
+   padding: 0;
+   
+  }
+
+a {text-decoration: none;
+   color: #000;
+   outline: none;}
+
+ul, ol {list-style: none;}
+
+img {vertical-align: bottom;
+     border: none;}
+
+     
+body {overflow-x: hidden;}
+
+/* layout */
+
+
+.header {width: 100%;
+         height: 100px;
+         position: fixed;
+         z-index: 999;
+         height: 120px;}
+
+
+.contents {width: 100%;
+           /* height: auto;쓰지말기 */
+           perspective: 1500px;}
+
+.contents>div {
+
+display: none;
+
+
+}
+
+.contents>div.on {
+
+    display: block;
+
+}
+
+
+/* 헤더 설정 */
+.header {display: flex;
+         justify-content: space-between;
+         align-items: center;
+         transition: all 0.8s;
+         
+          }
+
+.header .logo {font-size: 28px;
+              }
+.header .logo a {color: #fff;
+                display: block;
+                padding: 10px;}
+
+.header .logo a:hover {opacity: 0.7;}    
+
+
+/* 일정거리만큼 스크롤이 되었을때 header 스타일변경 */
+
+.header.fixed {background-color: rgba(0, 0, 0, 0.3);}
+
+
+.gnb {}
+.gnb>ul {display: flex;}
+.gnb>ul>li {}
+.gnb>ul>li>a {display: block;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px;}
+
+.gnb>ul>li>a:hover {color: #ccc;}
+
+.util {margin-right: 50px;}
+.util ul {display: flex;}
+.util ul li {}
+.util a {display: block;
+         color: #fff;
+        padding: 10px;
+        position: relative;}
+
+.util a:hover {color: #ccc;}        
+.util span {display: inline-block;
+            text-indent: -9999px;
+
+            }
+
+
+.util .num {position:absolute;
+            width: 12px;
+            height: 12px;
+            font-size: 10px;
+            background-color: aqua;
+            right: 2px;
+            top: 5px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;}
+
+/* 메인페이지 설정 */
+
+    /* hero 설정 */
+    .hero {width: 100%;
+           height: 100vh;
+           position: relative;}
+           /* 부모 높이 값이 기준이 있어야 100% 쓸 수 있음 */
+    .mainImg {width: 100%;
+              height: 100%;
+           overflow: hidden;    /* 꼭 들어가야함 위치 설정할때는 주석으로 감추기 */
+              }
+    .mainImg ul {width: 100%;
+                 height: 100%;
+                  position: relative;}
+    .mainImg ul li {position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 100%;}
+
+
+    .mainImg ul li:nth-child(1) {left: 0;}  
+    .mainImg ul li img {width: 100%;}
+
+
+
+
+    .btn {width: 80px;
+          position: absolute;
+          bottom: 50px;
+          left: 50%;
+          margin-left: -40px;}
+
+
+    .btn ul { width: 100%;
+              display: flex;
+              justify-content: space-between;}
+    .btn ul li {width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: #fff;
+                text-indent: -9999px;}
+
+    .btn ul li.on {background-color: #ccc;}
+
+
+
+
+    /* info 설정############################################### */
+
+    .info {padding: 50px 0;}
+    .info h2 {font-size: 60px;
+              text-align: center;
+              letter-spacing: 20px;
+              position: relative;
+              padding: 20px 0 0 0;/* 상우하좌 */
+              transition: all 0.8s;
+              top: 300px;
+              opacity: 0;
+            }
+
+
+    .info.on h2 {top: 0;
+      opacity: 1;}         
+    .info h2 span {font-size: 18px;
+                  letter-spacing: 5px;
+                   position: absolute;
+                   left: 50%;
+                   top: 0;
+                   margin-left: -120px;
+                  }    
+                        /* 포지션값을 조정하지말고 부모의 값을 조정해야함 */
+    .info p {text-align: center;
+             padding: 30px 0;}
+
+    .info .list {position: relative;
+                right: 500px;
+                opacity: 0;
+               transition: all 0.8s;}
+    .info .list.on {right: 0;
+      opacity: 1;}            
+    .info .list ul {display: flex;
+                    justify-content: center;
+                  /* flex wrap을 안하는게 좋음 공간이 작아지면 텍스트가 밑으로 떨어지게됨*/ }
+    .info .list li {margin: 0 10px; /* 상하 패딩은 수치넣지말기 p에다가 패딩주기 */
+                     width: 200px;/* 카드이미지와 같아야함*/
+   }
+    .info .list img {width: 100%;
+                     height: auto;
+                     position: relative;
+                     z-index: 2;
+                     transition: all 1s;}
+    
+    .info .list .text {width: 100%;
+                       text-align: center;
+                       transition: all 0.8s;
+                       transform: translateY(-200px);
+                       position: relative;
+                       opacity: 0;}
+
+    .info .list li:hover .text {transform: translateY(0);
+                             opacity: 1;} 
+                             
+                             
+    .info .list li:hover img {
+                              outline: 3px double red;
+                              outline-offset: -15px;}
+
+
+
+
+
+
+
+/* #######list2####################################################### */
+
+
+
+
+   
+    .info .list2 {position: relative;
+                  left: 800px;
+                  opacity: 0;
+                  transition: all 0.8s;}
+
+
+    .info .list2.on {left: 0;
+      opacity: 1;}  
+
+    .info .list2 ul {display: flex;
+                    justify-content: center;
+                  /* flex wrap을 안하는게 좋음 공간이 작아지면 텍스트가 밑으로 떨어지게됨*/ }
+    .info .list2 li {margin: 0 10px; /* 상하 패딩은 수치넣지말기 p에다가 패딩주기 */
+                     width: 200px;/* 카드이미지와 같아야함*/
+                     position: relative;
+   }
+    .info .list2 img {width: 100%;
+                     height: auto;
+                     position: relative;
+                     z-index: 2;
+                     transition: all 0.8s;
+                     opacity: 1;
+                     transform: rotateY(0);}
+    
+    .info .list2 .text {width: 200px;
+                        height: 300px;
+                        background-color: skyblue;
+                        color: #fff;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: rotateY(180deg);
+                        transition: all 0.8s;
+                        opacity: 0;
+                        position: absolute;
+                        left: 0;
+                        top: 0;}
+
+
+   .info .list2 li:hover .text {opacity: 1;
+                                transform: rotateY(0);}
+   .info .list2 li:hover img {opacity: 0;
+                              transform: rotateY(180deg);}
+
+
+
+   /* 제품리스트 설정############################################################ */
+
+   .pro {}
+   .pro h2 {font-size: 60px;
+            text-align: center;
+            letter-spacing: 20px;
+            position: relative;
+            padding: 20px 0 0 0;/* 상우하좌 */}
+            
+   .pro p {text-align: center;
+            padding: 30px 0;}
+
+   
+      
+
+   .pro_list {background-color: red;
+              width: 80%;
+             margin: 0 auto;
+              position: relative;
+              height: 200px;
+              display: flex;
+               justify-content: center;} 
+   .pro_list .left {position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #ccc;
+                    color: #fff;
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    left: 0;
+                    top: 50%;
+                    margin-top: -10px;}
+   .pro_list .right {position: absolute;
+                     width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #ccc;
+                    color: #fff;
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -10px;}  
+
+
+
+   .pro_list .container {background-color: antiquewhite;
+                         width: calc(220px*4);
+                         height: 200px;
+                         overflow: hidden;
+                         position: relative;} 
+   .pro_list .container ul {display: flex;
+                            position: absolute;
+                            left: 0;
+                           top: 0;}
+   .pro_list .container li {margin: 0 10px;
+                            width: 200px;}
+   .pro_list .container img {}   
+
+
+
+
+
+
+
+
+   
+   .pro_list2 {background-color: red;
+              width: 80%;
+             margin: 0 auto;
+              position: relative;
+              height: 200px;
+              display: flex;
+               justify-content: center;} 
+   .pro_list2 .left {position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #ccc;
+                    color: #fff;
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    left: 0;
+                    top: 50%;
+                    margin-top: -10px;}
+   .pro_list2 .right {position: absolute;
+                     width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #ccc;
+                    color: #fff;
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -10px;}  
+
+
+
+   .pro_list2 .container {background-color: antiquewhite;
+                         width: calc(220px*4);
+                         height: 200px;
+                         overflow: hidden;
+                         /* keyframe 설정할때 overflow 주석으로 감추고 설정해야함 */
+                         position: relative;
+                        } 
+   .pro_list2 .container ul {display: flex;
+                             position: absolute;}
+   .pro_list2 .container li {margin: 0 10px;
+                            width: 200px;}
+   .pro_list2 .container img {} 
+   
+   
+
+   .pro_list2 .container ul:nth-child(1) {left: 0;
+                                          animation: ani1 40s linear infinite;}
+                                          /* liner 일정한 속도 */
+   .pro_list2 .container ul:nth-child(2) {left: 100%;
+                                          animation: ani2 40s linear infinite;
+                                       }
+
+
+   .pro_list2 .container:hover ul:nth-child(1) {animation-play-state: paused;}
+   .pro_list2 .container:hover ul:nth-child(2) {animation-play-state: paused;}  
+                                     /* 애니메이션 걸려있는건 하나하나 다 paused해야함 */
+
+
+   @keyframes ani1 {
+
+      0% {left: 0;}
+      50% {left: -100%;}
+      50.00001% {left: 100%;}
+      100% {left: 0;}
+
+
+   }
+
+   @keyframes ani2 {
+
+      0% {left: 100%;}
+      50% {left: 0;}
+      100% {left: -100%;}
+
+
+   }
+
+
+   .pro_list2 .container li:hover {transform: scale(1.2);}
+
+
+
+
+
+   /* 제품소개페이지 설정 */
+
+   .story {}
+   .story h2 {font-size: 60px;
+      text-align: center;
+      letter-spacing: 20px;
+      position: relative;
+      padding: 20px 0 0 0;/* 상우하좌 */}
+   .story>p {text-align: center;
+             padding: 30px 0;}
+
+   .story_box {display: flex;
+               width: 80%;
+               margin: 0 auto;
+               height: 650px;
+               overflow: hidden;}  
+
+
+   .story_box>div {position: relative;
+                   width: 33.3333%;}
+
+   .story_box>div:nth-child(1) {background-color: red;}
+   .story_box>div:nth-child(2) {background-color: yellowgreen;}
+   .story_box>div:nth-child(3) {background-color: yellow;}
+
+
+
+
+   .left_box {}
+   .left_box ul {}
+   .left_box li {display: flex;
+                justify-content: flex-end;
+                margin: 10px 0;}
+
+   .left_box .txt {}
+   .left_box .txt strong {text-align: right;
+                          display: block;}
+   .left_box .txt p {width: 300px;
+                     /* 기기가 아무리 줄어들어도 300아래로 안감 */
+                     text-align: right;
+   }
+
+   .left_box i {font-size: 28px;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #fff;
+                line-height: 1.5;
+                text-align: center;
+                border-radius: 50%;
+                /* color: #fff; */
+                margin-left: 20px;
+               }
+
+
+
+
+   .img_box {text-align: center;
+             height: 100%;}
+   .img_box img {width: 100%;
+                 max-width: 100%;/* 꼭 해야함 확대하면 픽셀값이 깨짐 */
+                 position: relative;/* 앱솔루트안해도 위치값 제공할 수 있으니깐 안그러면 다른거 위치깨짐 */
+                 top: 100%;
+                 transition: all 1.5s;
+                 
+   }
+
+
+   .img_box.on img {top: 0;}
+
+
+
+   .right_box {}
+   .right_box ul {}
+   .right_box li {display: flex;
+                justify-content: flex-start;
+                margin: 10px 0;}
+
+   .right_box .txt {}
+   .right_box .txt strong {text-align: left;
+                          display: block;}
+   .right_box .txt p {width: 300px;
+                     /* 기기가 아무리 줄어들어도 300아래로 안감 */
+                     text-align: left;
+   }
+
+   .right_box i {font-size: 28px;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #fff;
+                line-height: 1.5;
+                text-align: center;
+                border-radius: 50%;
+                /* color: #fff; */
+                margin-right: 20px;
+               }
+
+
+/* product 페이지 설정 */
+
+.product {background-color: antiquewhite;
+          padding-top: 120px;
+          padding-bottom: 80px;}
+
+.pro001 {display: flex;
+         width: 90%;
+         margin: 0 auto;
+         padding-bottom: 50px;
+         border-bottom: #fff 2px solid;}
+.pro001 .imgBox {width: 70%;}
+.pro001 .cartBox {width: 30%;}
+
+.imgBox .bigImg {background-color: aqua;
+                 width: 80%;
+                 margin: 0 auto;
+                 height: 500px;
+               /* 자식에게 absolute 할거기때문에 height값을 꼭 지정  */
+               position: relative;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               /* 이미지 중앙 정렬  화면이 줄어들더라도 이미지가 가운데로 줄어들음*/
+               overflow: hidden;
+               /* 화면 확대할시 텍스트 부분이 치고 넘어옴 */
+               }
+
+.imgBox .bigImg img {position: absolute;
+                     width: 100%;
+                     opacity: 0;
+                     z-index: 1;
+
+                     }
+
+
+.imgBox .bigImg img.on {opacity: 1;
+                        z-index: 2;}
+
+
+
+
+.imgBox .thumb {width: 80%;
+                margin: 0 auto;
+                margin-top: 20px;}
+.imgBox .thumb ul {display: flex;
+                   justify-content: space-between;}
+.imgBox .thumb li:nth-child(2) {margin: 0 5px;
+                                }
+
+.imgBox .thumb li {height: 300px;
+                   width: 30%;
+                   overflow: hidden;}
+
+.imgBox .thumb img {width: 100%;}
+
+
+.cartBox .infoBox {}
+.cartBox .infoBox h2 {font-size: 30px;
+                   text-align: left;
+                   letter-spacing: 5px;}
+.cartBox .infoBox p {font-size: 18px;
+   text-align: left;}
+
+
+.cartBox .count {
+                 display: flex;
+                 justify-content: space-between;
+                 padding: 10px;
+                 margin: 20px 0;}
+.count .num {border: 2px solid #000;
+             }
+
+.count .num span {display: inline-block;
+                  padding: 5px 20px;
+                  font-size: 25px;
+                  color: #fff;
+                  cursor: pointer;}
+.count .num span:nth-child(1) {background-color: #000;
+                               }
+.count .num span:nth-child(2) {color: #000;}
+.count .num span:nth-child(3) {background-color: #000;}
+.count .won {display: flex;
+             justify-content: center;
+             align-items: center;
+             font-size: 20px;
+             font-weight: bold;
+             color: rgb(151, 5, 5);}
+
+.count .won span {font-size: 22px;
+                  display: inline-block;
+                  margin-right: 10px;}
+
+
+
+.count .num span:nth-child(1):hover {background-color: #ccc;}
+.count .num span:nth-child(3):hover {background-color: #ccc;}
+
+
+
+.cartBox .cart {display: flex;
+                width: 100%;
+                justify-content: space-between;}
+
+
+
+.cartBox .cart p {width: 48%;
+
+                  padding: 20px;
+                  box-sizing: border-box;
+                  text-align: center;
+                  font-size: 18px;
+                  font-weight: bold;
+                 background-color: rebeccapurple;
+                  border-radius: 10px;
+                  cursor: pointer;}
+
+
+
+.cartBox .cart p:nth-child(1) {border: 2px solid palevioletred;
+                               background-color: transparent;}
+
+
+.cartBox .cart p:hover {opacity: 0.6;}
+
+
+
+
+
+
+/* 추천상품설정 */
+
+.recommend {width: 80%;
+            margin: 40px auto;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            }
+
+.recommend h2 {width: 100%;
+               text-align: center;
+               padding: 20px 0;}            
+
+
+
+.recommend .left {width: 50px;
+                  height: 50px;
+                  background-color: #fff;
+                  border-radius: 50%;
+                  font-size: 20px;
+                  font-weight: bold;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  color: #ddd;
+                  /* 서체에 따라 위치가 다름  */
+                  box-sizing: border-box;
+                  padding-bottom: 5px;
+                  }
+
+
+.recommend .contain {width: calc(170px * 5);
+   overflow: hidden;
+   height: 100px;
+   position: relative;}
+.recommend .contain ul {display: flex;
+                        width: calc(170px * 8);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transition: all 0.8s;}
+.recommend .contain li {width: 150px;
+                        margin: 0 10px;
+                        height: 100px;
+                        overflow: hidden;}
+.recommend .contain img {}
+
+
+
+.recommend .right {width: 50px;
+   height: 50px;
+   background-color: #fff;
+   border-radius: 50%;
+   font-size: 20px;
+   font-weight: bold;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #ddd;
+   /* 서체에 따라 위치가 다름  */
+   box-sizing: border-box;
+   padding-bottom: 5px;
+                  }
+
+
+/* login 페이지 설정 */
+
+.contents.loginBig {z-index: 9999999;
+                    height: 100vh;
+                    width: 100%;
+                    position: relative;
+                    background-color: antiquewhite;}
+
+.login {width: 100%;
+        height: 100%;
+        position: fixed;
+        
+       }
+
+.login h2 {text-align: center;
+           padding: 50px 0;
+           cursor: pointer;}
+.login .loginBox {width: 500px;
+                  margin: 0 auto;
+                 
+                  display: flex;
+                  justify-content: center;
+                  
+                  }
+
+
+
+.loginBox .id {width: 200px;
+               background-color: #fff;
+               padding: 10px;
+               border-top-left-radius: 5px;
+               border-top-right-radius: 5px;
+               border: 1px solid #ccc;
+            }
+
+.loginBox .id input {margin-left: 5px;
+                     font-size: 20px;
+                     color: #333;
+                     border: none;
+                     caret-color: rgb(21, 156, 156);}
+
+.loginBox .id input::placeholder {color: #ddd;}
+
+.loginBox .id input:focus {outline: none;}
+.loginBox .pass {width: 200px;
+                 background-color: #fff;
+                 padding: 10px; 
+                 border-bottom-left-radius: 5px;
+                 border-bottom-right-radius: 5px;
+                 border: 1px solid #ccc;
+                 border-top: none;
+               }
+
+.loginBox .pass input {margin-left: 5px;
+                       font-size: 20px;
+                       color: #333;
+                       border: none;
+                     }
+
+
+.loginBox .pass input::placeholder {color: #ddd;}
+.loginBox .pass input:focus {outline: none;}
+
+
+.loginBox .loginBtn {width: 200px;
+   background-color: #fff;
+   padding: 10px; 
+   border-radius: 5px;
+   margin-top: 20px;
+   text-align: center;
+   cursor: pointer;}
+
+
+.loginBox .loginBtn input {color: aqua;
+                           background-color: transparent;
+                           border: none;
+                           letter-spacing: 5px;
+                           cursor: pointer;
+                           }
+
+
+.loginBox .loginBtn:hover {box-shadow: 2px 2px 2px #ccc;}
+
+
+.loginBox .naver {margin-top: 10px;}
+
+
+
+
+
+/* 장바구니 설정 */
+
+
+.cart {width: 500px;
+       height: 600px;
+       background-color: #fff;
+       border-radius: 20px;
+       border-top-left-radius: 0px;
+       box-shadow: 2px 2px 5px #ccc;
+       position: fixed;
+       top: 120px;
+       right: -500px;
+       transition: all 1.5s;
+      }
+
+
+.cart.on {right: 0;}      
+
+
+.cart h2 {position: absolute;
+          width: 40px;
+          height: 150px;
+          background-color: #fff;
+          left: -40px;
+          text-align: center;
+          box-sizing: border-box;
+          padding: 5px;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          padding-top: 10px;
+          cursor: pointer;
+          color: #ccc;
+         }
+

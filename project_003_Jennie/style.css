@@ -1,0 +1,3237 @@
+/* set to language */
+
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+ }
+
+/* 
+.imperial-script-regular {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+*/
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@100&display=swap');
+
+
+
+
+
+ /* reset css */
+ * {margin: 0;
+    padding: 0;
+}
+
+ul, ol {list-style: none;}
+
+img {vertical-align: bottom;
+     border: none;   
+}
+
+body {background-color: #1C1A1B;
+    font-family: 'Pretendard', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;   /* 페이지가 100% 높이를 가지도록 설정 */
+    overflow-y: scroll; 
+
+    
+    
+}
+
+.header {
+    width: 7.55vw;
+    height: auto;
+    position: fixed; /* 뷰포트 기준으로 고정 */
+    top: 1.56vw; /* 30px / 1920px */
+    left: 0.52vw; /* 10px / 1920px */
+    /* position: absolute;
+    top: 0;
+    left: 0; 
+    margin: 30px 10px;*/
+    z-index: 999;     
+
+
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.logo img {  width: 100%;
+    height: auto;}
+
+
+
+.contents>div {
+
+    display: none;
+    
+    
+    }
+    
+    .contents>div.on {
+    
+     display: block;
+    
+    }
+    
+
+
+.loadingPage {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 1;
+    
+    
+    
+}
+
+/*loadingPage.on ############################### */
+.loadingPage.on { 
+    display: block;
+    opacity: 1;
+                }
+
+.loadingPage.hide { 
+                    opacity: 0;
+                    z-index: -1;
+                    pointer-events: none; /* 클릭 방지 */
+                }
+
+.loadingBg {position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;}
+
+
+.loadingBg video {width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;}
+.loadingBg video source {position: absolute;
+
+
+}
+.overlay-video {
+    mix-blend-mode: screen; /* 어두운 부분 투명하게 */
+    opacity: 0.8    ;
+}
+
+
+.loadingTxt {color: #fff;
+             text-align: center;
+             line-height: 1.8;
+             position: absolute;
+             top: 50%;
+             right: 50%;
+             transform: translateY(-50%) translateX(720%);
+             transition: all 0.5s; 
+             font-size: 1.8vw;  
+             text-shadow: 0px 0px 50px #868686;
+             cursor: pointer;
+             z-index: 5;
+             
+            }
+.loadingTxt h3 {font-weight: 200;
+                
+            
+                                    
+}
+.loadingTxt span {
+   
+}
+
+.loadingTxt:hover {color: #CB0121;
+    transform: translateY(-50%) translateX(680%);     
+}
+
+
+
+
+.contents {position: relative;
+z-index: 1;
+}
+
+
+/* mainPage ######################################################################### */
+
+.mainPage {position: relative;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;  
+}
+/* 이미지 움직임 */
+@keyframes shakeBackground {
+    0% {
+        transform: translateX(0) translateY(0); /* 시작 위치 */
+    }
+    20% {
+        transform: translateX(18px) translateY(-18px); /* 오른쪽 위로 */
+    }
+    40% {
+        transform: translateX(-25px) translateY(10px); /* 왼쪽 아래로 */
+    }
+    60% {
+        transform: translateX(18px) translateY(18px); /* 오른쪽 아래로 */
+    }
+    80% {
+        transform: translateX(-10px) translateY(-10px); /* 왼쪽 위로 */
+    }
+    100% {
+        transform: translateX(0) translateY(0); /* 원래 위치로 돌아오기 */
+    }
+}
+
+
+
+.mainPage .bg {position: absolute;
+               top: 50%;
+               right: 0;
+               transform: translateX(20%) translateY(-50%);
+               animation: blink 1.5s infinite;
+               
+
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1; /* 완전 불투명 */
+    }
+    10% {
+      opacity: 0.85; /* 살짝 투명 */
+    }
+    20% {
+      opacity: 0.95; /* 거의 불투명 */
+    }
+    30% {
+      opacity: 0.8; /* 중간 투명 */
+    }
+    40% {
+      opacity: 0.9; /* 거의 불투명 */
+    }
+    50% {
+      opacity: 1; /* 완전 불투명 */
+    }
+    60% {
+      opacity: 0.7; /* 좀 더 투명 */
+    }
+    70% {
+      opacity: 0.9; /* 거의 불투명 */
+    }
+    80% {
+      opacity: 0.75; /* 중간 투명 */
+    }
+    90% {
+      opacity: 0.85; /* 살짝 투명 */
+    }
+    100% {
+      opacity: 1; /* 다시 완전 불투명 */
+    }
+  }
+  
+
+
+
+
+
+.mainPage .bg img {scale: 0.8;
+    width: 100vw; /* 뷰포트 크기 기준으로 이미지 크기 맞추기 */
+    height: auto; 
+    animation: shakeBackground 8s infinite ease-in-out;
+
+}
+
+
+.mainPage .menu {position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 transform: translateY(-50%) translateX(-190%);
+                 
+
+}
+.menu ul {text-align: center;}
+.menu li {margin: 2.6vw 0;}
+.menu a {font-size: 1.46vw;
+         text-decoration: none;
+         color: rgb(141, 124, 124); 
+         font-weight: 100; 
+         text-shadow: none;
+         transition: all 0.3s;
+          
+}
+.menu img {width: 18vw;
+    /* max-width: 570px; */
+    height: auto;
+    transition: all 0.3s;
+
+
+    }
+
+
+
+.menu li:hover a {color: #fff;
+    text-shadow: 0px 0px 20px #CB0121;
+}    
+
+.menu li:hover img {filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.8));}
+
+
+
+
+
+.mainPage .util {position: absolute;
+    right: 1.04vw; /* 20px / 1920px */
+    bottom: 1.04vw; /* 20px / 1920px */
+    padding: 2.08vw;
+    
+                    
+}
+.util ul {display: flex;}
+.util li {margin: 0 0.8vw;
+    opacity: 0.5;}
+.util a {}
+.util img {width: 1.3vw;  /* 화면 크기 기준으로 비율을 맞추기 위해 vw 단위 사용 */
+    height: auto;  }
+
+
+    .util li:hover {opacity: 1;}
+
+
+
+/* lnb 설정 */
+
+.lnb {}
+
+.homeBtn {position: fixed;
+    top: 50vh; /* 화면 세로 중앙 정렬 */
+    left: 3vw; /* 왼쪽에서 조금 떨어진 위치 */
+    transform: translateY(-500%); /* 정확한 중앙 정렬 */
+    width: 3.125vw;
+    height: 3.125vh;
+    cursor: pointer;
+    z-index: 10;}
+.homeBtn img {width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+
+.depth1 {font-size: 1.09vw;
+    position: relative;
+    top: 50vh;  /* 화면 세로 중앙 정렬 */
+    left: -1vw; /* 왼쪽에서 조금 떨어진 위치 */
+    transform: translateY(-215%) scaleY(0); /* 정확한 중앙 정렬 */
+    
+    padding: 0.52vw;
+    border-radius: 0.52vw;
+    z-index: 100;
+     
+    transition: all 0.8s; 
+}
+
+.homeBtn:hover>img {opacity: 0;}
+
+.homeBtn:hover .depth1 {
+    
+    
+    transform: translateY(-180%) scaleY(1); /* 정확한 중앙 정렬 */
+    
+    
+}
+
+.depth1>div {position: absolute;
+            
+            
+                
+}
+.depth1>ul {width: 2.6vw;
+            height: auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0 2vw;
+            border: 0.052vw solid #fff;
+            border-radius: 2.6vw;
+            box-sizing: border-box;
+}
+.depth1>ul li { text-align: center;
+    margin: 2.04vw 0;
+    width: 2.6vw;
+    height: 2.6vh;  
+    position: relative;
+    left: 0;
+    transform: translate(-1.3vw,-1.5vh);
+    z-index: 5;
+}
+.depth1 ul li a img:first-child {opacity: 1;}
+.depth1 ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.depth1 ul li a img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s;
+}
+
+/* 아이콘 호버 효과 */
+.depth1 ul li a img:last-child {
+    position: absolute;
+    opacity: 0; /* 기본적으로 숨김 */
+}
+
+.depth1 ul li a:hover img:first-child {
+    opacity: 0;
+}
+
+.depth1 ul li a:hover img:last-child {
+    opacity: 1;
+}
+
+.lnbLight {
+    width: 3.125vw;
+    height: 3.125vh;
+    position: absolute;
+    top: 3.5vh;
+    left: 1vw;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none; /* 마우스 이벤트 무시 */
+    transition: top 0.3s ease-in-out; 
+   
+    
+}
+
+.lnbLight>img {width: 3.125vw;
+    height: 3.125vh;
+}
+
+
+
+/* 첫 번째 li를 호버하면 lnbLight의 top 변경 */
+.depth1 ul li:nth-child(1):hover ~ .lnbLight { 
+    top: 3.5vh;
+    opacity: 1;
+}
+
+/* 두 번째 li를 호버하면 lnbLight의 top 변경 */
+.depth1 ul li:nth-child(2):hover ~ .lnbLight { 
+    top: 10vh;
+    opacity: 1;
+}
+
+/* 세 번째 li를 호버하면 lnbLight의 top 변경 */
+.depth1 ul li:nth-child(3):hover ~ .lnbLight { 
+    top: 17vh;
+    opacity: 1;
+}
+
+/* 네 번째 li를 호버하면 lnbLight의 top 변경 */
+.depth1 ul li:nth-child(4):hover ~ .lnbLight { 
+    top: 23vh;
+    opacity: 1;
+}
+
+
+
+
+/* depth2 */
+.depth1 ul li:nth-child(3) {position: relative;}
+.depth2 {
+    position: absolute;
+    left: 2.5vw;
+    top: 0;
+    width: 9.37vw; /* ✅ 부모 너비 */
+    background: rgba(0, 0, 0, 0.8);
+    border: 0.052vw solid #fff;
+    border-radius: 0.52vw;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 10;
+    overflow: hidden;
+
+}
+
+/* 2Depth 내부 리스트 스타일 */
+
+.depth2 li {
+    width: 100%;
+    padding: 1vh 0; /* ✅ 상하 패딩 조정 */
+   
+    font-size: 1vw;
+   
+    
+    text-align: center; /* ✅ 텍스트 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.depth2 li p {position: absolute;
+              top: 0;
+              left: 0; 
+              color: #fff; 
+              padding: 2vh 3vw;
+              background-color: rgba(0, 0, 0, 0.8);
+              transition: background-color 0.3s ease-in-out;
+              text-align: center;
+}
+/* 2Depth 메뉴 호버 효과 */
+.depth2 li:hover p {
+    background-color: #fff;
+    color: #000;
+}
+
+.iconAlbum:hover .depth2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+/* profilePage############################################################################### */
+
+
+.profilePage>div {display: none;}
+.profilePage>div.toggle {
+    display: block;
+    
+
+}  
+
+
+.profilePage {position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+   }
+
+
+
+/* .Kr {width: 100vw;
+     height: 100vh;
+    background-image: url(img/profileBgkr.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;   
+    transition: all 1.5s; 
+} */
+
+
+.Kr {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Kr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/profileBgkr.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 1; /* 여기서 투명도 조절 */
+    transition: all 1.5s;
+    z-index: -1;
+    transition: all 1.5s; 
+}
+
+
+
+.Kr>div {position: absolute;}
+
+
+
+.toggleBox {top: 50%;
+            left: 50%;
+            transform: translateX(-18vw) translateY(-10vh);
+            z-index: 5; 
+            animation: fadeIn1 1s ease-in-out; 
+            cursor: pointer;
+            width: 6vw;
+           height: 4.5vh;     
+}
+.switchOn {position: absolute;
+           width: 2.3vw;
+           height: 3vh;
+           background-color: #fff;
+           border-radius: 50% / 80%;
+           margin: 0.57vh;
+           left: 0;
+           transition: all 0.6s ease-in-out;
+
+}
+
+
+.toggleBox img {position: absolute;
+    width: 5.31vw;
+    height: auto;
+                
+}
+
+@keyframes typing {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.textBox div:nth-child(2) p {
+    animation-delay: 0.5s;
+}
+
+
+.textBox {font-size: 1.04vw;
+          color: #fff; 
+          top: 50%;
+          left: 50%;
+          transform: translateX(-18vw) translateY(-4vh);
+          z-index: 5;
+          font-family: 'Pretendard', sans-serif;
+          font-weight: 100;
+          font-style: normal;
+
+}
+.textBox>div {margin-bottom: 2.6vh;
+    overflow: hidden;  
+}
+.textBox p {letter-spacing: 0.06vw;;
+            line-height: 1.3;
+            display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1.5s ease-out forwards;
+    opacity: 0;
+
+}
+.textBox em {font-style: normal;
+             font-weight: 500;   
+}
+
+
+.ExploreBtn {top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(30vh);
+          text-align: center;
+          display: inline-block; 
+          cursor: pointer;
+          z-index: 555; 
+          animation: fadeIn1 1s ease-in-out; 
+        }
+.ExploreBtn>span {font-size: 1.04vw;
+                  font-style: normal;
+                  font-weight: 500; 
+                  color: #fff;
+                  border: 0.05vw solid #fff;
+                  border-radius: 1.3vw;
+                  padding: 0.74vh 1.04vw;               
+}
+
+.Kr .ExploreBtn:hover>span{color: #1C1A1B;
+                       background-color: #fff;
+}
+
+
+@keyframes zoomInOut1 {
+    0% {
+        transform:  translateX(-15vw) translateY(1vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
+    }
+    100% {
+        transform:  translateX(45vw) translateY(1vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
+}
+
+@keyframes zoomInOut2 {
+    0% {
+        transform: translateX(10vw) translateY(-53vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
+    }
+    100% {
+        transform: translateX(-30vw) translateY(-53vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
+}
+@keyframes fadeIn1 {
+
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+
+
+}
+
+
+.imgBg_001K {perspective: 1000px;
+}
+.imgBg_001K img {width: 75vw;
+             height: auto;
+             scale: 1.1;
+             top: 50%;
+             left: 50%;
+             transform: translateX(45vw) translateY(1vh) translateZ(0vw);
+             transition: all 1.5s;
+             z-index: 1;
+             animation: zoomInOut1 1s ease-in-out;  
+}
+
+
+
+
+.imgBg_002K {perspective: 1000px;
+
+}
+.imgBg_002K img {width: 75vw;
+             height: auto;
+             scale: 0.65;
+             top: 50%;
+             left: 50%; 
+             transform: translateX(-30vw) translateY(-53vh) translateZ(0vw);
+             transition: all 1.5s;  
+             z-index: 1;
+             animation: zoomInOut2 1s ease-in-out;  
+            }
+/* .imgBg_001K img:hover {transform: translateZ(1000px);} */
+/* .imgBg_002K img:hover {transform: translateZ(1000px);} */
+
+
+
+
+/* En.ver######################################## */
+
+.En {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.En::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/profileBgen.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 1; /* 여기서 투명도 조절 */
+    transition: all 1.5s;
+    z-index: -1;
+    transition: all 1.5s; 
+    background-color: #CF0000;
+}
+
+
+
+.En>div {position: absolute;}
+
+
+
+.toggleBox {top: 50%;
+            left: 50%;
+            transform: translateX(-18vw) translateY(-10vh);
+            z-index: 5; 
+            animation: fadeIn1 1s ease-in-out;
+            cursor: pointer;       
+}
+/* .switchOn {position: absolute;
+           width: 2.3vw;
+           height: 3vh;
+           background-color: #fff;
+           border-radius: 50% / 80%;
+           margin: 0.57vh;
+           
+           left: 2.5vw;
+           transition: all 0.6s ease-in-out;
+           animation: fadeIn1 1s ease-in-out;    
+
+} */
+.toggleBox img {position: absolute;
+    width: 5.31vw;
+    height: auto;
+                
+}
+
+@keyframes typing {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.textBox div:nth-child(2) p {
+    animation-delay: 0.5s;
+}
+
+
+.textBox {font-size: 1.04vw;
+          color: #fff; 
+          top: 50%;
+          left: 50%;
+          transform: translateX(-18vw) translateY(-4vh);
+          z-index: 5;
+          font-family: 'Pretendard', sans-serif;
+          font-weight: 100;
+          font-style: normal;
+
+}
+.textBox>div {margin-bottom: 2.6vh;
+    overflow: hidden;  
+}
+.textBox p {letter-spacing: 0.06vw;;
+            line-height: 1.3;
+            display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1.5s ease-out forwards;
+    opacity: 0;
+
+}
+.textBox em {font-style: normal;
+             font-weight: 500;   
+}
+
+
+.ExploreBtn {top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(30vh);
+          text-align: center;
+          display: inline-block; 
+          cursor: pointer;
+          z-index: 555; 
+        }
+.ExploreBtn>span {font-size: 1.04vw;
+                  font-style: normal;
+                  font-weight: 500; 
+                  color: #fff;
+                  border: 0.05vw solid #fff;
+                  border-radius: 1.3vw;
+                  padding: 0.74vh 1.04vw;               
+}
+
+.En .ExploreBtn:hover>span{color: #CF0000;
+                       background-color: #fff;
+}
+
+
+@keyframes zoomInOut3 {
+    0% {
+        transform:  translateX(-15vw) translateY(1vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
+    }
+    100% {
+        transform:  translateX(70vw) translateY(-50vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
+}
+
+@keyframes zoomInOut4 {
+    0% {
+        transform: translateX(10vw) translateY(-53vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
+    }
+    100% {
+        transform: translateX(-25vw) translateY(-25vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
+}
+
+
+.imgBg_001E {perspective: 1000px;
+}
+.imgBg_001E img {width: 75vw;
+             height: auto;
+             scale: 0.75;
+             top: 50%;
+             left: 50%;
+             transform: translateX(70vw) translateY(-50vh);
+             transition: all 1.5s;
+             z-index: 1; 
+             animation: zoomInOut3 1s ease-in-out;   
+}
+
+
+
+
+.imgBg_002E {perspective: 1000px;
+
+}
+.imgBg_002E img {width: 75vw;
+             height: auto;
+             scale: 0.8;
+             top: 50%;
+             left: 50%; 
+             transform: translateX(-25vw) translateY(-25vh);
+             transition: all 1.5s;  
+             z-index: 1;
+             animation: zoomInOut4 1s ease-in-out;  
+            }
+/* .imgBg_001E img:hover {transform: translateZ(1000px);} */
+/* .imgBg_002E img:hover {transform: translateZ(1000px);} */
+
+
+
+
+/* storiesPage################################################################### */
+
+.storiesPage {background-color: rgba(0, 0, 0, 0.8);
+              backdrop-filter: blur(10px);
+              width: 100vw;
+              height: 100vh; 
+             
+              position: fixed;
+              bottom: -100%; /* 화면 아래로 숨기기 */
+              left: 0;
+              transition: bottom 0.5s ease-in-out; /* 애니메이션 효과 */
+              z-index: 9999;
+              overflow-y: auto; 
+}
+
+.storiesPage.on {
+    bottom: 0; /* 화면에 나타나도록 */
+}
+
+.storiesPage .upperBtn {
+                        position: relative;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-35vh);
+                       
+                        display: flex;
+                       
+                        font-size: 21px;
+                        justify-content: center;
+                        align-items: center;
+                        
+
+}
+.upperBtn>div { cursor: pointer;
+                position: relative;
+                z-index: 5;
+
+}
+
+
+.upperBtn .all {border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 8px;
+    text-align: center; 
+    color: #fff; 
+    background-color: transparent; 
+    cursor: pointer; 
+
+
+}
+
+
+.upperBtn .musicBtn{border: 1px solid #fff;
+                    border-radius: 20px;
+                    padding: 5px 15px;
+                    margin: 8px;
+                    text-align: center; 
+                    color: #fff; 
+                    background-color: transparent; 
+                    cursor: pointer; 
+
+
+}
+.upperBtn .showBtn{border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 8px;
+    text-align: center;
+    color: #fff; 
+    background-color: transparent;  
+    cursor: pointer; 
+}               
+.upperBtn .fashionBtn{border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 8px;
+    text-align: center; 
+    color: #fff; 
+    background-color: transparent;  
+    cursor: pointer; 
+}  
+
+.upperBtn>div:hover { color: #000; 
+    background-color: #fff;  
+} 
+
+
+.storiesPage>section { 
+                        width: 8000px;
+                        display: flex;
+                        top: 20vh;
+                       
+                        height: 575px;
+                        left: 0;
+                        position: relative;
+                        z-index: 2;
+                        transform: translateX(0px);
+                        transition: transform 0.5s ease;
+}
+.storiesPage>section>article { width: 150px;
+                               height: 575px;
+                               margin: 10px;
+                               margin-top: -300px;
+                               /* transition: all 0.5s; */
+                               position: relative;
+                               top: 50%;
+                               overflow: hidden;
+                               filter: grayscale(60%);
+                               transition: transform 0.5s ease;
+                               cursor: pointer;
+                            }
+
+.storiesPage>section>article img {
+    pointer-events: none; /* 이미지 위에서 마우스를 올려도 부모 article이 hover 감지 */
+}
+
+.storiesPage>section>article:hover {filter: grayscale(0%);
+                        
+} 
+
+
+
+.storiesPage>section>article h2 {position: absolute;
+                                 color: rgb(156, 156, 156);
+                                 z-index: 5;
+                                 font-weight: 200;
+                                 display: inline;
+                                 text-align: center;
+                                 font-size: 18px;
+                                 margin: 10px;
+                                 top: 0;
+                                 left: 0;
+
+
+}
+.storiesPage>section>article strong {position: absolute;
+                                     z-index: 3; 
+                                     top: 0;
+                                     left: 0;
+                                     width: 150px;
+                                     height: 575px;
+                                     transition: all 0.8s;
+
+
+}
+
+.storiesPage>section>article strong img:nth-child(1) {position: absolute;
+                                                      top: 50%;
+                                                      left: 50%;
+                                                      transform: translate(-50%,-50%);
+
+}
+.storiesPage>section>article strong img:nth-child(2) {position: absolute;}
+
+.storiesPage>section>article p {position: absolute;
+                                z-index: 3;
+                                opacity: 0;
+                                transition: all 0.8s;
+}
+
+.articleTxtbox {opacity: 0;
+    z-index: 7;
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.articleTxtbox em {font-style: normal;
+    font-size: 41px;
+    font-weight: 100;}
+.articleTxtbox span {
+    font-size: 16px;
+                    font-weight: 100; 
+                    margin-top: -0.3vh;
+}
+
+
+
+/* article click시 효과 */
+
+.storiesPage>section>article.on {width: 1020px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article.on h2 {position: absolute;
+                                    color: rgb(255, 255, 255);
+                                    z-index: 5;
+                                    font-weight: 400;
+                                    display: inline;
+                                    text-align: center;
+                                    font-size: 18px;
+                                    margin: 10px;
+                                    top: 78%;
+                                    left: 2%;
+                                    transition: all 1.5s;
+
+                                }
+.storiesPage>section>article.on strong {opacity: 0.1;}
+.storiesPage>section>article.on p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1020px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+
+ 
+.storiesPage>section>article.on p img:nth-child(1) {position: absolute;
+                                                      top: 50%;
+                                                      left: 50%;
+                                                      transform: translate(-49%,-60%) scale(1.6);
+                                                      
+
+}
+.storiesPage>section>article.on p img:nth-child(2) {position: absolute;}  
+
+
+.storiesPage>section>article.on .articleTxtbox {z-index: 7;
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    opacity: 1;
+
+}
+.storiesPage>section>article.on .articleTxtbox em {font-style: normal;
+                   font-size: 41px;
+                   font-weight: 100; 
+}
+.storiesPage>section>article.on .articleTxtbox span {font-size: 16px;
+                    font-weight: 100; 
+                    margin-top: -0.3vh;
+}
+
+
+
+
+/* 세부 이미지 크기 조절 2번째 */
+.storiesPage>section>article:nth-child(2) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%,-50%) scale(1.3);
+
+}
+
+/* 세부 이미지 크기 조절 3번째 */
+
+
+.storiesPage>section>article:nth-child(3).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(3).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(3) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.45);
+
+}
+
+
+.storiesPage>section>article:nth-child(3).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.55);
+    
+
+}
+.storiesPage>section>article:nth-child(3).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 4번째 */
+.storiesPage>section>article:nth-child(4) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,-50%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(4).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1.3);
+    
+
+}
+
+
+
+/* 세부 이미지 크기 조절 5번째 */
+.storiesPage>section>article:nth-child(5) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%,-40%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(5).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 6번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(6).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(6).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(6) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.75);
+
+}
+
+
+.storiesPage>section>article:nth-child(6).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.75);
+    
+
+}
+.storiesPage>section>article:nth-child(6).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+
+    
+
+/* 세부 이미지 크기 조절 7번째 */
+.storiesPage>section>article:nth-child(7) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.65);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(7).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.7);
+    
+
+}
+
+
+
+
+
+/* 세부 이미지 크기 조절 8번째 */
+.storiesPage>section>article:nth-child(8) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-45%) scale(0.7);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(8).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-20%) scale(1.2);
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 9번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(9).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(9).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(9) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.3);
+
+}
+
+
+.storiesPage>section>article:nth-child(9).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(0.5);
+    
+
+}
+.storiesPage>section>article:nth-child(9).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 10번째 */
+.storiesPage>section>article:nth-child(10) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(10).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+.storiesPage>section>article:nth-child(10) .articleTxtbox {background-color: rgba(0, 0, 0, 0.2);
+                                                           
+}
+
+
+
+
+/* 세부 이미지 크기 조절 11번째 */
+.storiesPage>section>article:nth-child(11) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(11).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+/* 세부 이미지 크기 조절 12번째 */
+.storiesPage>section>article:nth-child(12) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.55);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(12).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.73);
+}
+
+
+
+/* 세부 이미지 크기 조절 13번째 */
+.storiesPage>section>article:nth-child(13) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(0.55);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(13).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(0.73);
+}
+
+
+/* 세부 이미지 크기 조절 14번째 */
+.storiesPage>section>article:nth-child(14) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-50%) scale(0.8);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(14).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.3);
+}
+
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 15번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(15).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(15).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(15) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-50%) scale(0.8);
+
+}
+
+
+.storiesPage>section>article:nth-child(15).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-40%) scale(1);
+    
+
+}
+.storiesPage>section>article:nth-child(15).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 16번째 */
+.storiesPage>section>article:nth-child(16) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.3);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(16).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-30%) scale(0.8);
+}
+
+
+/* 세부 이미지 크기 조절 17번째 */
+.storiesPage>section>article:nth-child(17) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(17).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 18번째 */
+
+
+.storiesPage>section>article:nth-child(18).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(18).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(18) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-45%) scale(0.7);
+
+}
+
+
+.storiesPage>section>article:nth-child(18).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%,-39%) scale(0.8);
+    
+
+}
+.storiesPage>section>article:nth-child(18).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+/* 세부 이미지 크기 조절 19번째 */
+.storiesPage>section>article:nth-child(19) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%,-50%) scale(0.8);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(19).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-30%) scale(1.3);
+}
+
+
+/* 세부 이미지 크기 조절 20번째 */
+.storiesPage>section>article:nth-child(20) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-28%,-50%) scale(1);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(20).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+/* 세부 이미지 크기 조절 21번째 */
+
+
+.storiesPage>section>article:nth-child(21).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(21).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(21) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-40%) scale(0.7);
+
+}
+
+
+.storiesPage>section>article:nth-child(21).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-39%) scale(0.8);
+    
+
+}
+.storiesPage>section>article:nth-child(21).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+/* 세부 이미지 크기 조절 22번째 */
+.storiesPage>section>article:nth-child(22) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-40%) scale(1.3);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(22).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.05);
+}
+
+
+
+
+
+/* 세부 이미지 크기 조절 23번째 */
+.storiesPage>section>article:nth-child(23) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-78%,-40%) scale(1.5);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(23).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+
+
+
+
+/* 세부 이미지 크기 조절 24번째 */
+.storiesPage>section>article:nth-child(24) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-40%) scale(1);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(24).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+
+
+/*26  */
+
+
+
+/* 세부 이미지 크기 조절 26번째 */
+.storiesPage>section>article:nth-child(26) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%,-50%) scale(1.3);
+
+}
+
+/* 세부 이미지 크기 조절 27번째 */
+
+
+.storiesPage>section>article:nth-child(27).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(27).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(27) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.45);
+
+}
+
+
+.storiesPage>section>article:nth-child(27).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.55);
+    
+
+}
+.storiesPage>section>article:nth-child(27).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 28번째 */
+.storiesPage>section>article:nth-child(28) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,-50%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(28).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1.3);
+    
+
+}
+
+
+
+/* 세부 이미지 크기 조절 29번째 */
+.storiesPage>section>article:nth-child(29) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%,-40%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(29).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 30번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(30).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(30).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(30) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.75);
+
+}
+
+
+.storiesPage>section>article:nth-child(30).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.75);
+    
+
+}
+.storiesPage>section>article:nth-child(30).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+
+    
+
+/* 세부 이미지 크기 조절 31번째 */
+.storiesPage>section>article:nth-child(31) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.65);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(31).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.7);
+    
+
+}
+
+
+
+
+
+/* 세부 이미지 크기 조절 32번째 */
+.storiesPage>section>article:nth-child(32) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-45%) scale(0.7);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(32).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-20%) scale(1.2);
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 33번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(33).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(33).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(33) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.3);
+
+}
+
+
+.storiesPage>section>article:nth-child(33).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(0.5);
+    
+
+}
+.storiesPage>section>article:nth-child(33).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 34번째 */
+.storiesPage>section>article:nth-child(34) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-50%) scale(0.6);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(34).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.8);
+    
+
+}
+
+
+
+
+/* 세부 이미지 크기 조절 35번째 */
+.storiesPage>section>article:nth-child(35) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(35).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+/* 세부 이미지 크기 조절 36번째 */
+.storiesPage>section>article:nth-child(36) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.55);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(36).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.73);
+}
+
+
+
+/* 세부 이미지 크기 조절 38번째 */
+.storiesPage>section>article:nth-child(38) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%,-50%) scale(1.4);
+
+}
+
+
+
+.storiesPage>section>article:nth-child(38).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+
+
+
+
+
+
+
+
+
+/* 세부 이미지 크기 조절 39번째 */
+
+
+.storiesPage>section>article:nth-child(39).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(39).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(39) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.45);
+
+}
+
+
+.storiesPage>section>article:nth-child(39).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.55);
+    
+
+}
+.storiesPage>section>article:nth-child(39).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 40번째 */
+.storiesPage>section>article:nth-child(40) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,-50%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(40).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1.3);
+    
+
+}
+
+
+
+/* 세부 이미지 크기 조절 41번째 */
+.storiesPage>section>article:nth-child(41) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%,-40%) scale(1);
+
+}
+
+
+.storiesPage>section>article:nth-child(41).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%) scale(1);
+    
+
+}
+
+
+/* 세부 이미지 크기 조절 42번째 세로크기###########################*/
+
+
+.storiesPage>section>article:nth-child(42).on {width: 520px;
+    height: 575px;
+    margin: 10px;
+    margin-top: -300px;
+   
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    transition: all 1.3s;
+    filter: grayscale(0%);
+    }
+.storiesPage>section>article:nth-child(42).on p {position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    height: 575px;
+    transition: all 0.8s;
+    overflow: hidden;
+    opacity: 1;}
+    
+.storiesPage>section>article:nth-child(42) strong img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.75);
+
+}
+
+
+.storiesPage>section>article:nth-child(42).on p img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%) scale(0.75);
+    
+
+}
+.storiesPage>section>article:nth-child(42).on p img:nth-child(2) {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.close {
+        color: rgb(255, 255, 255);
+        font-size: 2vw;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1.5vw;
+        opacity: 0.5;
+        
+
+}
+.close i {}
+
+.close:hover {opacity: 1;}
+
+
+
+
+
+/* albumPage################################################################### */
+
+.albumPage {background-color: #CF0000;
+            width: 100%;
+            height: 325vh;
+            
+            
+            
+          
+}
+
+
+.albumIntro {display: flex;
+            background-color: #CF0000;
+             padding-top: 13vh;
+             padding-bottom: 15vh;
+}
+.albumIntro .leftside {position: relative;}
+
+
+
+.albumIntro .leftside>img {width: 64vw;
+               height: auto;
+               position: relative;
+               z-index: 5;
+               
+               
+}
+.albumIntro .leftside .bgLogo {position: absolute;
+    z-index: 1; 
+    transform: translateX(10vw) translateY(-2vh);
+}
+.albumIntro .leftside .bgLogo img {scale: 2.5; 
+    width: 26vw;
+    height: auto;
+
+
+
+}
+
+
+
+.albumIntro .rightside {padding-left: 1vw;
+   
+}
+
+
+
+.albumK {font-size: 1.04vw;
+    color: rgb(0, 0, 0); 
+    top: 50%;
+    left: 50%;
+    
+    z-index: 5;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-bottom: 5vh;
+    
+
+}
+
+.albumK p {letter-spacing: 0.03vw;;
+      line-height: 1.3;
+      display: inline-block;
+      margin-bottom: 3vh;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 1.5s ease-out forwards;
+
+}
+.albumK em {font-style: normal;
+       font-weight: 500;   
+}
+
+.albumK img {position: relative; /* 기존 위치에서 이동 가능하도록 */
+            top: 0.8vh;
+            width: auto;
+            max-height: 5vh;
+            min-height: 5vh;
+        }
+
+
+
+.albumE {font-size: 1.04vw;
+    color: rgb(0, 0, 0); 
+    top: 50%;
+    left: 50%;
+    
+    z-index: 5;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+.albumE p {letter-spacing: 0.03vw;;
+      line-height: 1.3;
+      display: inline-block;
+      margin-bottom: 3vh;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 1.5s ease-out forwards;
+
+}
+.albumE em {font-style: normal;
+       font-weight: 500;   
+}
+
+.albumE img {position: relative; /* 기존 위치에서 이동 가능하도록 */
+            top: 1vh;
+            width: auto;
+            max-height: 5vh;
+            min-height: 5vh;
+        }
+
+
+        .moreBtn {
+            display: flex;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translateX(48vw) translateY(-70vh);
+            transition: all 1s;
+            cursor: none;
+            z-index: 1;
+            /* 위치는 고정 */
+           
+          }
+          
+          .btnInner {
+            display: flex;
+            align-items: center;
+            color: #000;
+            transition: transform 0.8s ease, filter 0.8s ease;
+          }
+          
+          .moreBtn p {
+            margin-right: 0.5vw;
+            font-size: 18px;
+            font-weight: 200;
+          }
+          
+          .moreBtn img {
+            font-size: 16px;
+          }
+          
+          /* 움직임은 안쪽에만 적용 */
+          .moreBtn:hover .btnInner {
+            transform: translateY(5vh); /* 원하는 만큼 */
+            filter: invert(1);
+          }
+          
+
+/* albulTrackBox###################################### */
+
+.albulTrackBox {padding-top: 20vh;
+                position: relative;
+                
+                background-color: #CF0000;
+                width: 100vw;
+                height: 230vh;
+                overflow: hidden;
+                
+                
+}
+.albulTrackBox>div {position: absolute;
+    
+
+}
+
+.albulTrackBox .bg {width: 100vw;
+                    height: auto;
+                    background-color: #CF0000;
+                    pointer-events: none;
+                    z-index: 0;
+                    
+}
+.albulTrackBox .bg img:nth-child(1) {width: 100vw;
+                                    height: auto;
+                                    z-index: 1;
+                                    
+                                }
+
+
+.albulTrackBox .iconVD {top: 50%;
+                        right: 50%; 
+                        transform: translateX(23vw) translateY(-59.5vh);
+                        color: #fff;
+                        display: flex;
+                        font-size: 20px;
+                        
+                        z-index: 3;
+                        cursor: pointer;
+
+
+}
+.iconVD>div {margin-right: 1vw;
+             display: flex;
+             opacity: 0.5;
+             cursor: pointer;
+}
+
+
+.iconVD>div p {line-height: 1.1;
+               margin-left: 0.3vw;
+               font-weight: 100; 
+               transform: translateY(0vh);
+               opacity: 1;
+               transition: all 0.3s;
+               pointer-events: none;
+}
+.iconVD>div i {pointer-events: none;}
+.iconVD>div:nth-child(1) p {line-height: 0.9;}
+
+.iconVD>div:hover {opacity: 0.8;}
+
+.iconVD>div:hover p {
+    opacity: 1;}
+
+.trackBox {top: 50%;
+           right: 50%; 
+           transform: translateX(55vw) translateY(-80vh);
+           position: relative;
+           scale: 0.85;
+           
+           width: 50vw;
+           height: 100vh;
+}
+
+.trackBox>img {position: absolute;
+               z-index: 1; 
+               
+   
+                
+}
+.trackBox .trackTxtBox {display: flex;
+                        
+                         z-index: 5;
+                         position: absolute;
+                         top: 50%;
+                         left: 50%;
+                         transform: translate(-25vw, -50vh);
+                         scale: 0.85;
+                     
+                         
+}
+
+.trackTxtBox .trackleftside {} 
+.trackTxtBox .trackleftside img {margin-bottom: 8vh;
+    cursor: pointer;
+} 
+
+.trackTxtBox .trackrightside {margin-top: 6vh;} 
+.trackTxtBox .trackrightside img {margin-bottom: 8vh;
+    cursor: pointer;
+} 
+
+.trackTxtBox img:hover { 
+    filter: saturate(100%) invert(8%) sepia(100%) saturate(7450%) hue-rotate(10deg) contrast(105%);
+}
+
+.lpEffectSec {
+   
+    }
+
+
+.lpEffectB {position: relative;
+            top: 3vh;
+            left: -50vw;
+            transform: rotateX('angle');
+            
+}
+.lpEffectB>img {position: absolute;
+                display: none;
+                animation: spin 60s linear infinite;
+                mix-blend-mode: hard-light;
+                opacity: 0.5;
+                pointer-events: none;
+                
+             
+                    
+}
+
+
+
+
+@keyframes spin {
+    0%   { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+/* musicvideoPage########################################### */
+
+.musicvideoPage {width: 100vw;
+                 height: 100vh;
+                 overflow: hidden;
+                 transition: bottom 0.3s ease-in-out;
+                 animation: popup 0.5s ease-in-out; 
+                 
+                
+}
+
+@keyframes popup {
+
+    0% {transform: translateY(80vh);}
+
+    100% {transform: translateY(0);}
+
+
+
+}
+.musicvideoPage .mvBg {
+                        width: 100vw;
+                        height: 100vh;
+                        background-image: url(img/mvBg.png);
+                        position: absolute;
+                        background-position: center center;
+                        background-size: cover;
+                        z-index: -1;
+
+                    
+                    }
+                    
+
+
+
+
+.mvMainframeSec {position: relative;
+              height: 78vh; 
+
+}
+
+
+.mvMainframe {
+position: relative;
+top: 0;
+left: 50vw;
+width: 70vw;
+height: 78vh;
+overflow: hidden;
+transform: translateX(-32vw) translateY(-5vh) scale(1.1);
+}
+.mvMainframe video {position: absolute;
+    top: 0;
+    left: 50vw;
+    transform: translateX(-47.5vw) translateY(-3vh);
+    width: 59vw;
+    height: auto;
+    /* opacity: 0;
+    */
+
+           
+}
+
+
+.mvMainframe video source {position: relative;
+   
+
+}
+.mvMainframe img {position: absolute;
+                   
+                  width: 64.06vw;
+                  height: 78.33vh;
+
+                  
+}
+
+
+
+.mvMainframeSec .bg-video {position: absolute;
+    top: 0;
+    left: 50vw;
+    width: 68vw;
+    height: auto;
+    
+    transform: translateX(-34vw) translateY(-1vh);
+    z-index: -1;
+    opacity: 0.8;
+
+
+   
+    
+}
+
+
+.lowerframeBox {
+    display: flex;
+    transform: translate(1.04vw,-1.67vh) rotateZ(-3.5deg);
+    
+   
+    
+}
+
+
+
+
+
+
+
+.lowerframe {display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100vw;
+    
+    justify-content: space-between;
+    
+                
+}
+
+
+
+.lowerframeBox>div:nth-child(1) {transform: translateX(0vw);
+    animation: ani1 30s linear infinite;
+    
+}
+.lowerframeBox>div:nth-child(2) {transform: translateX(0vw);
+    animation: ani2 30s linear infinite;   
+}
+
+@keyframes ani1 {
+
+    0% {transform: translateX(0vw);}
+    49.9% {transform: translateX(-99.9vw);} 
+    50% {transform: translateX(100vw);}
+    100% {transform: translateX(0vw);}
+
+
+ }
+
+ @keyframes ani2 {
+
+    0% {transform: translateX(0vw);}
+    49.9% {transform: translateX(-99.9vw);} 
+    100% {transform: translateX(-200vw);}
+
+
+
+ 
+ }
+
+
+
+.lowerframeBox:hover > div:nth-child(1) {animation-play-state: paused;}
+.lowerframeBox:hover > div:nth-child(2) {animation-play-state: paused;}
+.mvListBox {
+            display: flex;
+            
+            
+            
+}
+.mvListBox>div {width: 19.6vw;
+                height: 23.85vh;
+                overflow: hidden;
+                position: relative;
+             
+                
+                margin-left: 0.47vw;
+                
+                
+        }
+.mvListBox>div img:nth-child(1) {position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36.67vw;
+    height: 36.67vh;
+    transform: translate(-50%, -50%);
+    
+    filter: grayscale(95%);
+    transition: all 0.3s;
+}
+
+
+
+
+/* 텍스트 크기위치조절 */
+
+.mvListBox > div:nth-child(1) .listText {
+    position: relative;
+    top: 50%;
+    left: 70%;
+   
+    width: 12vw;
+    height: auto;
+  }
+  
+  .mvListBox > div:nth-child(2) .listText {
+    position: relative;
+    top: 75%;
+    left: 88%;
+   
+    width: 15vw;
+    height: auto;
+  }
+  
+  .mvListBox > div:nth-child(3) .listText {
+    position: relative;
+    top: 90%;
+    left: 70%;
+   
+    width: 12vw;
+    height: auto;
+  }
+  
+  .mvListBox > div:nth-child(4) .listText {
+    position: relative;
+    top: 65%;
+    left: 97%;
+   
+    width: 17vw;
+    height: auto;
+  }
+  
+  .mvListBox > div:nth-child(5) .listText {
+    position: relative;
+    top: 50%;
+    left: 10%;
+   
+    width: 7vw;
+    height: auto;
+  }
+
+
+
+  
+
+
+.lowerframe>img {scale: 1.45;
+                 position: relative;
+                 top: 0;
+                 left: 50%;
+                 width: 77.08vw;
+                 height: 24.35vh;
+                 transform: translate(-92.8vw,-0.18vh) rotateZ(0.03deg);   
+                 pointer-events: none;
+}
+
+
+
+
+
+
+/* replace to txt */
+
+
+.mvListBox>div:nth-child(1) img:nth-child(2) {transform: translate(-10vw,-5vh);}
+.mvListBox>div:nth-child(2) img:nth-child(2) {transform: translate(-15vw,-8vh);}
+.mvListBox>div:nth-child(3) img:nth-child(2) {transform: translate(-15vw,-8vh);}
+.mvListBox>div:nth-child(4) img:nth-child(2) {transform: translate(-18vw,-8vh);}
+
+
+
+.mvListBox>div:hover img:nth-child(1) {filter: grayscale(0%);} 
+
+
+
+
+
+/* tourdatePage############################################## */
+
+.tourdatePage {width: 100vw;
+               height: 100vh; 
+               background-color: #CF0000;
+               overflow: hidden;
+               position: relative;
+}
+.Bgtour {width: 100vw;
+    height: 100vh; 
+    background-image: url(img/tourdatesPageWideBg.png);
+    background-repeat: no-repeat;
+    background-size: contain;    
+    background-position: right;
+}
+
+
+
+.tourTxtSec {position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-38vw,-38vh);
+
+
+}
+
+.tourTxtSec>img {width: 26vw;
+                 height: auto;
+                 position: relative;
+                 top: 50%;
+                 left: 50%;
+                 transform: translate(-17vw,-1vh);
+}
+.dateTxtSec {position: relative;
+             top: 50%;
+             left: 50%;
+             transform: translate(-20vw,9vh);
+
+}
+
+.dateTxtbox {position: relative;
+    z-index: 1;
+    margin-bottom: 5vh;
+}
+.dateTxtbox .text {display: flex;
+                   font-size:  1.25vw; 
+                   position: relative;
+                   z-index: 2;
+                   
+                   white-space: nowrap;
+                   overflow: hidden;
+                   
+                   opacity: 1;
+               
+                   
+                   
+                   
+}
+@keyframes typing2 {
+    0% {
+        transform: translateY(-100%); /* 위에서 아래로 시작 */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%); /* 위에서 아래로 시작 */
+        opacity: 1;
+    }
+}
+
+.dateTxtbox .text em {font-style: normal;
+                      margin-right: 3vw;
+                      font-weight: 300;
+                      color: #fb7373; 
+                      text-align: center; 
+                      min-width: 5vw;
+                      opacity: 0;
+                      animation: typing2 1s ease-out forwards;
+                      animation-delay: 0s;
+}
+.dateTxtbox .text p {font-style: normal;
+                     margin-right: 3vw;  
+                     font-weight: 600;
+                     color: #ff5657;
+                     text-align: left;
+                     min-width: 10vw;
+                     opacity: 0;
+                      animation: typing2 1s ease-out forwards;
+                      animation-delay: 0.4s;
+                    }
+.dateTxtbox .text span {font-style: normal;
+                        margin-right: 3vw;  
+                        font-weight: 300;
+                        color: #f63f3f;
+                        text-align: left;
+                        opacity: 0;
+                      animation: typing2 1s ease-out forwards;
+                      animation-delay: 0.8s;
+                    }
+
+
+
+.dateTxtbox .Soldoutlin {position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              transform: translate(-18.5vw,-3.5vh);
+                               z-index: 5;
+                               animation: drawImage 0.7s forwards;
+                               animation-delay: 1.8s;
+                               opacity: 0;
+}
+
+.dateTxtbox .Soldout {position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              transform: translate(2vw,-5vh);
+                               z-index: 7;
+                               animation: soldout 0.3s ease-out forwards;
+                               animation-delay: 2s;
+                               opacity: 0;
+}
+
+
+.tourTxtSec .dateTxtSec .dateTxtbox img {display: none;}
+.tourTxtSec .dateTxtSec .dateTxtbox:nth-child(1) img {display: block;}
+.tourTxtSec .dateTxtSec .dateTxtbox:nth-child(2) img {display: block;}
+
+
+
+
+@keyframes drawImage {
+    0% {
+        width: 0;
+        transform: translate(-50vw,-3.5vh);
+        opacity: 0;
+    }
+    100% {
+        width: 100%; 
+        transform: translate(-18.5vw,-3.5vh);
+        opacity: 1;
+    }
+        
+
+}
+@keyframes soldout {
+
+0% {
+    opacity: 0;
+}
+
+100% {
+    opacity: 1;
+}
+
+
+
+
+}
+
+
+
+/* shopPage############################################## */
+
+
+
+.shopPage { width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.shopHero {background-color: #000;
+    width: 93vw;
+    height: 50vh;
+    border: 0.052vw solid rgb(68, 68, 68);
+    border-radius: 0.26vw;
+    display: flex;
+           justify-content: space-around;
+           align-items: center;
+           position: relative; 
+           overflow: hidden;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, 10%);
+}
+.shopHero img {position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-11vw,-25vh) scale(0.9); 
+               width: 21.875vw;
+height: 53.24vh;
+}
+.shopHero p {color: #CF0000;
+             font-style: italic;
+             font-size: 1.1vw;
+             font-weight: 400;
+             letter-spacing: 0.26vw;
+             
+
+}
+
+
+.shopPage .option {display: flex;
+                   padding-top: 15vh;
+                   padding-left: 10vw;
+                   color: #fff;
+                   cursor: pointer;
+
+}
+.shopPage .option p {font-size: 1.1vw;
+                    
+                     border: 0.052vw solid #fff;
+                     margin-right: 0.8vw;
+                     padding: 0;
+                     border-radius: 1.56vw;
+                     padding: 0 1.04vw;
+}
+
+.shopPage .option span {position: relative;
+                        top: 1vh;
+            
+}
+.shopPage .option img {vertical-align: middle;
+                       font-size: 0.84vw;
+                       width: 3.23vw;
+height: 4.54vh;
+                       
+}
+
+
+.shopPage .option p:hover {background-color: #CF0000;}
+
+
+
+
+
+.productList {padding-left: 13vw;
+              margin-top: 6vh;  
+}
+
+
+.productList ul {display: flex;
+
+                 
+}
+.productList li {perspective: 75vw; 
+                 padding: 4.16vh 1.56vw; 
+}
+.cardBox {position: relative;
+    width: 18vw;
+    height: 44.4vh;
+    perspective: 36.5vw; /* 3D 깊이감을 줍니다. */
+    transform-style: preserve-3d; /* 자식 요소들이 3D 변환을 지원하도록 설정 */
+    transform: rotateY(0deg);
+    transition: transform 1s; 
+    animation: card 0.8s forwards;
+
+}
+
+
+.cardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .cardBox:hover .cardInner {
+    transform: rotateY(180deg);
+  }
+.cardFront {position: absolute;
+            width: 100%;
+            height: 100%;  
+            backface-visibility: hidden;  
+            width: 18vw;
+    height: 44.4vh;
+}
+.cardFront>img {width: 18vw;
+    height: 44.4vh;
+}
+
+.cardBack {position: absolute;
+    width: 18vw;
+    height: 44.4vh;
+            background-color: #000;
+            border: 5px solid #CB0121;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;  
+            box-sizing: border-box;
+
+}
+.cardBack>img { object-fit: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+    /* 하단 텍스트 */
+
+    .txtBoxP { padding: 1.04vh 0;           /* 20px ≈ 1.04vh */
+        margin-top: 3vh;          /* 10px ≈ 0.52vh */
+        width: 17.97vw;              /* 345px ≈ 17.97vw */
+              color: #fff;
+              text-align: center;
+              font-size: 1.1vw; 
+              animation: textP 0.8s forwards; 
+    }
+    .txtBoxP p {font-weight: 200;
+                margin-bottom: 0.16vh;
+    }
+    .txtBoxP em {font-style: normal;
+                 font-weight: 600;   
+    }
+
+
+    @keyframes textP {
+        0% {transform: translateY(-10vh);
+            opacity: 0;    
+        }
+        100% {transform: translateY(0vh);
+            opacity: 1;  
+        }
+    
+    
+    
+      }
+
+    /* proRuby NINIBARAS  */
+
+
+    .proRuby {display: block;
+       
+    
+    }
+
+    .proRuby.off {display: none;}
+
+    
+
+
+
+    /* 기본 상태는 rotateY(180deg)로 숨겨진 상태 */
+
+.proNINIBARAS {position: absolute;
+               
+               display: none;
+}    
+
+
+  
+.proNINIBARAS .cardBack {position: absolute;
+    width: 18vw;
+    height: 44.4vh;
+            background-color: #000;
+            border: 5px solid #97bbda;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;  
+            box-sizing: border-box;
+
+}
+.proNINIBARAS.on {
+    
+    display: block;
+}    
+.proNINIBARAS.on .cardBox {
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: rotateY(180deg);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    
+  }
+  
+  /* 'on' 클래스가 추가되면 애니메이션이 적용되어 보이게 됨 */
+  .proNINIBARAS.on .cardBox {
+    opacity: 1;
+    animation: card 0.8s forwards;
+  }
+
+  @keyframes card {
+    0% {transform: rotateY(90deg);
+        opacity: 0;    
+    }
+    100% {transform: rotateY(0deg);
+        opacity: 1;  
+    }
+
+
+
+  }
+
+

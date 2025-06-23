@@ -1,0 +1,375 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 전체설정 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+
+/* 레이아웃설정 */
+
+#wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FAF6EB;
+}
+
+.body {
+    overflow-x: hidden;
+    
+}
+
+
+
+/* ################################################## */
+
+
+
+
+.slider_second {
+    width: 100%;
+    margin-top: 150px;
+    position: relative;
+}
+
+/* .slider_second .con_box {display: flex;
+                         width: 100%;
+                         overflow: hidden;
+                         position: relative;} */
+
+
+
+
+.slider_second .con_box .con1 {
+    width: 100%;
+    min-width: 100%;
+    height: 790px;
+    background-color: #785379;
+    position: relative;
+    display: flex;
+}
+
+.slider_second .con_box .con1 img {
+    position: absolute;
+    bottom: -5%;
+}
+
+.con1 .txtBox_rescue {
+    width: 60%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.con1 .txtBox_rescue .txt_main {
+    font-size: 71px;
+    color: #FAF6EB;
+    font-family: "Grandiflora One", serif;
+
+
+
+    text-shadow:
+        -1px -1px 0 #FAF6EB,
+        1px -1px 0 #FAF6EB,
+        -1px 1px 0 #FAF6EB,
+        1px 1px 0 #FAF6EB;
+    /* 스트로크 효과 */
+}
+
+.con1 .txtBox_rescue .txt_sub {
+    font-size: 26px;
+    color: #FAF6EB;
+    font-family: "Noto Sans KR", serif;
+    margin-top: 50px;
+}
+
+.con1 .listBox {
+    position: relative;
+    width: 40%;
+    height: 790px;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+
+.con1 .listBox ul {position: absolute;
+                   top: -13%;
+                   }
+
+.con1 .listBox ul li {
+    width: 70%;
+    height: 35%;
+    align-items: center;
+
+    background-color: #FAF6EB;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 30px;
+    
+}
+
+.con1 .listBox ul li:nth-child(odd) {margin-left: 50px;}
+
+
+
+
+
+.con1 .listBox ul li .text_list {
+    font-size: 26px;
+    color: #785379;
+    font-weight: bold;
+    font-family: "Noto Sans KR", serif;
+}
+
+.con1 .listBox ul li .text_main {
+    font-size: 26px;
+    color: #3D3D3D;
+    font-weight: normal;
+    font-family: "Noto Sans KR", serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.con1 .listBox ul li .text_info {
+    font-size: 18px;
+    color: #636363;
+    font-family: "Noto Sans KR", serif;
+    display: flex;
+   
+}
+.text_info .info_date {margin-left: 10px;
+                       /* border-left: 1px solid #636363; */
+                       position: relative;
+                       padding-left: 5px;
+                    }
+
+.text_info .info_date::before {content: '';
+    position: absolute;
+    top: 22%;
+    left: -15%;
+    height: 70%;
+    width: 2px;
+    background-color: #8b8b8b;
+    margin-left: 10px;}
+
+
+
+.slider_second .btn {position: absolute;
+                     top: 35%;
+                     left: 3%;}
+
+.slider_second .btn ul {}
+
+.slider_second .btn ul li {width: 25px;
+                           height: 25px;
+                           background-color: #BF9FC0;
+                           border-radius: 50%;
+                           text-indent: -9999px;
+                           margin-top: 32px;}
+
+
+
+
+.slider_second .con_box .con2 {width: 100%;
+    min-width: 100%;
+    height: 790px;
+    background-color: #ED7E48;
+    position: relative;
+    display: flex;}
+
+.con2 .howtoRescue {
+                    position: absolute;
+                    top: 13%;
+                    left: 10%;
+                    z-index: 1;
+                    
+                    } 
+.con2 .howtoRescue h1 { color: #F3E1CB;
+    font-size: 71px;
+    background-color: #ED7E48;
+    display: inline;
+    padding: 4px 8px;
+    font-family: "Grandiflora One", serif;
+    margin-left: 50px;
+
+
+
+    text-shadow:
+        -1px -1px 0 #F3E1CB,
+        1px -1px 0 #F3E1CB,
+        -1px 1px 0 #F3E1CB,
+        1px 1px 0 #F3E1CB;
+    } 
+
+.howtoRescue_txt {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  align-items: flex-start;
+                  border: 1px solid #F3E1CB;
+                  background-color: #ED7E48;
+                  border-radius: 10px;
+                  padding: 100px;
+                  margin-top: -50px;
+                  
+                  }  
+
+.con2 .howtoRescue span {
+                        font-size: 26px;
+                        color: #F3E1CB;
+                        font-family: "Noto Sans KR", serif;
+                        font-weight: lighter;
+                        border-bottom: 2px solid #F3E1CB;
+                        
+                        margin-bottom: 10px;
+                        display: inline-block;
+                        
+                     } 
+
+.con2 .howtoRescue strong {font-weight: normal;}
+
+.con2 .howtoRescue_bg {} 
+.con2 .howtoRescue_bg img {position: absolute;
+                          bottom: 0;
+                          right: 0;} 
+
+
+
+.con2 .btn ul li {background-color: #F3E1CB;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider_second .con_box .con3 {width: 100%;
+                               min-width: 100%;
+                               height: 790px;
+                               background-color: #F3E1CB;
+                               position: relative;
+                               display: flex;}
+
+
+.con3 .rescue-request {width: 60%;
+                       position: absolute;
+                       top: 30%;
+                       left: 15%;
+                       }
+
+.con3 .rescue-request h1 {color: #ED7E48;
+                          font-size: 71px;
+                          font-family: "Grandiflora One", serif;
+                          
+                          text-shadow:
+                              -1px -1px 0 #ED7E48,
+                              1px -1px 0 #ED7E48,
+                              -1px 1px 0 #ED7E48,
+                              1px 1px 0 #ED7E48;
+                          margin-bottom: 30px;
+                              
+                          
+    
+}
+.con3 .rescue-request p {font-size: 26px;
+    color: #ED7E48;
+    font-family: "Noto Sans KR", serif;
+    font-weight: lighter;
+    
+    }
+.con3 .rescue-request strong {font-weight: normal;}   
+
+
+
+
+.con3 .simple-steps {width: 40%;
+                     position: absolute;
+                     top: 20%;
+                     right: -3%;
+                     z-index: 1;}
+.con3 .simple-steps h2 {color: #ED7E48;
+    font-size: 36px;
+    background-color: #F3E1CB;
+    display: inline;
+    padding: 4px 8px;
+    font-family: "Noto Sans KR", serif;
+    margin-left: 16%;
+    z-index: 1;
+    position: absolute;
+    top: -6%;
+    
+    }
+.simple-steps ul {border: #ED7E48 1px solid;
+                  background-color: #F3E1CB;
+                  display: inline-block;
+                  border-radius: 10px;
+                  padding: 100px 50px;
+                  }
+
+.simple-steps ul li {text-align: center;
+                     font-family: "Noto Sans KR", serif;
+                     color: #ED7E48;
+                     font-size: 26px;
+                     margin: 30px 70px;}
+
+
+
+.simple-steps ul li a{color: #FAF6EB;
+                      background-color: #785379;
+                      border-radius: 10px;
+                      padding: 4px 8px;}
+
+.con3 .rescue-request_bg {}
+.con3 .rescue-request_bg img {position: absolute;
+                          bottom: 0;
+                          right: 0;} 
+
+.con3 .btn ul li {background-color: #ED7E48;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ######################################################################### */

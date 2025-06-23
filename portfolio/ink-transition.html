@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ink Reveal</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f6f6f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .fade-ink-text {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 64px;
+      color: #111;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+      filter: url(#ink-wobble);
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        filter: url(#ink-wobble) blur(5px) contrast(60%);
+      }
+      50% {
+        opacity: 0.4;
+        filter: url(#ink-wobble) blur(2px) contrast(90%);
+      }
+      100% {
+        opacity: 1;
+        filter: url(#ink-wobble) blur(0px) contrast(100%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SVG 필터 정의 (잉크 퍼짐 애니메이션 포함) -->
+  <svg width="0" height="0">
+    <filter id="ink-wobble">
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="turbulence"/>
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="0" xChannelSelector="R" yChannelSelector="G">
+        <!-- scale이 0 → 6으로 2초간 번짐 애니메이션 -->
+        <animate attributeName="scale" from="0" to="6" dur="2s" fill="freeze" />
+      </feDisplacementMap>
+    </filter>
+  </svg>
+
+  <!-- 텍스트 -->
+  <div class="fade-ink-text">My Design Works</div>
+
+</body>
+</html>

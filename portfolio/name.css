@@ -1,0 +1,55 @@
+
+
+@charset 'UTF-8';
+
+@font-face {
+  font-family: 'SilverGarden';
+  src: url('font/Silver_Garden/Silver Garden.otf') format('opentype'); /* 확장자 맞춰 수정 */
+}
+
+body {
+  margin: 0;
+  background: #f6f6f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.name-wrapper h1 {
+  font-family: 'SilverGarden', cursive;
+  font-size: 80px;
+  color: #111;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.name-wrapper h1.reveal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #f6f6f4;
+  animation: wipe 2.2s ease forwards;
+
+  /* 흐릿한 경계 효과 */
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 99.8%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 99.8%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+
+
+@keyframes wipe {
+    0% {
+      left: 0;
+      width: 100%;
+    }
+    100% {
+      left: 102%; /* 살짝 더 넘어가게 해서 완전 가려지게 */
+      width: 0;
+    }
+  }

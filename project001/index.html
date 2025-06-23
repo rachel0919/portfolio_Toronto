@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국동물구조관리협회 리뉴얼프로젝트</title>
+
+
+    <!-- 외부스타일시트연결 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style_respon.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
+    </style>
+
+      <!-- 반응형스타일시트연결 -->
+      <link rel="stylesheet" href="responsive.css">
+
+
+
+  <!-- font awesome cdn -->
+  <script src="https://kit.fontawesome.com/694f379057.js" crossorigin="anonymous"></script>
+     
+  <!-- 제이쿼리 cdn   순서 꼭 이대로 해야함!!!!!!!! githurb에서는 http를 못읽음 그래서 하단에 있는 것을 씀-->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+   <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <!-- 외부라이브러리를 먼저 연결하고 외부스크립트를 작성한다 -->
+  <!-- 외부스크립트연결 -->
+  <script src="js/javascript.js"></script>
+
+        
+
+</head>
+
+
+<body>
+
+<div class="scroll" style="display: none;">scroll</div>
+
+
+<div id="wrap">
+
+
+        <header class="header">
+            <a href="" class="logo">
+                
+                <p>KARMA</p>
+                <span>Korea Animal Rescue & Management</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Our Mission</a></li>
+                    <li><a href="">Abandoned Animals</a></li>
+                    <li><a href="">Wildlife Rescue</a></li>
+                    <li><a href="">Pet Diaries</a></li>
+                    <li><a href="">Support Us</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+
+
+        <section class="slider_main"> 
+
+            <div class="imgBox1"> 
+                <img src="img/board001_004.png" alt="" width="1915px" height="841px">
+            </div>
+
+            
+
+            <div class="txtBox">
+
+
+                <div class="txt_upper">Today’s Pet Tip</div>
+                <div class="txt_main"> Your Pet’s Feelings Matter</div>
+                <div class="txt_sub">
+                    <p>Yes, Animals Feel Too</p>
+                    <p>Instead of yelling, <strong>try gentle & positive training</strong></p>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="reservation">
+
+                
+                    <form id="reservationForm">
+                        <div class="reservation-box">
+
+
+                        <div class="reser_box1">
+                            <label for="purpose">Please select the <strong>purpose of your visit</strong></label>
+                            <div class="selectBox">
+                                <i class="fa-solid fa-dog"></i>
+                                <select id="purposeSelect" name="purpose" required> 
+
+                                     <option value="" disabled selected>Select your purpose</option>
+                                     <option value="adoption">I want to adopt</option>
+                                     <option value="rescue">I want to request a rescue</option>
+                                    
+                                </select>
+                                
+                            </div>
+                        </div>
+
+                        <div class="reser_box2">
+                             <label for="date">Please select a <strong>date</strong></label>
+                            <div class="selectBox">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                        </div>
+            
+                        <div class="reser_box3">
+                            <button type="submit">Book Now</button>
+                        </div>
+                    </div>
+
+
+                    </form>
+
+
+            </div>
+
+            
+
+
+
+
+
+            <!-- 예약 폼 on넣어야할 자리###################################### -->
+<div class="reservation-form">
+
+<div class="">
+
+
+
+    <div class="reservationBox">
+        
+            <div class="selection">
+              <label for="purpose">Purpose</label>
+              <input type="text" id="purposeInput" value="Purpose selected" disabled /> <!-- 기본적으로 선택된 목적을 보여줍니다 -->
+              
+              <label for="date">Date</label>
+              <input type="text" id="dateInput" value="2025-04-22" disabled /> <!-- 기본적으로 선택된 날짜를 보여줍니다 -->
+            </div>
+          
+            <!-- 이메일과 요청사항 입력 부분 -->
+            <div class="additional-info">
+    
+                <div class="emailB">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Enter your email" />
+                </div>
+    
+                <div class="requeB">
+                    <label for="request">Additional Notes</label>
+                    <textarea id="request" placeholder="Write your request here "></textarea>
+                </div>
+    
+    
+          </div>
+          
+            <!-- 체크박스 부분 -->
+            <div class="checkboxes">
+             <div class="checkT"> <input type="checkbox" id="terms" /> <label for="terms">If you're adopting, please complete the pre-training before your visit.</label></div>
+             <div class="checkT"><input type="checkbox" id="agreement" /> <label for="agreement">Please note: the animal you meet may be different from the one you hoped to adopt.</label></div>
+            </div>
+
+
+        <div class="closeBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    
+
+
+        </div>   
+
+
+
+
+            <!-- 예약하기 버튼 -->
+           <div class="reserBox"> 
+            <button id="reserveButton">Book Now</button>
+            </div>
+
+
+
+</div>
+
+
+
+
+  </div>
+
+
+<!-- 예약 확인팝업 on넣어야할 자리###################################### -->
+
+  <div class="confirmR">
+
+
+    
+<div class="confirmBox">
+
+
+
+    <div class="confirmUpper">
+        
+            <div class="noticed">
+              <p>Your reservation is confirmed.</p>
+              <p>Please check your email for the details.</p>
+            </div>
+          
+   
+
+        <div class="closeBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    
+
+
+    </div>   
+
+
+
+
+            <!-- 예약하기 버튼 -->
+  <div class="confirmLower"> 
+       <button id="confirmButton">Got it</button>
+   </div>
+
+
+
+</div>
+
+
+  </div>
+
+
+
+
+
+        </section>
+
+
+
+
+
+        <!-- 2단######################################################################## -->
+        
+
+
+    <div class="notice_box">
+
+
+        <div class="subject_rightBox">
+            <div class="subject_right">
+                <div class="subject_txt">
+                    
+                    <h2>News & Updates</h2>
+                    <p>We’re sharing meaningful updates as we move forward together</p>
+    
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="contentsBox">
+
+                <section class="map"> 
+                     
+                        
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.57926049526!2d126.98076971243941!3d37.87013397184454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cc2c25a4bc281%3A0xf4c38b5c09abc4d7!2z7ZWc6rWt64-Z66y86rWs7KGw6rSA66as7ZiR7ZqM!5e0!3m2!1sko!2skr!4v1738731945658!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    
+                    
+                    
+                    <div class="map_forposition">
+                        <div class="info-box">
+                                <div class="map_textBox">
+                                <h3>Korea Animal Rescue & Management Association</h3>
+      <p>63-37, Gamaksan-ro, Nam-myeon, Yangju-si, Gyeonggi-do, Republic of Korea</p>
+      <p><i class="fa-solid fa-phone"></i> +82-31-867-9119</p>
+                                </div>
+                        </div>
+                    </div>
+                </section> 
+
+                <section class="notice">
+                    <!-- notice를 기준으로 more positon-->  
+                    <ul>
+                        
+                        <li>
+                            <a href="">haring precious updates from our journey
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p> During the first half of this year, KARMA rescued 152 animals —  
+    and 87 of them have already found new families.  
+    Every one of these steps was made possible thanks to your support and care.  
+    Let’s continue to keep our hearts open to the lives still waiting on the streets.</p>
+                        
+                        </li>
+                        
+                        <li>
+                            <a href="">Our animal friends at the centre are doing well!
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>The animals at our shelter are steadily recovering with warm care.  
+    From eagle owls to kestrels and swans, many are improving through expert treatment.  
+    Please continue to cheer them on until they’re ready to return to nature.</p>
+                        
+                        </li>
+
+
+
+                        <li>
+                            <a href="">Adoption Info Session at KARMA Shelter
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>Join us this Saturday, May 11, for an adoption info session at the KARMA shelter.  
+    You’ll have a chance to meet adoptable animals and ask any questions you have about adoption.  
+    No registration required — everyone is welcome!</p>
+                        
+                        </li>
+
+
+                        <li>
+                            <a href="">Spring Has Arrived at the Shelter
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>With the warm spring sunshine, our animals are enjoying more walks and bath time.  
+    Watching them stretch and play in the sun brings a peaceful rhythm to the shelter's day.</p>
+                        
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="">Help Us Give Wings Again
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>A rescued kestrel is now in stable recovery.  
+    After losing the ability to fly due to a wing injury,  
+    this brave bird is now practicing short flights again.  
+    Please cheer it on as it prepares to return to the wild.</p>
+                        
+                        </li>
+                        
+                        
+
+                        <li>
+                            <a href="">Year-End Giving with KARMA
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p>This winter, KARMA is hosting a "Share the Warmth" year-end donation event.  
+    All proceeds will go toward food, medical care, and winter supplies for shelter animals.  
+    Let’s close out the year by sharing warmth and kindness together.</p>
+                        
+                        </li>
+                        
+                        
+
+                        <li>
+                            <a href="">Winter Wildlife Campaign & Volunteer Drive
+                                <div class="noticeI">     
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </a>
+                            <p> Even in the cold season, wildlife in nature needs our care.  
+    Through the "Protect the Winter Forest" campaign,  
+    KARMA is looking for volunteers to help with feeding, fence checks, and other outdoor tasks until December.  
+    Join us in this small but meaningful act for nature.</p>
+                        
+                        </li>
+                        
+                        
+
+
+
+
+                        
+                    </ul>
+
+
+
+                    
+                    <p class="more"><a href="">More</a></p>
+                </section>
+
+
+            </div>
+    </div>
+
+
+
+        <section class="newmember">
+
+            <div class="subject_left">
+                <div class="subject_txt">
+                    <h2>Find a Forever Family</h2>
+                    <p>They’re hoping to meet someone just like you</p>
+
+
+                </div>
+                
+            </div>
+
+            
+            
+            <div class="iBtn">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-circle-chevron-left"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-circle-chevron-right"></i></a></li>
+                </ul>
+            </div>
+
+            
+            <div class="imgBox">
+                
+                <ul class="imgBox_con">
+                    
+                    <li class="card">
+                        <a href="">
+                            <div class="img_w_bg"><img src="img/newmemberImg_001.png" alt="삼순"></div>
+                            <div class="status">
+                                <div class="status_txt">In Care</div>
+                                <div class="status_txt">Medium</div>
+                            </div>
+                            <div class="name">Milo</div>
+                            <div class="location">Pocheon, Gyeonggi-do</div>
+                        </a>
+                    </li>
+
+                    <li class="card">
+                        <a href="">
+                            <div class="img_w_bg"><img src="img/newmemberImg_003.png" alt="쫑이"></div>
+                            <div class="status">
+                                <div class="status_txt">In Care</div>
+                                <div class="status_txt">Large</div>
+                            </div>
+                            <div class="name">Teddy</div>
+                            <div class="location">Uijeongbu, Gyeonggi-do</div>
+                        </a>
+                    </li>
+
+                    <li class="card">
+                        <a href="">
+                            <div class="img_w_bg"><img src="img/newmemberImg_002.png" alt="뿌뿌"></div>
+                            <div class="status">
+                                <div class="status_txt">Available</div>
+                                <div class="status_txt">Small</div>
+                            </div>
+                            <div class="name">Pudding</div>
+                            <div class="location">Uijeongbu, Gyeonggi-do</div>
+                        </a>
+                    </li>
+
+                    <li class="card">
+                        <a href="">
+                            <div class="img_w_bg"><img src="img/newmemberImg_004.png" alt="라라"></div>
+                            <div class="status">
+                                <div class="status_txt">Available</div>
+                                <div class="status_txt">Medium</div>
+                            </div>
+                            <div class="name">Luna</div>
+                            <div class="location">Pocheon, Gyeonggi-do</div>
+                        </a>
+                    </li>
+
+                    <li class="card">
+                        <a href="">
+                            <div class="img_w_bg"><img src="img/newmemberImg_005.png" alt="뭉치"></div>
+                            <div class="status">
+                                <div class="status_txt">Available</div>
+                                <div class="status_txt">Small</div>
+                            </div>
+                            <div class="name">Beans</div>
+                            <div class="location">Uijeongbu, Gyeonggi-do</div>
+                        </a>
+                    </li>
+
+                    <li class="card">
+                        <a href="">
+                            <div class="img_w_bg"><img src="img/newmemberImg_006.png" alt="코코"></div>
+                            <div class="status">
+                                <div class="status_txt">Available</div>
+                                <div class="status_txt">Medium</div>
+                            </div>
+                            <div class="name">Coco</div>
+                            <div class="location">Pocheon, Gyeonggi-do</div>
+                        </a>
+                    </li>
+
+                    <li class="card">
+                        <a href="">
+                            <div class="img_w_bg"><img src="img/newmemberImg_007.png" alt="삼순"></div>
+                            <div class="status">
+                                <div class="status_txt">Available</div>
+                                <div class="status_txt">Small</div>
+                            </div>
+                            <div class="name">Nala</div>
+                            <div class="location">Uijeongbu, Gyeonggi-do</div>
+                        </a>
+                    </li>
+
+                    <li class="card">
+                        <a href="">
+                            <div class="img_w_bg"><img src="img/newmemberImg_008.png" alt="삼순"></div>
+                            <div class="status">
+                                <div class="status_txt">Available</div>
+                                <div class="status_txt">Large</div>
+                            </div>
+                            <div class="name">Ruby</div>
+                            <div class="location">Uijeongbu, Gyeonggi-do</div>
+                        </a>
+                    </li>
+
+                    
+                    
+                </ul>
+            </div>
+
+            <p class="more"><a href="">More</a></p>
+        
+        
+       
+        </section>  
+
+
+
+        <section class="slider_second">
+            <!-- slider_second를 기준으로 btn positon  -->
+            <div class="con_box">
+    
+        <div class="con1Forscroll">
+        
+                  <div class="con1">
+                    <img src="img/board002_001.png" alt="background">
+                    <div class="txtBox_rescue">
+                        <div class="txt_main">
+                            Rescued and safe, <br>
+      now they’re learning to smile again
+                        </div>
+                       <div class="txt_sub">
+      Every small act brings <strong>big change</strong><br>
+      Be a part of it.
+    </div>
+                    </div>
+                    <div class="listBox">
+                        <ul>
+        
+                            <li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    KARMA rescued an injured bird.  
+    Now it's getting ready to fly again — thank you
+  </div>
+  <div class="text_info">
+    <div class="info_name">Kim ○○</div>
+    <div class="info_date">2024.12.28</div>
+  </div>
+</li>
+        
+        <li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    We found kittens shivering in the rain —  
+    now they’re safe and warm in foster care.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Chai ○○</div>
+    <div class="info_date">2024.12.30</div>
+  </div>
+</li>
+        
+        <li>
+  <div class="text_list">
+    Adoption
+  </div>
+  <div class="text_main">
+    Since adopting Moongchi, our home is full of smiles.  
+    Thank you for bringing this joy into our lives.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Lee ○○</div>
+    <div class="info_date">2025.01.30</div>
+  </div>
+</li>
+        
+                         <li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    Found kittens shivering in the rain.  
+    Now safe and warm in foster care.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Chae ○○</div>
+    <div class="info_date">2024.12.30</div>
+  </div>
+</li>
+
+
+<li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    A bird with an injured leg was rescued by KARMA.  
+    It’s now getting ready to soar again. Thank you.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Kim ○○</div>
+    <div class="info_date">2024.12.28</div>
+  </div>
+</li>
+        
+        <li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    Kittens trembling in the rain — now safe and resting.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Chae ○○</div>
+    <div class="info_date">2024.12.30</div>
+  </div>
+</li>
+                      <li>
+  <div class="text_list">
+    Adoption
+  </div>
+  <div class="text_main">
+    Since Moongchi joined our family, joy has filled our home.  
+    Thank you for this happiness.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Lee ○○</div>
+    <div class="info_date">2025.01.30</div>
+  </div>
+</li>
+        
+        
+                           <li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    We found kittens shivering in the rain —  
+    now they’re safe and healing.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Chae ○○</div>
+    <div class="info_date">2024.12.30</div>
+  </div>
+</li>
+
+<li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    An injured bird was rescued by KARMA —  
+    now it’s ready to fly again. Thank you.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Kim ○○</div>
+    <div class="info_date">2024.12.28</div>
+  </div>
+</li>
+        
+        
+                         <li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    We found tiny kittens trembling in the rain —  
+    now they’re safe and loved.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Chae ○○</div>
+    <div class="info_date">2024.12.30</div>
+  </div>
+</li>
+        
+        <li>
+  <div class="text_list">
+    Adoption
+  </div>
+  <div class="text_main">
+    Since adopting Moongchi, our family laughs a little more every day.  
+    We’re so grateful for the joy he brings.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Lee ○○</div>
+    <div class="info_date">2025.01.30</div>
+  </div>
+</li>
+        
+                   <li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    Rain-soaked and trembling — now safe in gentle care.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Chae ○○</div>
+    <div class="info_date">2024.12.30</div>
+  </div>
+</li>
+
+
+<li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    A bird once grounded by injury is ready to fly again —  
+    thanks to KARMA’s care.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Kim ○○</div>
+    <div class="info_date">2024.12.28</div>
+  </div>
+</li>
+        
+        
+                            <li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    Tiny kittens were trembling in the rain —  
+    now they’re safe in warm hands.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Chae ○○</div>
+    <div class="info_date">2024.12.30</div>
+  </div>
+</li>
+        
+        
+                           <li>
+  <div class="text_list">
+    Adoption
+  </div>
+  <div class="text_main">
+    Moongchi brought joy to our days.  
+    We’re thankful for this little happiness.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Lee ○○</div>
+    <div class="info_date">2025.01.30</div>
+  </div>
+</li>
+        
+        
+                            <li>
+  <div class="text_list">
+    Rescue
+  </div>
+  <div class="text_main">
+    Cold and shaking in the rain —  
+    now safe, warm, and at peace.
+  </div>
+  <div class="text_info">
+    <div class="info_name">Chae ○○</div>
+    <div class="info_date">2024.12.30</div>
+  </div>
+</li>
+        
+        
+                        </ul>
+                    </div> 
+        
+        
+                
+        
+        
+        
+                  </div>
+    </div>
+    
+    
+    <div class="con2Forscroll">
+        
+                  <div class="con2">
+        
+                    <div class="howtoRescue">
+        
+                    <h1>What to Know When Rescuing</h1>
+                    
+                  <div class="howtoRescue_txt">
+                      
+                    <span>Always prioritise <strong>safety</strong> — protect both yourself and the animal.</span>
+
+    <span>If you find a stray or wild animal, <strong>contact a local rescue centre</strong> or expert right away.</span>
+
+    <span>Use <strong>protective tools</strong> like gloves, blankets, or a carrier to handle the animal gently.</span>
+
+    <span>Check the animal’s <strong>injury or condition</strong> quickly and document if needed.</span>
+
+    <span>Move the animal to a <strong>safe and secure location</strong> to prevent injury or escape.</span>
+
+    <span>Before giving food or water, <strong>assess the animal’s condition</strong> and proceed with care.</span>
+
+  </div>
+                  
+                   </div>
+        
+                   <div class="howtoRescue_bg ">
+                    <img src="img/board003_001.png" alt="">
+                   </div>
+        
+                </div>
+    </div>
+    
+    
+    
+    
+             <div class="con3Forscroll">
+                  <div class="con3">
+        
+                   <div class="section rescue-request">
+                    <h1>Wildlife Rescue Request</h1>
+      <p>Have you found a wild animal that’s injured or in danger?</p>
+      <p>Tap the <strong>Rescue Request button</strong> to help save a life.</p>
+      <p>Every wild life in crisis needs your help.</p>
+        
+                   </div>
+        
+                <div class="simple-steps">
+        
+                    <h2>How to Request</h2>
+      <ul>
+        <li>Check location & condition of the animal</li>
+        <li><i class="fa-solid fa-down-long"></i></li>
+        <li>Click <a href="">Request Rescue</a></li>
+        <li><i class="fa-solid fa-down-long"></i></li>
+        <li>Rescue team dispatched</li>
+      </ul>
+        
+                </div>
+        
+                <div class="rescue-request_bg ">
+                    <img src="img/board004_001.png" alt="">
+                   </div>
+        
+                
+             
+            
+                  </div>
+        
+             </div>
+
+
+
+
+
+
+      
+
+
+    
+    
+            </div>
+    
+            <div class="btn">
+                   
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+
+             
+
+
+
+            
+        </section>
+
+        
+
+
+        <section class="find">
+
+
+          <div class="find_leftside">
+              
+                <div class="subject_left">
+                    <div class="subject_txt">
+                        
+                       <h2>Find a Lost Pet</h2>
+  <p>The ones you loved are still waiting for you</p>
+    
+                    </div>
+                </div>
+    
+                
+                <div class="search">
+                    <form class="search-form">
+                        <input type="text" placeholder="Type or gender" class="search-input">
+                        <button type="submit" class="search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+
+    
+                <div class="btnForposition">
+                    <div class="iBtn">
+                        <ul>
+                            <li><a href=""><i class="fa-solid fa-circle-chevron-left"></i></a></li>
+                            <li><a href=""><i class="fa-solid fa-circle-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+               <div class="imgForpositionCD">
+                    <div class="img">
+                        <img src="img/find_001.png" alt="cat" class="cat">
+                        <img src="img/find_002.png" alt="dog" class="dog">
+                    </div>
+               </div>
+
+          </div>
+
+         <div class="find_rightside">
+
+                <div class="findBox">
+                    <ul>
+                        <li>
+
+  <a href="" class="findText">
+
+    <div class="imgforPosition">
+      <div class="imgBox">
+        <img src="img/findImg_001.jpg" alt="British Shorthair">
+      </div>
+    </div>
+
+    <div class="findTextbox_bg">
+      <div class="findTextbox">
+
+        <div class="findUpper">
+          <h3>British Shorthair</h3>
+
+          <div class="findList_txt">
+            <strong>Species</strong> 
+            <p>Cat</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Sex</strong> 
+            <p>Female</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Note</strong> 
+            <p>Very cautious</p>
+          </div>
+        </div>
+
+        <div class="findLower">
+          <p>Rescued on 2024.12.01</p>
+          <p><i class="fa-solid fa-location-dot"></i> Uijeongbu 3-dong, Uijeongbu-si, Gyeonggi</p>
+        </div>
+
+        <div class="findLower_tap">
+          <a href="" class="contact-button">
+            Contact Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </a>
+
+</li>
+
+
+<li>
+
+  <a href="" class="findText">
+
+    <div class="imgforPosition">
+      <div class="imgBox">
+        <img src="img/findImg_003.jpg" alt="Dachshund">
+      </div>
+    </div>
+
+    <div class="findTextbox_bg">
+      
+      <div class="findTextbox">
+        <div class="findUpper">
+          <h3>Dachshund</h3>
+
+          <div class="findList_txt">
+            <strong>Species</strong> 
+            <p>Dog</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Sex</strong> 
+            <p>Male</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Note</strong> 
+            <p>Very playful and energetic</p>
+          </div>
+        </div>
+
+        <div class="findLower">
+          <p>Rescued on 2024.12.19</p>
+          <p><i class="fa-solid fa-location-dot"></i> 2094 Samyuksa-ro, Pocheon-si, Gyeonggi</p>
+        </div>
+
+        <div class="findLower_tap">
+          <a href="" class="contact-button">
+          Contact Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </a>
+  
+</li>
+
+
+<li>
+
+  <a href="" class="findText">
+
+    <div class="imgforPosition">
+      <div class="imgBox">
+        <img src="img/findImg_002.jpg" alt="Shih Tzu">
+      </div>
+    </div>
+
+    <div class="findTextbox_bg">
+      
+      <div class="findTextbox">
+        <div class="findUpper">
+          <h3>Shih Tzu</h3>
+
+          <div class="findList_txt">
+            <strong>Species</strong> 
+            <p>Dog</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Sex</strong> 
+            <p>Female</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Note</strong> 
+            <p>Very curious and alert</p>
+          </div>
+        </div>
+
+        <div class="findLower">
+          <p>Rescued on 2024.12.22</p>
+          <p><i class="fa-solid fa-location-dot"></i> 715-2, Sangok-dong, Uijeongbu-si, Gyeonggi</p>
+        </div>
+
+        <div class="findLower_tap">
+          <a href="" class="contact-button">
+          Contact Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </a>
+  
+</li>
+
+<li>
+
+  <a href="" class="findText">
+
+    <div class="imgforPosition">
+      <div class="imgBox">
+        <img src="img/findImg_004.jpg" alt="Scottish Fold">
+      </div>
+    </div>
+
+    <div class="findTextbox_bg">
+      
+      <div class="findTextbox">
+        <div class="findUpper">
+          <h3>Scottish Fold</h3>
+
+          <div class="findList_txt">
+            <strong>Species</strong> 
+            <p>Cat</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Sex</strong> 
+            <p>Male</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Note</strong> 
+            <p>Very friendly and sociable</p>
+          </div>
+        </div>
+
+        <div class="findLower">
+          <p>Rescued on 2024.12.01</p>
+          <p><i class="fa-solid fa-location-dot"></i> Uijeongbu 3-dong, Uijeongbu-si, Gyeonggi</p>
+        </div>
+
+        <div class="findLower_tap">
+          <a href="" class="contact-button">
+          Contact Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </a>
+  
+</li>
+<li>
+
+  <a href="" class="findText">
+
+    <div class="imgforPosition">
+      <div class="imgBox">
+        <img src="img/findImg_005.jpg" alt="Mix">
+      </div>
+    </div>
+
+    <div class="findTextbox_bg">
+      
+      <div class="findTextbox">
+        <div class="findUpper">
+          <h3>Mix</h3>
+
+          <div class="findList_txt">
+            <strong>Species</strong> 
+            <p>Cat</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Sex</strong> 
+            <p>Female</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Note</strong> 
+            <p>Very attached to her space</p>
+          </div>
+        </div>
+
+        <div class="findLower">
+          <p>Rescued on 2024.12.01</p>
+          <p><i class="fa-solid fa-location-dot"></i> Uijeongbu 3-dong, Uijeongbu-si, Gyeonggi</p>
+        </div>
+
+        <div class="findLower_tap">
+          <a href="" class="contact-button">
+          Contact Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </a>
+  
+</li>
+
+<li>
+
+  <a href="" class="findText">
+
+    <div class="imgforPosition">
+      <div class="imgBox">
+        <img src="img/findImg_006.jpg" alt="Korean Shorthair">
+      </div>
+    </div>
+
+    <div class="findTextbox_bg">
+      
+      <div class="findTextbox">
+        <div class="findUpper">
+          <h3>Korean Shorthair</h3>
+
+          <div class="findList_txt">
+            <strong>Species</strong> 
+            <p>Dog</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Sex</strong> 
+            <p>Male</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Note</strong> 
+            <p>Very active and full of energy</p>
+          </div>
+        </div>
+
+        <div class="findLower">
+          <p>Rescued on 2024.12.19</p>
+          <p><i class="fa-solid fa-location-dot"></i> 2094 Samyuksa-ro, Pocheon-si, Gyeonggi</p>
+        </div>
+
+        <div class="findLower_tap">
+          <a href="" class="contact-button">
+          Contact Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </a>
+  
+</li>
+<li>
+
+  <a href="" class="findText">
+
+    <div class="imgforPosition">
+      <div class="imgBox">
+        <img src="img/findImg_007.jpg" alt="Exotic Shorthair">
+      </div>
+    </div>
+
+    <div class="findTextbox_bg">
+      
+      <div class="findTextbox">
+        <div class="findUpper">
+          <h3>Exotic Shorthair</h3>
+
+          <div class="findList_txt">
+            <strong>Species</strong> 
+            <p>Cat</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Sex</strong> 
+            <p>Female</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Note</strong> 
+            <p>Gentle and laid-back</p>
+          </div>
+        </div>
+
+        <div class="findLower">
+          <p>Rescued on 2024.12.22</p>
+          <p><i class="fa-solid fa-location-dot"></i> 715-2, Sangok-dong, Uijeongbu-si, Gyeonggi</p>
+        </div>
+
+        <div class="findLower_tap">
+          <a href="" class="contact-button">
+          Contact Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </a>
+  
+</li>
+
+
+<li>
+
+  <a href="" class="findText">
+
+    <div class="imgforPosition">
+      <div class="imgBox">
+        <img src="img/findImg_008.jpg" alt="Tuxedo Cat">
+      </div>
+    </div>
+
+    <div class="findTextbox_bg">
+      
+      <div class="findTextbox">
+        <div class="findUpper">
+          <h3>Tuxedo Cat</h3>
+
+          <div class="findList_txt">
+            <strong>Species</strong> 
+            <p>Cat</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Sex</strong> 
+            <p>Female</p>
+          </div>
+
+          <div class="findList_txt">
+            <strong>Note</strong> 
+            <p>Makes eye contact easily</p>
+          </div>
+        </div>
+
+        <div class="findLower">
+          <p>Rescued on 2024.12.01</p>
+          <p><i class="fa-solid fa-location-dot"></i> Uijeongbu 3-dong, Uijeongbu-si, Gyeonggi</p>
+        </div>
+
+        <div class="findLower_tap">
+          <a href="" class="contact-button">
+          Contact Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </a>
+  
+</li>
+                        
+                    </ul>
+                 </div> 
+                 
+                 
+                 <p class="more">
+                    <a href="">
+                        More
+                    </a>
+                </p>
+                
+    
+         </div>
+
+         <div class="findPopupR">
+
+
+    
+            <div class="findPopupBox">
+            
+            
+            
+                <div class="findPopupUpper">
+                    
+                        <div class="findPopupNoticed">
+                          <p>Please call</p>
+    <p>000-000-0000 right away</p>
+                        </div>
+                      
+               
+            
+                    <div class="closeBtn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                
+            
+            
+                </div>   
+            
+            
+            
+            
+                        <!-- 예약하기 버튼 -->
+              <div class="findPopupLower"> 
+                   <button id="findPopupButton">Got it</button>
+               </div>
+            
+            
+            
+            </div>
+            
+            
+              </div>
+            
+   
+
+         
+
+        </section>
+
+        <div class="videoBox">
+
+            <div class="subject_left">
+                <div class="subject_txt">
+                    
+                     <h2>Moments That Matter</h2>
+    <p>Sharing meaningful moments, dreaming of a better tomorrow</p>
+
+                </div>
+                
+            </div>
+
+
+
+            <section class="video">
+                <div class="titleBox">
+                    <a href="">
+                        <img src="img/videoImg_002.png" alt="">
+                        <h2>Dogs Sacrificed by Human Greed</h2>
+                        <p>2024.12.24</p>
+                    </a>
+                    
+                </div>
+    
+                <div class="titleBox">
+                    <a href="">
+                        <img src="img/videoImg_001.png" alt="">
+                        <h2>You Can’t Just Walk Away From Me</h2>
+                        <p>2024.12.24</p>
+                    </a>
+                    
+                </div>
+
+                <div class="more">
+                    <a href="">More</a>
+                </div>
+    
+    
+            </section>
+
+
+          
+        </div>
+
+        
+        <section class="info">
+            <div class="info_001">
+                <div class="txt">
+                    <p>Together, we dream of a better world</p>
+      <h2>Korea Animal Rescue & Management Association</h2>
+                </div>
+            
+                    <div class="img_info">
+                        <img src="img/introImgDeco.png" alt="사진프레임" class="img_info_frame">
+                        <img src="img/introImgDeco.png" alt="사진프레임" class="img_info_frame">
+                        <div class="img_info_f">
+                            <div class="imgBox">
+                                <img src="img/introImg_005.jpeg" alt="동물을 돌보는 손" class="introImg">
+                            </div>
+                        </div>
+                    </div>
+            
+            </div>
+            <div class="info_002">
+                
+ <p>
+KARMA is a non-profit organisation officially approved by the Ministry of Environment.<br>
+Located in Yangju, Gyeonggi-do, we operate a <strong>3,000-pyeong animal protection centre and headquarters</strong>  
+dedicated to the preservation of life and nature.<br><br>
+
+Founded in 1998 with support from the Korea Forest Service and Korea Tobacco & Ginseng Corporation,<br>
+KARMA now provides <strong>comprehensive rescue, treatment, protection, and adoption services</strong>  
+for abandoned animals.<br><br>
+
+We care for around 10,000 animals each year.<br>
+<strong>Through medical treatment and safe shelter, rescued animals are given a second chance at life.</strong><br><br>
+
+With 8 rescue vehicles and more than 30 staff members,<br>
+we work to <strong>prevent poaching and animal abandonment</strong>, promote adoptions,  
+and raise awareness about <strong>coexistence between animals and humans</strong>.<br><br>
+
+We also support endangered species restoration efforts and collaborate with global animal welfare organisations<br>
+to help build a better world for all living beings.<br><br>
+
+<strong>KARMA exists to protect every life’s right to live in happiness.</strong>
+</p>
+
+            
+                    
+                <img src="img/introBg_010.png" alt=""> 
+                
+                
+            </div>
+
+
+            <div class="info_003">
+                <p>Help us create a better world — together</p>
+            </div>
+
+           
+            <img src="img/introBg_001.png" alt="" class="particle-img img1">
+            <img src="img/introBg_002.png" alt="" class="particle-img img2">
+            <img src="img/introBg_003.png" alt="" class="particle-img img3">
+            <img src="img/introBg_004.png" alt="" class="particle-img img4">
+            <img src="img/introBg_005.png" alt="" class="particle-img img5">
+            <img src="img/introBg_006.png" alt="" class="particle-img img6">
+            <img src="img/introBg_007.png" alt="" class="particle-img img7">
+            <img src="img/introBg_008.png" alt="" class="particle-img img8">
+            <img src="img/introBg_009.png" alt="" class="particle-img img9">
+
+        </section>
+
+
+
+        <footer class="footer">
+
+            <div class="footerBg"></div>
+
+
+             <div class="footerT">
+
+               <div class="footerB">
+                    <div>
+                        <h2>한국동물구조관리협회</h2>
+                        <p>Korea Animal Rescue & Management Association</p>
+                        <p>63-37 Gamaksan-ro, Nam-myeon, Yangju-si, Gyeonggi-do, South Korea</p>
+                        <p>0318679119</p>
+    
+                    </div>
+    
+    
+                    <div>
+                         <p>This site was created as a portfolio project. All videos and images are not for commercial use</p>
+                        <p>Copyright @ RachelChai. 2025. ALL Rights Reserved</p>
+                    </div>
+                    
+        
+               </div>
+
+               <div class="topB">
+                <span>TOP</span>
+                <i class="fa-solid fa-chevron-up"></i>
+               </div>
+
+           </div>
+
+        </footer>
+    
+</div>
+    
+</body>
+</html>

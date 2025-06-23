@@ -1,0 +1,1138 @@
+/* set to language */
+
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+ }
+
+/* @font-face {
+
+ font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+  <weight>: Use a value from 100 to 900
+<uniquifier>: Use a unique and descriptive class name
+
+
+} */
+
+
+
+ @font-face {
+    font-family: 'Silver Garden Bold';
+    src: url('font/Silver_Garden/Silver Garden Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Silver Garden Italic';
+    src: url('font/Silver_Garden/Silver Garden Italic.otf') format('opentype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Silver Garden';
+    src: url('font/Silver_Garden/Silver Garden.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Silver Garden Bold Italic';
+    src: url('font/Silver_Garden/Silver Garden Bold Italic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@100&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+
+ /* reset css */
+ * {margin: 0;
+    padding: 0;
+}
+
+ul, ol {list-style: none;
+        
+}
+
+img {vertical-align: bottom;
+     border: none;   
+}
+
+body {background-color: #e6e6e6;
+    font-family: 'Pretendard', sans-serif;
+    width: 100vw;
+    height: auto;   /* 페이지가 100% 높이를 가지도록 설정 */
+   
+    color: #3C3C3C;  
+    
+}
+
+
+
+#wrap {position: relative;}
+
+
+
+
+/* lnb 설정####################################### */
+
+
+  
+  .lnbButton {
+    width: 2.63vw;
+    height: 2.63vh;
+    font-size: 3.68vw;
+    position: fixed;
+    top: 50vh;
+    left: 0;
+    transform: translate(2vw, -7vh);
+    color: #464646;
+    opacity: 0.3;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.8s;
+    
+    
+  }
+  
+  
+.lnb {
+    position: fixed;
+    top: 0;
+    left: -32vw;
+    transform: translateX(-20vw);
+    opacity: 0;
+    z-index: 555;
+    width: 30vw;
+    height: 100vh;
+    transition: all 0.8s;
+    
+
+  }
+
+  .lnbContent {
+    position: absolute;
+    top: 0;
+    left: 18vw; /* 기본적으로 숨김 */
+    width: 30vw;
+    height: 100vh;
+    transition: all 0.8s;
+  }
+
+  
+  .lnbBg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(img/gnb_back_001.png);
+    background-size: cover;
+    pointer-events: none;
+    opacity: 1;
+    transition: all 0.8s;
+  }
+  
+  .lnbList {
+    font-family: "Inter", sans-serif;
+    font-size: 1.89vw;
+    font-weight: 600;
+    font-style: italic;
+    position: absolute;
+    top: 20vh;
+    left: 18vw; /* 기본적으로 화면 밖으로 숨김 */
+    opacity: 1;
+    z-index: 5;
+    transition: all 0.8s;
+    
+  }
+  
+  .lnb li {
+    margin: 7vh 0;
+  }
+  
+  .lnb li a {
+    text-decoration: none;
+    color: #ADADAD;
+    transition: all 0.8s;
+  }
+  
+  .lnb li:hover a {
+    color: #555555;
+  }
+
+
+  
+ 
+
+/* 상단주석(?) 설정####################################### */
+
+.upperText {position: absolute;
+    top: 3vh;
+    left: 0;
+    display: flex;
+    width: 92.5vw;
+    height: auto;  /* 세로 높이는 텍스트 크기에 맞게 조정 */
+    z-index: 5;
+    justify-content: space-between; /* 양 옆 끝으로 요소 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    
+
+}
+
+.upperText p {margin: 0 5vw; /* 기본 여백 제거 */
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375vw; /* 원하는 글씨 크기로 설정 */
+    font-weight: 200; 
+    color: #616161;
+    display: flex;
+      
+}
+
+.upperText p:nth-child(2) {font-size: 1.09375vw;
+                           margin: 0;
+                           position: relative;
+
+}
+.upperText a {
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: #888888; /* 아이콘 색상 */
+}
+.upperText a:nth-child(3) i {font-size: 1.458vw;} 
+.upperText i {
+  margin-right: 0.78125vw; /* 아이콘과 텍스트 간 간격 */
+}
+
+.upperText a:hover {
+  color: #000000; /* 호버 시 색상 변경 */
+}
+
+
+.upperText i:hover::after {
+  content: attr(title); /* 툴팁 텍스트 */
+  position: absolute;
+  bottom: 1.302vw;
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  padding: 0.26vw;
+  font-size: 0.625vw;
+  border-radius: 0.26vw;
+}
+
+/* page onoff################################################################### */
+.index {position: relative;
+        z-index: 0;
+}
+.index>div {display: none;}
+.index>div.on {display: block;}
+
+
+
+/* hero-section 설정####################################### */
+
+.mainPage {position: relative;
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;    
+
+}
+
+.hero-section {position: absolute; 
+               top: 0;
+               left: 0;
+               width: 100vw;
+               height: 100vh;  
+               
+            }
+.heroBg { width: 100vw;
+          height: 100vh; 
+          background-image: url(img/mainPage_001.png);
+          background-size: cover; /* 배경 이미지가 영역에 맞게 크기 조정 */
+          background-position: center;
+          /* filter: opacity(0.5); */
+          overflow: hidden; /* 물결이 밖으로 넘지 않도록 설정 */
+          position: relative;
+        }
+
+.heroBg>img {width: 100vw;
+             height: 100vh;
+}        
+
+
+
+
+.heroBgVideo video {width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen; 
+    opacity: 1;
+}
+.heroBgVideo video source {}
+
+
+.heroText {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-55%, -60%); 
+  text-align: center; /* 텍스트 중앙 정렬 */
+  z-index: 2; /* heroBg보다 위로 올리기 위해 z-index 추가 */
+  
+}
+
+
+.heroText .nameReveal {
+                       
+
+}
+.heroText .nameReveal>img {transform: scale(1);}
+/* 
+.heroText .nameReveal p {font-style: italic;
+                         font-size: 7.292vw;;
+                         display: inline-block; 
+                         margin: 0; 
+                         line-height: 1;
+                         transform: translate(0.2vw, -3vh); 
+                            
+}  */
+
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: url(#ink-wobble) blur(50vw) contrast(60%);
+  }
+  50% {
+    opacity: 0.4;
+    filter: url(#ink-wobble) blur(40vw) contrast(90%);
+  }
+  100% {
+    opacity: 1;
+    filter: url(#ink-wobble) blur(0vw) contrast(100%);
+  }
+}
+
+
+.tagline {position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-42vw, 30vh); 
+          text-align: left;  
+
+}
+.tagline p {font-family: "Inter", sans-serif;
+            font-weight: 200;
+            font-size: 1.354vw;
+            transform: translate(0,-3vh);
+
+}
+.tagline em {display: flex;
+    font-family: 'Silver Garden'; 
+    font-size: 2.604vw;
+    margin-top: -2.8vh;
+    margin-left: -0.5vw; 
+
+
+
+}
+.tagline em>p {font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 1.354vw;
+    display: inline-block; /* 인라인 블록으로 설정 */
+    margin: 0; /* 기본 여백 제거 */
+    line-height: 1; /* 줄 간격 설정 */
+    transform: translateY(1.9vh); 
+}
+
+
+
+.heroText span:nth-of-type(1) {position: absolute;
+                               top: 0;
+                               left: 0;
+                               transform: translate(-22vw, 10vh);
+                               font-size: 1.093vw;
+                               font-weight: 200; 
+                               font-family: "Inter", sans-serif;
+                               color: #616161;
+                               opacity: 0.4;
+}
+.heroText span:nth-of-type(2) {position: absolute;
+                               top: 0;
+                               right: 0;
+                               transform: translate(22vw, 48vh);
+                               font-size: 1.093vw;
+                               font-weight: 200; 
+                               font-family: "Inter", sans-serif;
+                               color: #616161;
+                               opacity: 0.4;
+}
+
+
+
+
+
+/* bottom-nav 설정####################################### */
+
+
+.bottom-nav {  position: absolute;
+    width: 100vw;
+    height: 10vh; /* 적당한 높이 설정 */
+    top: 88vh; /* 하단에 위치 */
+    left: 50%;
+    transform: translateX(-50%); /* 가로 중앙 정렬 */
+    display: flex;
+    justify-content: space-evenly; /* 요소들 간의 간격을 균등하게 분배 */
+    align-items: center; /* 세로 중앙 정렬 */
+            }
+.bottom-nav>div { 
+    text-align: center;
+    margin: 0 10.417vw;  
+    border: 0.052vw solid #3f3f3f;
+    border-radius: 2.604vw;
+    width: 11.458vw;
+    height: 4.63vh;
+    display: flex;
+  justify-content: center; /* 텍스트를 가로로 중앙 정렬 */
+  align-items: center; /* 텍스트를 세로로 중앙 정렬 */
+  box-sizing: border-box; /* 패딩과 테두리를 포함한 크기 계산 */
+  background-color: transparent; /* 투명 배경 */
+  cursor: pointer;
+  overflow: hidden; /* 텍스트가 넘칠 경우 숨김 처리 */
+  color: #3f3f3f;
+  cursor: pointer;
+
+}
+.bottom-nav>div h2 { 
+    font-family: "Inter", sans-serif;
+    font-size: 1.093vw;
+    font-weight: 400;
+    margin: 0; /* h2의 기본 여백 제거 */
+   
+    
+
+}
+
+.bottom-nav>div:hover {
+    color: #fff;
+    background-color: #151515;
+
+
+
+}
+
+
+
+
+/* uxuiPage########################################## */
+
+
+
+
+.uxuiPage {width: 100vw;
+           height: 100vh; 
+           position: relative;
+           overflow: hidden;
+            position: fixed;
+   
+        }
+.uxuiPageBg {width: 100vw;
+             height: 100vh; 
+             position: absolute;
+             background-image: url(img/uxuiPage_001.png);
+             background-size: cover; /* 배경 이미지가 영역에 맞게 크기 조정 */
+             background-position: center;
+             z-index: -1;
+            }
+
+
+.subjectT {display: flex;
+           position: relative;
+           top: 8vh;
+           left: 50%;
+           transform: translateX(-50%);
+
+           width: 88vw;
+           border-bottom: 0.7px solid #3C3C3C; 
+            
+}            
+.subjectT h2 {font-size: 40px;
+              font-family: 'Silver Garden'; 
+              display: inline-block;
+              position: relative;
+              left: 2vw;
+              margin-bottom: -1vh;
+
+
+}            
+.subjectT p {font-size: 20px;
+             font-family: "Inter", sans-serif; 
+             display: inline-block;
+             font-weight: 200;
+}  
+
+
+
+.contentsArea {height: 90vh;
+               width: 100vw;
+               position: relative;
+               bottom: -10vh; 
+               display: flex;
+               justify-content: center;
+}
+.contentsArea .contentsBox {width: 533px;
+                            height: 580px;
+                            background-color: #fff;
+                            border: 0.5px solid #B9B9B9;
+                            border-radius: 20px;
+                            padding: 10px;
+                            box-sizing: border-box;
+                            margin: 50px 100px;
+
+
+                          
+                            
+}
+
+.contentsArea .contentsBox:hover {box-shadow: 3px 3px 15px #b8b8b8;
+                                  cursor: pointer;
+}
+
+.contentsBox .imgBox {width: 510px;
+                      height: 405px;
+                      background-color: #B9B9B9;
+                      border: 0.5px solid #B9B9B9;
+                      border-radius: 20px;
+                      box-sizing: border-box;
+                      overflow: hidden;
+                     }
+
+.contentsBox .imgBox img {width: 100%;
+                          height: auto;
+}
+
+.contentsBox .textBox {display: flex;
+                       padding: 15px 30px; 
+                       display: flex;
+                       justify-content: space-between; 
+                       align-items: center;
+                       
+}
+.contentsBox .leftside {color: #3C3C3C;
+                        display: flex;
+                        flex-direction: column;    
+                        margin-top: 25px;
+}
+.contentsBox .leftside em {font-family: 'Silver Garden';
+                           font-size: 48px;
+                           font-style: italic; 
+}
+.contentsBox .leftside span {font-family: "Inter", sans-serif; 
+                             font-size: 16px;
+                             font-weight: 300;
+                             margin-top: 0px;
+}
+.contentsBox .rightside {color: #3C3C3C;
+                         border: 3px solid #3C3C3C;
+                         border-radius: 50%;
+                         position: relative;
+                         top: 2vh;
+}
+.contentsBox .rightside i {font-size: 30px;
+                           padding: 5px 7px; 
+}
+
+
+
+
+
+
+/* uxuiSub1################################################# */
+
+.uxuiSub1 {width: 100vw;
+           height: auto;
+           overflow-x: hidden;
+           position: relative;
+           z-index: -1;
+
+}
+.uxuiSub1Bg {width: 100%;
+             height: auto;}
+.uxuiSub1Bg>img {width: 100%;
+  height: auto;}
+
+
+.closeB {position: fixed;
+          z-index: 50;
+          top: 2vh;
+          right: 3vw;
+          opacity: 0.5;
+          width: 2vw;
+          height: 4vh;
+          
+          text-align: center;
+        }
+.closeB i {font-size: 40px;}
+
+
+.closeB:hover {opacity: 1;}
+
+
+.footerC { position: absolute;
+  z-index: 5;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between; /* 양끝으로 배치 */
+  width: 97vw; 
+  opacity: 0.8;
+  pointer-events: none;
+  
+ 
+         
+          
+}
+.footerC>p {margin: 0; /* 기본 margin을 없애고 */
+  font-size: 14px; /* 글자 크기 설정 (선택적) */}
+
+
+ 
+/* uxuiSub2################################################# */
+
+.uxuiSub2 {width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+  z-index: -1;
+
+}
+.uxuiSub2Bg {width: 100%;
+    height: auto;}
+.uxuiSub2Bg>img {width: 100%;
+height: auto;
+opacity: 0.2;
+}
+
+
+
+
+
+
+
+/* publishingPage########################################## */
+
+
+
+
+.publishingPage {width: 100vw;
+           height: 100vh; 
+           position: relative;
+           overflow: hidden;
+            position: fixed;
+   
+        }
+.publishingPageBg {width: 100vw;
+             height: 100vh; 
+             position: absolute;
+             background-image: url(img/publisherPage_001.png);
+             background-size: cover; /* 배경 이미지가 영역에 맞게 크기 조정 */
+             background-position: center;
+             z-index: -1;
+            }
+
+
+.subjectT {display: flex;
+           position: relative;
+           top: 8vh;
+           left: 50%;
+           transform: translateX(-50%);
+
+           width: 88vw;
+           border-bottom: 0.7px solid #3C3C3C; 
+            
+}            
+.subjectT h2 {font-size: 40px;
+              font-family: 'Silver Garden'; 
+              display: inline-block;
+              position: relative;
+              left: 2vw;
+              margin-bottom: -1vh;
+
+
+}            
+.subjectT p {font-size: 20px;
+             font-family: "Inter", sans-serif; 
+             display: inline-block;
+             font-weight: 200;
+}  
+
+
+
+.publishingPage .contentsArea {height: 90vh;
+               width: 100vw;
+               position: relative;
+               bottom: -10vh; 
+               display: flex;
+               justify-content: center;
+}
+.publishingPage .contentsArea .contentsBox {width: 533px;
+                            height: 580px;
+                            background-color: #fff;
+                            border: 0.5px solid #B9B9B9;
+                            border-radius: 20px;
+                            padding: 10px;
+                            box-sizing: border-box;
+                            margin: 50px 10px;
+
+
+                          
+                            
+}
+
+.contentsArea .contentsBox:hover {box-shadow: 3px 3px 15px #b8b8b8;
+                                  cursor: pointer;
+}
+
+.contentsBox .imgBox {width: 510px;
+                      height: 405px;
+                      background-color: #B9B9B9;
+                      border: 0.5px solid #B9B9B9;
+                      border-radius: 20px;
+                      box-sizing: border-box;
+                      overflow: hidden;
+                     }
+
+.contentsBox .imgBox img {}
+
+.contentsBox .textBox {display: flex;
+                       padding: 15px 30px; 
+                       display: flex;
+                       justify-content: space-between; 
+                       align-items: center;
+                       
+}
+.contentsBox .leftside {color: #3C3C3C;
+                        display: flex;
+                        flex-direction: column;  
+                         margin-top: 25px; 
+}
+.contentsBox .leftside em {font-family: 'Silver Garden';
+                           font-size: 48px;
+                           font-style: italic; 
+}
+.contentsBox .leftside span {font-family: "Inter", sans-serif; 
+                             font-size: 16px;
+                             font-weight: 300;
+                             margin-top: 0px;
+}
+.contentsBox .rightside {color: #3C3C3C;
+                         border: 3px solid #3C3C3C;
+                         border-radius: 50%;
+                         position: relative;
+                         top: 2vh;
+}
+.contentsBox .rightside i {font-size: 30px;
+                           padding: 5px 7px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+/* publishingSub1################################################# */
+
+.publishingSub1 {width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+  z-index: -1;
+
+}
+.publishingSub1Bg {width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
+.publishingSub1Bg>img {width: 100%;
+height: auto;}
+
+
+
+.publishingSub1 .linkB {position: absolute;
+  top: 86vh;
+  right: 7.9vw;
+  z-index: 5;
+  display: flex;
+  border: 0.5px solid #555555;
+  border-radius: 50px;
+  padding: 3px 9px;
+  color: #8a8a8a;
+  background-color: transparent;
+  cursor: pointer;
+}
+.publishingSub1 .linkB>i {margin-right: 2px;
+    font-size: 13px;
+    transform: rotateZ(-15deg);
+    margin-top: 3px;
+    
+}
+.publishingSub1 .linkB>p {}
+
+
+.publishingSub1 .linkB:hover {color: #fff;
+  background-color: #555555;  
+}
+
+
+/* publishingSub2################################################# */
+
+.publishingSub2 {width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+  z-index: -1;
+
+}
+.publishingSub2Bg {width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
+.publishingSub2Bg>img {width: 100%;
+height: auto;}
+
+
+
+
+
+.publishingSub2 .linkB {position: absolute;
+  top: 91vh;
+  left: 8.5vw;
+  z-index: 5;
+  display: flex;
+  border: 0.5px solid #fff;
+  border-radius: 50px;
+  padding: 3px 9px;
+  color: #eca8a8;
+  cursor: pointer;
+}
+.publishingSub2 .linkB>i {margin-right: 2px;
+    font-size: 13px;
+    transform: rotateZ(-15deg);
+    margin-top: 3px;
+    
+}
+.publishingSub2 .linkB>p {}
+
+
+.publishingSub2 .linkB:hover {color: #fff;
+                              background-color: rgb(110, 0, 0);
+}
+
+
+.publishingSub2>.closeB {position: fixed;
+  z-index: 50;
+  top: 2vh;
+  right: 3vw;
+  opacity: 0.5;
+  width: 2vw;
+  height: 4vh;
+  color: #fff;
+  text-align: center;
+}
+.publishingSub2>.closeB i {font-size: 40px;}
+
+
+.publishingSub2>.closeB:hover {opacity: 1;}
+
+
+
+
+
+
+
+.publishingSub2>.footerC { position: absolute;
+  z-index: 5;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between; /* 양끝으로 배치 */
+  width: 97vw; 
+  opacity: 0.8;
+  pointer-events: none;
+  color: #fff;
+ 
+         
+          
+}
+.publishingSub2>.footerC>p {margin: 0; /* 기본 margin을 없애고 */
+  font-size: 14px; /* 글자 크기 설정 (선택적) */}
+
+
+
+
+
+
+/* publishingSub3################################################# */
+
+.publishingSub3 {width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+  z-index: -1;
+
+}
+.publishingSub3Bg {width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+   
+  }
+.publishingSub3Bg>img {width: 100%;
+height: auto;}
+
+
+.publishingSub3 .linkB {position: absolute;
+                        top: 83vh;
+                        right: 6.9vw;
+                        z-index: 5;
+                        display: flex;
+                        border: 0.5px solid #555555;
+                        border-radius: 50px;
+                        padding: 3px 9px;
+                        color: #8a8a8a;
+                        cursor: pointer;
+}
+.publishingSub3 .linkB>i {margin-right: 2px;
+                          font-size: 13px;
+                          transform: rotateZ(-15deg);
+                          margin-top: 3px;
+                          
+}
+.publishingSub3 .linkB>p {}
+
+
+.publishingSub3 .linkB:hover {color: #fff;
+                              background-color: #555555;
+}
+
+
+
+/* profilePage######################################## */
+
+.profilePage {width: 100vw;
+              height: 100vh;
+              position: fixed;
+              /* overflow: hidden; */
+              position: relative;
+}
+
+
+
+
+.profileBg {width: 100%;
+            height: 100%;
+            background-image: url(img/profile_txt_002.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: 0;
+}
+
+
+.proTextBox {position: absolute;
+             width: 92vw;
+             height: 68vh;
+             top: 53%;
+             left: 50%;
+             transform: translate(-50%,-38%);
+             /* background-color: red; */
+             z-index: 1;
+             display: flex;
+            
+}
+
+.proLeftside {width: 30%;
+              height: 100%;
+              position: relative;
+              top: 20vh;
+              left: 6vw;
+              
+              
+}
+
+.proLeftside p {font-size: 16px;
+                font-weight: 500;
+                font-family: "Inter", sans-serif;
+                color: #696969;
+                margin: 10px 0;
+             
+              }
+.proLeftside .proContactB {display: flex;}
+.proContactB .iconB {width: 22px;
+                     height: 22px;
+                     opacity: 0.5;
+                     margin-right: 0.4vw;
+                     cursor: pointer;
+                     transition: all 0.2s;
+}
+.proContactB .iconB img {width: 100%;
+                         height: 100%;
+}
+
+
+.proContactB .iconB:hover {opacity: 0.8;}
+
+
+
+
+
+
+.proRightside {width: 70%;
+                 height: 100%;
+                 overflow: hidden;
+
+               
+                 
+                 
+} 
+
+
+
+.proRightB {width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+           
+}
+
+.proRightB>p {text-align: right;
+              margin-right: 60px;
+              padding-bottom: 3px;
+              font-size: 21px;
+              font-family: "Inter", sans-serif;
+              opacity: 0;
+              font-weight: 200;
+              letter-spacing: -1px;
+
+}
+
+.proUpper {display: flex;
+  border-top: 1px solid #000;
+  margin: 0 50px 0 150px;
+  justify-content: space-between;
+  padding: 8px 30px;
+  align-items: center;
+
+}
+.proUpper h2 {font-family: "Inter", sans-serif;
+              font-size: 40px;
+              font-weight: 700;
+              color: #000;
+
+}
+
+
+
+
+
+.circleI {color: #000;
+  /* border: 3px solid #000; */
+  border-radius: 50%;
+  transition: transform 0.3s ease-in;
+  transform: rotateZ(0deg);
+
+ 
+}
+.circleI i {font-size: 30px;
+    padding: 5px 7px; 
+    
+}
+
+
+.circleI:hover {transform: rotateZ(90deg);}
+
+
+
+.proLower { margin: 0 50px 0 150px;
+            padding: 3px 30px;
+            height: 0px; /* 초기 높이 설정 (숨기기) */
+            overflow: hidden; /* 내용이 넘어가면 숨기기 */
+           
+            transition: all 0.3s ease-out;
+            display: block; /* 항상 표시되지만, visibility로 숨김 처리 */
+          }
+
+
+
+.proRightside .proRightB:nth-child(1) .proLower.on {height: 100px;}
+.proRightside .proRightB:nth-child(2) .proLower.on {height: 380px;
+                                                    transition: all 0.5s ease-out;
+}
+.proRightside .proRightB:nth-child(3) .proLower.on {height: 110px;}
+.proRightside .proRightB:nth-child(4) .proLower.on {height: 220px;}
+.proRightside .proRightB:nth-child(5) .proLower.on {height: 150px;}
+
+
+
+.proLower p {font-size: 19px;
+             color: #696969;
+             font-family: "Inter", sans-serif;
+             font-weight: 200; 
+             letter-spacing: -1px;
+
+
+}
+
+.proLower em {font-style: normal;
+              font-weight: 500;
+}
+
+.proLower span {opacity: 0.8;
+                font-size: 16px;
+}
+.proLower>div {margin-top: 3px;
+               margin-bottom: 20px;
+}
+
+.proLower.contact {
+}
+.proLower.contact>div {display: flex;
+                       flex-direction: column; 
+}
+
+.proLower.contact>div span {width: 80px;
+                            height: auto;
+                            display: inline-block;
+                           
+}
+
