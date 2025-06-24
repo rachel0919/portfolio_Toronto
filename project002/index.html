@@ -18,6 +18,21 @@
     <!-- naver login API -->
     <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
 
+
+
+   <!-- google login API -->
+    <script>
+  window.onload = function () {
+    google.accounts.id.initialize({
+      client_id: 'YOUR_GOOGLE_CLIENT_ID',
+      callback: handleCredentialResponse
+    });
+    google.accounts.id.prompt();
+  };
+</script>
+
+
+
     <!-- 제이쿼리 cdn   순서 꼭 이대로 해야함!!!!!!!! githurb에서는 http를 못읽음 그래서 하단에 있는 것을 씀-->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -371,8 +386,8 @@ and sustainable farming.
                                 <img src="img/Cage-Free Eggs_small.png" alt="Cage-Free Eggs">
                                 <span>Better eggs, happier hens</span>
                                <p>
-No cages, no cruelty — we use eggs<br>
-from hens raised in healthy, open spaces.<br>
+No cages, no cruelty —<br>we use eggs
+from hens raised <br>in healthy, open spaces.<br>
 It’s better for them,<br>
 and better for your ice cream.
 </p>
@@ -411,20 +426,19 @@ and better for your ice cream.
                                     <div class="storyText_001">
                                         <h3>A Scoop of Flavour, A Scoop of Purpose</h3>
     <span>
-      Ben & Jerry’s began in 1978 as a small ice cream shop founded by two friends, Ben Cohen and Jerry Greenfield,
-      in Burlington, Vermont. With bold flavours and
-      generous chocolate chunks, it quickly became
-      one of the most iconic premium ice cream brands worldwide.<br><br>
+      Ben & Jerry’s began in 1978 as a small ice cream shop founded by two friends,</br>
+      Ben Cohen and Jerry Greenfield, in Burlington, Vermont. </br>
+      With bold flavours and generous chocolate chunks, </br>
+      it quickly became one of the most iconic premium ice cream brands worldwide.<br><br>
 
-      But what makes Ben & Jerry’s truly special
-      goes beyond taste alone.
-      The brand is committed to social and environmental good —
+      But what makes Ben & Jerry’s truly special goes beyond taste alone.</br>
+      The brand is committed to social and environmental good —</br> 
       from sourcing <strong>Fairtrade</strong> ingredients, to using <strong>non-GMO</strong> products,<br>
       and supporting animal welfare with <strong>cage-free eggs</strong>.<br><br>
 
       Believing in “more than just ice cream,”<br>
-      Ben & Jerry’s continues
-      to serve scoops <br>that make the world a little better.
+      Ben & Jerry’s continues to serve scoops<br>
+      that make the world a little better.
     </span>
                                     </div>
     
@@ -595,7 +609,7 @@ in growing sustainably.
 
                                 <div class="upperText">
                                     <img src="img/productText_pb.png" alt="pb">
-                                    <span>Peanut Butter Cup</span>
+                                 
                                 </div>
 
                                 <div class="reviewImg">
@@ -631,7 +645,7 @@ in growing sustainably.
 
                                 <div class="upperText">
                                     <img src="img/productText_halfbaked.png" alt="halfbaked">
-                                    <span>Half Baked</span>
+                              
                                 </div>
 
                                 <div class="reviewImg">
@@ -668,7 +682,7 @@ in growing sustainably.
 
                                 <div class="upperText">
                                     <img src="img/productText_chunky.png" alt="chunky">
-                                    <span>Chunky Monkey</span>
+                             
                                 </div>
 
                                 <div class="reviewImg">
@@ -705,7 +719,7 @@ in growing sustainably.
 
                                 <div class="upperText">
                                     <img src="img/productText_cherry.png" alt="cherry">
-                                    <span>Cherry Garcia</span>
+                                   
                                 </div>
 
                                 <div class="reviewImg">
@@ -743,7 +757,7 @@ in growing sustainably.
 
                                 <div class="upperText">
                                     <img src="img/productText_pb.png" alt="pb">
-                                     <span>Peanut Butter Cup</span>
+                                
                                 </div>
 
                                 <div class="reviewImg">
@@ -780,7 +794,7 @@ in growing sustainably.
 
                                 <div class="upperText">
                                     <img src="img/productText_halfbaked.png" alt="halfbaked">
-                                    <span>Half Baked</span>
+                                   
                                 </div>
 
                                 <div class="reviewImg">
@@ -817,7 +831,7 @@ in growing sustainably.
 
                                 <div class="upperText">
                                     <img src="img/productText_chunky.png" alt="chunky">
-                                    <span>Chunky Monkey</span>
+                                    
                                 </div>
 
                                 <div class="reviewImg">
@@ -854,7 +868,7 @@ in growing sustainably.
 
                                 <div class="upperText">
                                     <img src="img/productText_cherry.png" alt="cherry">
-                                    <span>Cherry Garcia</span>
+                                    
                                 </div>
 
                                 <div class="reviewImg">
@@ -962,19 +976,21 @@ in growing sustainably.
                                     <span class="plI"><i class="fa-solid fa-plus"></i></span>
                                 </div>
                                 <div class="won">
-                                    <span>00</span><p>WON/p>
+                                    <span>00</span><p>WON</p>
                                 </div>
                             </div>
                             <p class="add"><a href="">Add To Cart</a></p>
 
                         </div>
                         <div class="deInfo">
-                             <h4>Chocolate ice cream packed with white & dark fudge chunks, pecans, walnuts, and almonds</h4>
+                             <h4>Chocolate ice cream packed with white & dark fudge chunks, pecans, walnuts —<br>
+                                and almonds</h4>
   <p>
     Back in 1985, Ben & Jerry’s created the New York Super Fudge Chunk —<br>
     a flavour made just for New Yorkers, with all kinds of chunks packed inside.<br>
-    We figured, if it’s a hit in New York, it’ll be a hit anywhere.<br>
-    And honestly? We weren’t wrong.
+    We figured, if it’s a hit in New York, it’ll be a hit anywhere.
+    And honestly?<br>
+    We weren’t wrong.
   </p>
                         </div>
                         <div class="deIngre">
@@ -1007,7 +1023,8 @@ in growing sustainably.
                         </div>
                         <div class="deVal">
                             <h4>VALUES-LED SOURCING</h4>
-                             <p>We source our ingredients in ways that are ethical, sustainable, and aligned with our values</p>
+                             <p>We source our ingredients in ways that are ethical, sustainable —<br>
+                                and aligned with our values</p>
                             <div class="valimgBox">
 
 
@@ -1039,7 +1056,7 @@ in growing sustainably.
     
                                     <div class="indiviBox">
                                         <img src="img/icons_Responsibly_Sourced_Packaging_VLS_Simpler_Icons.png" alt="">
-                                        <span>RESPONSIBLY SOURCED PACKAGING</span>
+                                        <span>RESPONSIBLY <br>SOURCED PACKAGING</span>
                                     </div>
     
                                     <div class="indiviBox">
@@ -1108,7 +1125,7 @@ in growing sustainably.
                             </div>
                             <div class="proSugtxt">
                                 <img src="img/productText_cherry.png" alt="cherry">
-                                <p>Cherry Garcia</p>
+                                <strong>Add To Cart</strong>
                             </div>
 
                         </div>
@@ -1121,7 +1138,7 @@ in growing sustainably.
                             </div>
                             <div class="proSugtxt">
                                 <img src="img/productText_pb.png" alt="Peanutbuttercup">
-                                <p>Peanut Butter Cup</p>
+                                <strong>Add To Cart</strong>
                             </div>
 
                         </div>
@@ -1134,7 +1151,7 @@ in growing sustainably.
                             </div>
                             <div class="proSugtxt">
                                 <img src="img/productText_chunky.png" alt="ChunkyMonkey">
-                                <p>Chunky Monkey</p>
+                                <strong>Add To Cart</strong>
                             </div>
 
                         </div>
@@ -1147,7 +1164,7 @@ in growing sustainably.
                             </div>
                             <div class="proSugtxt">
                                 <img src="img/productText_halfbaked.png" alt="HalfBaked">
-                                <p>Half Baked</p>
+                                <strong>Add To Cart</strong>
                             </div>
 
                         </div>
@@ -1458,6 +1475,8 @@ in growing sustainably.
                         <div class="never">
                              <!-- 네이버 로그인 버튼 노출 영역 -->
                         <div id="naver_id_login"></div>
+                          
+                        
                         </div>
                     </form>
 

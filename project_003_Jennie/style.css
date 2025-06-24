@@ -2406,6 +2406,7 @@ z-index: 1;
             transition: all 1s;
             cursor: none;
             z-index: 1;
+            cursor: pointer;
             /* 위치는 고정 */
            
           }
@@ -3066,7 +3067,15 @@ height: 4.54vh;
 }
 
 
-.shopPage .option p:hover {background-color: #CF0000;}
+/* .shopPage .option p:hover {background-color: #CF0000;} */
+.shopPage .option p:nth-of-type(1):hover {
+  background-color: #CF0000;
+}
+
+/* 두 번째 p 호버 시 하늘색 */
+.shopPage .option p:nth-of-type(2):hover {
+  background-color: #97bbda;
+}
 
 
 

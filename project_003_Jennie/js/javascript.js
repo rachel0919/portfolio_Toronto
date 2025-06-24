@@ -117,6 +117,7 @@ $(".depth1 ul li:nth-child(4)").click(function(e) {
     $(".mainPage, .profilePage, .albumPage, .shopPage").removeClass("on");
     $(".shopPage").addClass("on");
     $(".lnb").show();
+    $("html, body").scrollTop(0);
 });
 
    // .depth2 항목 클릭 시 해당 섹션으로 스크롤 이동
@@ -288,6 +289,18 @@ $(window).scroll(function () {
             "swing"
         );
     }
+});
+// Check It 클릭시 스크롤
+$(".moreBtn").on("click", function () {
+  if (!$(".albumPage").length) return;
+
+  var trackBoxTop = $(".albulTrackBox .bg").offset().top + ($(window).height() * 0.75);
+
+  $("html, body").stop().animate(
+    { scrollTop: trackBoxTop },
+    1000, // 애니메이션 속도
+    "swing"
+  );
 });
 
 

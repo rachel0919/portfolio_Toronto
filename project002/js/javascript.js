@@ -33,7 +33,7 @@ $('.proList1').children('.right').click(function(){
   if(num<4) num++;
  if(num == 4){
 
-    alert('마지막페이지입니다')
+    alert('You have seen them all! 🍦')
 
   }
  
