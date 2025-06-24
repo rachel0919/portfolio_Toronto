@@ -786,8 +786,8 @@ height: auto;}
 
 
 .publishingSub1 .linkB {position: absolute;
-  top: 86vh;
-  right: 7.9vw;
+  top: 85vh;
+  right: 5vw;
   z-index: 5;
   display: flex;
   border: 0.5px solid #555555;
@@ -921,8 +921,8 @@ height: auto;}
 
 
 .publishingSub3 .linkB {position: absolute;
-                        top: 83vh;
-                        right: 6.9vw;
+                        top: 89vh;
+                        right: 6.5vw;
                         z-index: 5;
                         display: flex;
                         border: 0.5px solid #555555;
