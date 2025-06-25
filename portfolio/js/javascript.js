@@ -295,7 +295,7 @@ $(document).ready(function() {
     e.preventDefault();  // 기본 동작을 방지 (만약 a 태그가 있다면)
     
     // 새 창에서 웹사이트 열기
-    window.open('https://rachel0919.github.io/portfolio/project002/index.html', '_blank');
+    window.open('https://rachel0919.github.io/portfolio_Toronto/project002/index.html', '_blank');
   });
 
 
@@ -304,7 +304,7 @@ $(document).ready(function() {
     e.preventDefault();  // 기본 동작을 방지 (만약 a 태그가 있다면)
     
     // 새 창에서 웹사이트 열기
-    window.open('https://rachel0919.github.io/portfolio/project_003_Jennie/index.html', '_blank');
+    window.open('https://rachel0919.github.io/portfolio_Toronto/project_003_Jennie/index.html', '_blank');
   });
 
 
@@ -314,7 +314,7 @@ $(document).ready(function() {
     e.preventDefault();  // 기본 동작을 방지 (만약 a 태그가 있다면)
     
     // 새 창에서 웹사이트 열기
-    window.open('https://rachel0919.github.io/portfolio/project001/index.html', '_blank');
+    window.open('https://rachel0919.github.io/portfolio_Toronto/project001/index.html', '_blank');
   });
 
 
