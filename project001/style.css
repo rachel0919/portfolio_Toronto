@@ -105,7 +105,7 @@ body {
     display: block;
     padding: 2px 20px;
     font-size: 18px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     color: #3D3D3D;
 }
 
@@ -130,7 +130,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 40px;
+    margin-top: 110px;
     position: absolute;
     top: 0;
     right: 0;
@@ -146,13 +146,14 @@ body {
     font-size: 28px;
     font-weight: 300;
     text-align: center;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
     color: #3D3D3D;
     background-color: #ffd700;
     padding: 0 5px;
     border-radius: 3px;
     box-shadow: inset 0 -8px 0 rgba(255, 215, 0, 0.5);
-    margin: 0;
+    margin: -30px 0;
 
 }
 
@@ -162,20 +163,21 @@ body {
 
     font-size: 71px;
     text-align: center;
-    font-family: "Grandiflora One", serif;
+    
+    font-family: "Darumadrop One", sans-serif;
     color: #3D3D3D;
     margin: 0;
 }
 
 
 .txtBox .txt_sub {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .txtBox .txt_sub p {
     font-size: 26px;
     text-align: end;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     color: #3D3D3D;
 }
 
@@ -255,7 +257,7 @@ body {
     border-right: 0.75px solid #3D3D3D;
     margin-left: 50px;
     font-size: 22px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     color: #3D3D3D;
 }
 
@@ -284,7 +286,7 @@ body {
     border: none;
     background-color: transparent;
     font-size: 28px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     text-align: right;
     margin-right: 10px;
    /* right: 5%;
@@ -309,7 +311,7 @@ body {
     margin-left: 50px;
     width: 60%;
     font-size: 22px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     color: #3D3D3D;
 
 }
@@ -331,7 +333,7 @@ body {
     border: none;
     background-color: transparent;
     font-size: 28px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     margin-right: 10px;
     cursor: pointer;
     /* position: absolute;
@@ -373,7 +375,7 @@ body {
     background-color: transparent;
     color: #F6EBD9;
     font-size: 28px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     font-weight: bold;
     margin: 0;
    /* p의 위치가 항상 정중앙! 부모값도 참고해야함 */
@@ -428,7 +430,7 @@ body {
   height: auto;
   
   padding: 50px 50px 0 50px;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Inter", sans-serif;
 
 }
 
@@ -442,7 +444,7 @@ body {
 
 .reservationBox > .selection label {
   font-size: 21px;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #3D3D3D;
   margin-bottom: 5px;
   display: inline-block; /* 레이블을 블록으로 설정 */
@@ -473,7 +475,7 @@ body {
 }
 .reservationBox > .additional-info label {
   font-size: 21px;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #3D3D3D;
   margin-bottom: 5px;
   display: inline-block;
@@ -513,7 +515,7 @@ body {
   
   .reservationBox > .checkboxes label {
     font-size: 16px;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Inter", sans-serif;
     color: #3D3D3D;
   }
   
@@ -542,7 +544,7 @@ body {
   background-color: transparent;
   color: #F6EBD9;
   font-size: 28px;
-  font-family: "Noto Sans KR", serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   margin-top: 10px;
  /* p의 위치가 항상 정중앙! 부모값도 참고해야함 */
@@ -642,7 +644,7 @@ position: fixed;
   height: auto;
   text-align: center;
   padding: 50px;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 21px;
   color: #3D3D3D;
 }
@@ -672,7 +674,7 @@ position: fixed;
   background-color: transparent;
   color: #F6EBD9;
   font-size: 28px;
-  font-family: "Noto Sans KR", serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   margin-top: 10px;
  /* p의 위치가 항상 정중앙! 부모값도 참고해야함 */
@@ -740,8 +742,9 @@ position: fixed;
     position: absolute;
     top: 0;
     right: 0;
-    width: 40%;
+    width: 45%;
     height: 165px;
+    text-align: right; 
     background-color: #F6EBD9;
     border-top-left-radius: 500px;
     border-bottom-left-radius: 500px;
@@ -751,21 +754,21 @@ position: fixed;
 
 .subject_right .subject_txt {
     width: 100%;
-    margin-left: 220px;
-    padding-top: 25px;
+    margin-left: -130px;
+    padding-top: 40px;
 }
 
 .subject_right .subject_txt h2 {
     font-size: 45px;
     font-weight: bold;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     color: #785379;
 }
 
 .subject_right .subject_txt p {
     font-size: 22px;
     font-weight: normal;
-    font-family: "Noto Sans KR", serif;
+   font-family: "Inter", sans-serif;
     color: #888888;
 }
 
@@ -803,8 +806,8 @@ position: fixed;
 }
 
 .contentsBox .map .info-box {
-    width: 380px;
-    height: 140px;
+    width: 360px;
+    height: 160px;
     border-top-left-radius: 10px;
 
     position: absolute;
@@ -825,9 +828,9 @@ position: fixed;
 }
 
 .contentsBox .map .info-box h3 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     color: #5C5C5C;
     text-align: right;
 
@@ -835,9 +838,9 @@ position: fixed;
 }
 
 .contentsBox .map .info-box p {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: normal;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     color: #5C5C5C;
     text-align: right;
 
@@ -871,7 +874,7 @@ position: fixed;
     
     color: #3D3D3D;
     background-color: transparent;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     font-size: 22px;
     border: 2px solid #969696;
     border-radius: 10px;
@@ -898,8 +901,7 @@ position: fixed;
     /* a 태그가 가능한 넓이를 차지하도록 설정 */
     text-align: left;
     /* 가로로 왼쪽 정렬 */
-    margin-left: 15px;
-    margin-right: 20px;
+    margin: 3px 20px 3px 15px;
 }
 
 
@@ -991,7 +993,7 @@ position: fixed;
     text-align: center;
     color: #888888;
     font-size: 18px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     /* margin-left: 1380px; */
 
 }
@@ -1012,7 +1014,7 @@ position: fixed;
 
 .newmember .subject_left {
 
-      width: 40%;
+    width: 40%;
     height: 165px;
     background-color: #F6EBD9;
     border-top-right-radius: 500px;
@@ -1025,7 +1027,7 @@ position: fixed;
 .newmember .subject_left .subject_txt {
   width: 100%;
   margin-left: 220px;
-  padding-top: 25px;
+  padding-top: 43px;
 }
 
 .newmember .iBtn {
@@ -1226,46 +1228,35 @@ position: fixed;
 .card .status {
     position: absolute;
     display: flex;
-    top: 76%;
-    left: 18%;
+    flex-wrap: nowrap;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
     align-items: center;
     background-color: #ED7E48;
     color: #fff;
-    padding: 1px 15px;
+    padding: 1px 20px;
     border-radius: 20px;
     font-size: 22px;
-    font-family: "Noto Sans KR", serif;
-    margin-bottom: 10px;
-
+    font-family: "Inter", sans-serif;
+    margin-bottom: 8px;
+    width: auto;
+   
+    text-align: center; /* 텍스트를 가운데 정렬 */
 }
 
 .card .status .status_txt {
-    padding-left: 15px;
-    /* 왼쪽 패딩 */
-    margin-right: 10px;
+   
+  
+    display: flex;
+    text-align: center; /* 텍스트를 가운데 정렬 */
 }
 
-.card .status .status_txt:nth-child(2) {
-    position: relative;
-    padding-left: 10px;
-}
-
-.card .status .status_txt:nth-child(2)::before {
-    content: '';
-    position: absolute;
-    top: 12%;
-    left: -20%;
-    height: 80%;
-    width: 2px;
-    background-color: #fff;
-    margin-left: 10px;
-    /* 구분선과 텍스트 사이의 간격 추가 */
-}
 
 
 
 .card .name {
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     font-weight: bold;
     font-size: 28px;
     color: #785379;
@@ -1276,7 +1267,7 @@ position: fixed;
 .card .location {
     font-size: 22px;
     color: #3D3D3D;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     margin-top: -2%;
     padding: 0;
 }
@@ -1305,7 +1296,7 @@ position: fixed;
     text-align: center;
     color: #888888;
     font-size: 18px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     /* margin-left: 1380px; */
 
 }
@@ -1332,7 +1323,7 @@ position: fixed;
 
 
 .card:hover  .name {
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     font-weight: bold;
     font-size: 28px;
     color: #FAF6EB;
@@ -1343,7 +1334,7 @@ position: fixed;
 .card:hover  .location {
     font-size: 22px;
     color: #FAF6EB;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     margin-top: -2%;
     padding: 0;
 }
@@ -1413,22 +1404,22 @@ position: fixed;
 .con1 .txtBox_rescue .txt_main {
     font-size: 71px;
     color: #FAF6EB;
-    font-family: "Grandiflora One", serif;
+    font-family: "Darumadrop One", sans-serif;
 
 
 
-    text-shadow:
+    /* text-shadow:
     -1px -1px 0 #FAF6EB,
     1px -1px 0 #FAF6EB,
     -1px 1px 0 #FAF6EB,
     1px 1px 0 #FAF6EB;
-    /* 스트로크 효과 */
+    스트로크 효과 */
 }
 
 .con1 .txtBox_rescue .txt_sub {
     font-size: 26px;
     color: #FAF6EB;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     margin-top: 50px;
 }
 
@@ -1479,22 +1470,21 @@ position: fixed;
     font-size: 26px;
     color: #785379;
     font-weight: bold;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
 }
 
 .con1 .listBox ul li .text_main {
     font-size: 26px;
     color: #3D3D3D;
     font-weight: normal;
-    font-family: "Noto Sans KR", serif;
-    margin-top: 30px;
+    font-family: "Inter", sans-serif;
     margin-bottom: 30px;
 }
 
 .con1 .listBox ul li .text_info {
     font-size: 18px;
     color: #636363;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     display: flex;
    
 }
@@ -1546,16 +1536,16 @@ position: fixed;
     background-color: #ED7E48;
     display: inline;
     padding: 4px 8px;
-    font-family: "Grandiflora One", serif;
+    font-family: "Darumadrop One", sans-serif;
     margin-left: 50px;
 
 
 
-    text-shadow:
+    /*text-shadow:
     -1px -1px 0 #F3E1CB,
     1px -1px 0 #F3E1CB,
     -1px 1px 0 #F3E1CB,
-    1px 1px 0 #F3E1CB;
+    1px 1px 0 #F3E1CB;*/
     } 
 
 .howtoRescue_txt {
@@ -1573,7 +1563,7 @@ position: fixed;
 .con2 .howtoRescue span {
                         font-size: 26px;
                         color: #F3E1CB;
-                        font-family: "Noto Sans KR", serif;
+                        font-family: "Inter", sans-serif;
                         font-weight: lighter;
                         border-bottom: 2px solid #F3E1CB;
                         
@@ -1619,13 +1609,13 @@ position: fixed;
 
 .con3 .rescue-request h1 {color: #ED7E48;
                           font-size: 71px;
-                          font-family: "Grandiflora One", serif;
+                          font-family: "Darumadrop One", sans-serif;
                           
-                          text-shadow:
+                          /*text-shadow:
                           -1px -1px 0 #ED7E48,
                           1px -1px 0 #ED7E48,
                           -1px 1px 0 #ED7E48,
-                          1px 1px 0 #ED7E48;
+                          1px 1px 0 #ED7E48;*/
                           margin-bottom: 30px;
                               
                           
@@ -1633,7 +1623,7 @@ position: fixed;
 }
 .con3 .rescue-request p {font-size: 26px;
     color: #ED7E48;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     font-weight: lighter;
     
     }
@@ -1652,7 +1642,7 @@ position: fixed;
     background-color: #F3E1CB;
     display: inline;
     padding: 4px 8px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     margin-left: 16%;
     z-index: 1;
     position: absolute;
@@ -1667,7 +1657,7 @@ position: fixed;
                   }
 
 .simple-steps ul li {text-align: center;
-                     font-family: "Noto Sans KR", serif;
+                     font-family: "Inter", sans-serif;
                      color: #ED7E48;
                      font-size: 26px;
                      margin: 30px 70px;}
@@ -1811,7 +1801,7 @@ height: 100%;
                 outline: none; /* 클릭 시 기본 강조 효과 제거 */
                 font-size: 22px; /* 텍스트 크기 */
                 color: #7e7e7e; /* 텍스트 색상 */
-                font-family: "Noto Sans KR", serif;
+                font-family: "Inter", sans-serif;
                 background-color: transparent;
                           }
                           
@@ -1941,7 +1931,7 @@ overflow: hidden;
 .findTextbox_bg .findTextbox {padding: 50px;}
 
 .findTextbox h3 {color: #785379;
-                 font-family: "Noto Sans KR", serif;
+                 font-family: "Inter", sans-serif;
                  font-size: 28px;
                  font-weight: bold;
                  margin-top: -10px;}
@@ -1958,14 +1948,14 @@ overflow: hidden;
             margin-top: 65px;}
 
 .findList_txt strong {color: #3D3D3D;
-                      font-family: "Noto Sans KR", serif;
+                      font-family: "Inter", sans-serif;
                       font-size: 22px;
                       font-weight: bold;
                       min-width: 80px; 
                       display: inline-block;}
 
 .findList_txt p {color: #3D3D3D;
-                 font-family: "Noto Sans KR", serif;
+                 font-family: "Inter", sans-serif;
                  font-size: 22px;
                  font-weight: normal;
                  margin-left: 60px;
@@ -1973,7 +1963,7 @@ overflow: hidden;
 
 .findLower {margin-bottom: 10px;}
 .findLower p {color: #3D3D3D;
-                font-family: "Noto Sans KR", serif;
+                font-family: "Inter", sans-serif;
                 font-size: 16px;
                 font-weight: normal;
                 }
@@ -1992,7 +1982,7 @@ overflow: hidden;
 .findLower_tap a {
     
     color: #fff;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     font-size: 28px;
     font-weight: bold;
     
@@ -2068,7 +2058,7 @@ overflow: hidden;
     text-align: center;
     color: #888888;
     font-size: 18px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     /* margin-left: 1380px; */
 
 }
@@ -2113,7 +2103,7 @@ position: fixed;
   height: auto;
   text-align: center;
   padding: 50px 100px;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 21px;
   color: #3D3D3D;
 }
@@ -2143,7 +2133,7 @@ position: fixed;
   background-color: transparent;
   color: #F6EBD9;
   font-size: 28px;
-  font-family: "Noto Sans KR", serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   margin-top: 10px;
  /* p의 위치가 항상 정중앙! 부모값도 참고해야함 */
@@ -2207,14 +2197,14 @@ position: fixed;
 .subject_left .subject_txt h2 {
     font-size: 45px;
     font-weight: bold;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     color: #785379;
 }
 
 .subject_left .subject_txt p {
     font-size: 22px;
     font-weight: normal;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     color: #888888;
 }
 
@@ -2312,7 +2302,7 @@ position: fixed;
     text-align: center;
     color: #888888;
     font-size: 18px;
-    font-family: "Noto Sans KR", serif;
+    font-family: "Inter", sans-serif;
     /* margin-left: 1380px; */
 
 }
@@ -2348,12 +2338,12 @@ position: fixed;
 
 .info .info_001 .txt p {font-size: 28px;
                         font-weight: normal;
-                        font-family: "Noto Sans KR", serif;
+                        font-family: "Inter", sans-serif;
                         color: #3D3D3D; 
                         margin-bottom: 10px;
   }
 .info .info_001 .txt h2 {font-size: 71px;
-                         font-family: "Grandiflora One", serif;
+                         font-family: "Darumadrop One", sans-serif;
                          color: #3D3D3D; 
                          margin-bottom: 20px;}
 
@@ -2415,7 +2405,7 @@ position: fixed;
                  padding: 20px; /* 텍스트 여백 */
                  box-sizing: border-box;
                  font-size: 22px;
-                 font-family: "Noto Sans KR", serif;
+                 font-family: "Inter", sans-serif;
                  color: #3D3D3D;
                  line-height: 1.5;
                 }
@@ -2437,7 +2427,7 @@ position: fixed;
 
 .info_003 p {color: #785379;
              font-size: 60px;
-             font-family: "Grandiflora One", serif;
+            font-family: "Darumadrop One", sans-serif;
              text-shadow: -0.5px -0.5px 0px #785379, 
              0.5px -0.5px 0px #785379, 
              -0.5px 0.5px 0px #785379, 
@@ -2804,7 +2794,7 @@ position: fixed;
 .footerB {display: flex;
           flex-direction: column;
           justify-content: space-between;
-          font-family: "Noto Sans KR", serif;
+          font-family: "Inter", sans-serif;
           margin: 85px 0 10px 0;
 }
 .footerB h2 {font-size: 36px;}
