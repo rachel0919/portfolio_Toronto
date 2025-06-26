@@ -28,41 +28,6 @@
 @media (max-width:599px) 
 {
 
-   
-
-
-
-
-
-}
-
-
-/* 태블릿구간############################################################## */
-
-
-
-/* 600이상 */
-/* 모든 600이상 구간은 다 적용됨 */
-
-
-@media (min-width:600px) {
-
-
-
-
-
-    
-
-
-
-}
-
-
-
-/* 600px이상 767px이하 */
-
-@media (max-width:767px) and (min-width:600px)
-{
     #wrap {width: 100%;
         margin: 0 auto; 
  }
@@ -70,17 +35,20 @@
     .header {
        
         flex-direction: column;
-        width: 90%;
-    
+        width: 100%;
+     
     }
 
     
     .header nav {
-        top: 6vh;
-        right: 10vw;
-        margin-right: 5vw;
+        top: 8vh;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-right: 0vw;
+        width: 90%;
     }
     .header nav ul {
+        width: 100%;
         flex-wrap: wrap;
         justify-content: space-between;
     }
@@ -97,9 +65,9 @@
 
     .slider_main .txtBox {
       
-        margin-top: -40px;
+        margin-top: 30px;
     
-        margin-right: 3vw;
+        margin-right: 4vw;
     
     }
     
@@ -108,7 +76,7 @@
     
     .txtBox .txt_upper {
         font-size: 12px;
-        
+         margin: -10px 0;
     }
     
     
@@ -121,7 +89,7 @@
     
     
     .txtBox .txt_sub {
-        margin-top: 10px;
+        margin-top: 0px;
     }
     
     .txtBox .txt_sub p {
@@ -155,7 +123,7 @@
     bottom: 10%;
     left: 38%;
     
-    margin-bottom: 10px;}
+    margin-bottom: -20px;}
 
 
 .reservation .reservation-box {
@@ -228,7 +196,7 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 8px;
-    margin-top: 20px;
+    margin-top: 45px;
 
 }
 
@@ -240,7 +208,7 @@
 
 .subject_right {
    
-    width: 90%;
+    width: 80%;
    
    
 
@@ -248,10 +216,25 @@
 
 
 
+
+
+
 .subject_right .subject_txt {
    
-    margin-left: 160px;
+    margin-left: -10px;
     
+}
+
+
+
+.subject_right .subject_txt h2 {
+    font-size: 35px;
+   
+}
+
+.subject_right .subject_txt p {
+    font-size: 18px;
+ 
 }
 
 
@@ -289,18 +272,30 @@
 
 .newmember .subject_left {
 
-    width: 65%;
+    width: 80%;
     margin-top: 0px;
   }
 
 
   .newmember .subject_left .subject_txt {
     
-    margin-left: 40px;
+    margin-left: 10px;
    
   }
 
 
+
+
+
+.subject_left .subject_txt h2 {
+    font-size: 35px;
+   
+}
+
+.subject_left .subject_txt p {
+    font-size: 18px;
+ 
+}
 
   .slider_second {
    
@@ -336,7 +331,7 @@
 .con1 .txtBox_rescue {
     width: 55%;
     margin-left: 8%;
-    margin-top: 15%;
+    margin-top: 13%;
     
 }
 
@@ -350,7 +345,7 @@
 }
 
 .con1 .txtBox_rescue .txt_sub {
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 10px;
 }
 
@@ -468,7 +463,7 @@ text-shadow:
 
 top: 25%;
 
-width: 45%;
+width: 40%;
                        
   left: 8%;
 }
@@ -487,7 +482,7 @@ text-shadow:
 
 
 }
-.con3 .rescue-request p {font-size: 18px;
+.con3 .rescue-request p {font-size: 12px;
 
 font-weight: 300;
 
@@ -499,26 +494,26 @@ font-weight: 300;
 
 .con3 .simple-steps {
 
-width: 55%;
+width: 60%;
        
         top: 15%;
-        right: -10%;}
+        right: -9%;}
 .con3 .simple-steps h2 {
-font-size: 26px;
+font-size: 18px;
 
-padding: 4px 8px;
+padding: 2px 4px;
 
-margin-left: 16%;
+margin-left: -4%;
 
-top: -6%;
+top: -4%;
 
 }
 .simple-steps ul {
-padding: 50px 20px;
+padding: 50px 0px;
 }
 
 .simple-steps ul li {
-font-size: 20px;
+font-size: 16px;
 margin: 10px 20px;}
 
 
@@ -673,7 +668,7 @@ height: calc(320px * (460 / 400));
 .findTextbox h3 {
                  font-size: 20px;
                  font-weight: 900;
-                 margin-top: -30px;}
+                 margin-top: -40px;}
 
 
 
@@ -681,7 +676,10 @@ height: calc(320px * (460 / 400));
 .findUpper {
             padding: 0px;
             margin-bottom: 10px;
-            margin-top: 65px;}
+            margin-top: 65px;
+             min-height: 160px; 
+        
+        }
 
 .findList_txt strong {
                       font-size: 20px;
@@ -690,12 +688,14 @@ height: calc(320px * (460 / 400));
                     }
 
 .findList_txt p {
-                 font-size: 20px;
+                 font-size: 18px;
                  
                  margin-left: 40px;
                  }
 
-
+.findLower {margin: -5px 0 -30px 0;
+            
+}
 .findLower p {
                 font-size: 16px;
                
@@ -734,7 +734,7 @@ height: calc(320px * (460 / 400));
 
 .videoBox .subject_left .subject_txt {
    
-    margin-left: 40px;
+    margin-left: 10px;
     
   }
 
@@ -769,7 +769,7 @@ height: calc(320px * (460 / 400));
 .video .titleBox a h2 {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 5px;
     margin-right: 5px;
    
@@ -779,7 +779,7 @@ height: calc(320px * (460 / 400));
 .video .titleBox a p {
     
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 12px;
    
 }
 
@@ -830,12 +830,889 @@ height: calc(320px * (460 / 400));
               
                  font-size: 16px;
                 
-                 line-height: 1.5;
+                 line-height: 1.0;
                 }
 
 .info .info_002 img {
-                     width: 95%;
-                     height: 80%;
+                     width: 98%;
+                     height: 100%;
+                  }
+
+
+
+
+.info_003 {width: 100%;
+           height: 630px;
+         }
+           
+           
+
+.info_003 p {
+             font-size: 40px;
+            
+             opacity: 66; 
+             }
+
+
+
+.info .img5 {position: absolute;
+             bottom: 10%;
+             left: 18%;
+             opacity: 0;
+             z-index: 1; }
+            
+.info .img7 {position: absolute;
+             bottom: 3%;
+             left: -12%;
+             opacity: 0.7;
+             z-index: 1; }
+.info .img8 {position: absolute;
+             bottom: 50%;
+             right: 15%;
+             opacity: 0.7;
+             z-index: 1; }
+
+
+
+
+
+}
+
+
+/* 태블릿구간############################################################## */
+
+
+
+/* 600이상 */
+/* 모든 600이상 구간은 다 적용됨 */
+
+
+@media (min-width:600px) {
+
+
+
+
+
+    
+
+
+
+}
+
+
+
+/* 600px이상 767px이하 */
+
+@media (max-width:767px) and (min-width:600px)
+{
+    #wrap {width: 100%;
+        margin: 0 auto; 
+ }
+    
+    .header {
+       
+        flex-direction: column;
+        width: 100%;
+     
+    }
+
+    
+    .header nav {
+        top: 8vh;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-right: 0vw;
+        width: 90%;
+    }
+    .header nav ul {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .header nav ul li a {
+        
+        padding: 2px 7px;
+        font-size: 12px;
+        
+    }
+
+
+
+
+    .slider_main .txtBox {
+      
+        margin-top: 30px;
+    
+        margin-right: 4vw;
+    
+    }
+    
+    
+    
+    
+    .txtBox .txt_upper {
+        font-size: 12px;
+         margin: -10px 0;
+    }
+    
+    
+    
+    .txtBox .txt_main {
+    
+        font-size: 31px;
+        
+    }
+    
+    
+    .txtBox .txt_sub {
+        margin-top: 0px;
+    }
+    
+    .txtBox .txt_sub p {
+        font-size: 12px;
+      
+    }
+    
+    .slider_main {
+                  height: calc(100vh - 700px);}
+    
+    
+    
+    .slider_main .imgBox1 {left: 55%;
+                           margin-bottom: 0px;
+                           height: 600px; 
+                           overflow: hidden;
+                           z-index: 1;
+                           pointer-events: none;
+                        }
+    
+
+
+  
+.slider_main .reservation {
+    height: 350px; 
+}
+
+
+.reservation form {width: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 38%;
+    
+    margin-bottom: -20px;}
+
+
+.reservation .reservation-box {
+
+    width: 80%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+
+}                    
+
+.reservation .reservation-box .reser_box1 {
+    
+    width: 95%;
+    border-right: 0px solid #3D3D3D;
+    margin-left: 20px;
+    padding-top: 18px;
+    font-size: 16px;
+    
+}
+
+
+
+.reservation .reservation-box .reser_box1 .selectBox select {
+   
+    font-size: 18px;
+   
+    margin-right: 30px;
+  
+    
+}
+
+
+
+.reservation .reservation-box .reser_box2 {
+    
+    padding: 16px 20px 0px 20px ;
+    margin-left: 0px;
+    margin-top: 20px;
+    width: 95%;
+    font-size: 16px;
+    border-top: 0.75px solid #3D3D3D;
+
+}
+
+
+
+
+.reservation .reservation-box .reser_box2 input {
+    
+    font-size: 18px;
+    
+    margin-right: -10px;
+    
+
+ 
+    
+}
+
+.reservation .reservation-box .reser_box3 {
+  
+    width: 100%;
+    background-color: #785379;
+    
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 8px;
+    margin-top: 45px;
+
+}
+
+
+.subject_rightBox {
+    top: 34%;
+}
+
+
+.subject_right {
+   
+    width: 80%;
+   
+   
+
+}
+
+
+
+
+
+
+.subject_right .subject_txt {
+   
+    margin-left: -10px;
+    
+}
+
+
+
+.subject_right .subject_txt h2 {
+    font-size: 35px;
+   
+}
+
+.subject_right .subject_txt p {
+    font-size: 18px;
+ 
+}
+
+
+
+.notice_box>.contentsBox {
+    margin-top: 100px;
+    margin-left: 3.5%;
+    width: 95%;
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.contentsBox .map {
+    width: 100%;
+    margin-bottom: 300px;
+    height: 40%;
+}
+
+.contentsBox .notice {
+    width: 100%;
+    height: 60%;
+   
+}
+
+.contentsBox .notice ul {
+    height: 70%;
+    
+   
+}
+
+
+
+.newmember .subject_left {
+
+    width: 80%;
+    margin-top: 0px;
+  }
+
+
+  .newmember .subject_left .subject_txt {
+    
+    margin-left: 10px;
+   
+  }
+
+
+
+
+
+.subject_left .subject_txt h2 {
+    font-size: 35px;
+   
+}
+
+.subject_left .subject_txt p {
+    font-size: 18px;
+ 
+}
+
+  .slider_second {
+   
+    height: 390px;
+   
+}
+
+  
+  .con1Forscroll {
+   
+    height: 390px;
+   
+  }
+
+
+   
+  
+
+
+  .slider_second .con_box .con1 {
+   
+    height: 390px;
+    overflow: hidden;
+   
+    
+}
+
+  .slider_second .con_box .con1 img {
+    
+   
+    left: -35%;
+}
+.con1 .txtBox_rescue {
+    width: 55%;
+    margin-left: 8%;
+    margin-top: 13%;
+    
+}
+
+.con1 .txtBox_rescue .txt_main {
+    font-size: 31px;
+    text-shadow:
+    0px 0px 0 #FAF6EB,
+    0px 0px 0 #FAF6EB,
+    0px 0px 0 #FAF6EB,
+    0px 0px 0 #FAF6EB;
+}
+
+.con1 .txtBox_rescue .txt_sub {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.con1 .listBox {
+   
+    width: 45%;
+}
+    
+
+
+.con1 .listBox ul {
+    right: 0%;
+    }
+
+    .con1 .listBox ul li {
+        width: 95%;
+        height: 30%;
+        
+    
+      
+        padding: 20px;
+        
+    }
+
+.con1 .listBox ul li:nth-child(odd) {margin-left: 0px;}
+.con1 .listBox ul li .text_list {
+    font-size: 16px;
+  
+}
+
+.con1 .listBox ul li .text_main {
+    font-size: 16px;
+  
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.con1 .listBox ul li .text_info {
+    font-size: 12px;
+  
+   
+}
+
+.slider_second .con_box .con1 img {
+    
+    bottom: -20%;
+    left: -5%;
+}
+
+
+
+.con2Forscroll {
+ 
+    height: 390px;
+   
+  }
+
+.slider_second .con_box .con2 {
+    
+    height: 390px;
+   }
+
+
+
+   .con2 .howtoRescue {
+   
+    top: 10%;
+    left: 8%;
+   
+    
+    } 
+.con2 .howtoRescue h1 {
+font-size: 41px;
+padding: 2px 2px;
+margin-left: 15px;
+
+
+
+text-shadow:
+0px 0px 0 #F3E1CB,
+0px 0px 0 #F3E1CB,
+0px 0px 0 #F3E1CB,
+0px 0px 0 #F3E1CB;
+} 
+
+.howtoRescue_txt {
+
+  
+  margin-top: -30px;
+  
+  
+  
+  
+  padding: 30px 20px;
+  }  
+
+.con2 .howtoRescue span {
+        font-size: 16px;
+     
+        
+        margin-bottom: 8px;
+       
+        
+     }
+     
+
+     
+.slider_second .con_box .con3 {
+    height: 390px;
+   
+    }
+
+
+.con3 .rescue-request {
+
+top: 25%;
+
+width: 40%;
+                       
+  left: 8%;
+}
+
+.con3 .rescue-request h1 {
+    font-size: 31px;
+    margin-bottom: 5px;  
+
+
+text-shadow:
+0px 0px 0 #ED7E48,
+0px 0px 0 #ED7E48,
+0px 0px 0 #ED7E48,
+0px 0px 0 #ED7E48;
+
+
+
+}
+.con3 .rescue-request p {font-size: 12px;
+
+font-weight: 300;
+
+}
+.con3 .rescue-request strong {font-weight: bold;}   
+
+
+
+
+.con3 .simple-steps {
+
+width: 60%;
+       
+        top: 15%;
+        right: -9%;}
+.con3 .simple-steps h2 {
+font-size: 18px;
+
+padding: 2px 4px;
+
+margin-left: -4%;
+
+top: -4%;
+
+}
+.simple-steps ul {
+padding: 50px 0px;
+}
+
+.simple-steps ul li {
+font-size: 16px;
+margin: 10px 20px;}
+
+
+
+.simple-steps ul li a{
+padding: 4px 8px;}
+
+
+.con3 .rescue-request_bg img {position: absolute;
+bottom: 0;
+right: 0;} 
+
+
+
+
+
+
+
+
+
+
+.slider_second>.btn {position: absolute;
+top: 50%;
+left: 1.5%;
+transform: translateY(-50%);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 555;
+
+height: 390px;                    
+}
+
+.slider_second>.btn ul a {}
+
+.slider_second>.btn ul li {width: 15px;
+height: 15px;
+
+}
+
+
+.find {
+
+    margin-top: 100px;
+    
+    
+
+}
+
+.find .find_leftside {width: 50%;
+  
+                     
+                     
+                     
+                     }
+
+
+
+.find_leftside .subject_left {
+    width: 100%;
+    left: 0%;
+    top: 100px;
+  
+   
+    
+}     
+
+.find_leftside .subject_left .subject_txt {
+   
+    margin-left: 10px;
+    
+  }
+
+
+
+
+  
+  .find_leftside .search {
+    left: 5%;
+    top: 38%;
+    margin: 10px 0; 
+
+      }
+
+      .search-input {
+                
+        padding: 2px 5px; /* 내부 여백 */
+        font-size: 16px; /* 텍스트 크기 */
+       
+                  }
+
+
+.btnForposition {
+         top: 50%;
+         left: 0%;}
+
+
+
+
+
+
+    .find_leftside .imgForpositionCD {position: absolute;
+                                    bottom: -2%;
+                                    left: 5%;
+                                     margin-bottom: 25px;
+                                     transform: scale(0.8);
+                                    }
+    
+    .imgForpositionCD .cat {margin-right: -19px;}
+    
+    
+    
+    
+    .find .find_rightside {width: 50%;
+                           position: relative;
+                           
+                          }
+
+
+
+   .find_rightside .findBox {width: 98%;
+overflow: hidden;
+
+}
+
+
+
+
+
+.imgforPosition {position: absolute;
+                 z-index: 1;
+                 top: 100px;
+                 left: 10px;}
+
+              
+
+.findText .imgBox {width: 300px;
+    height: calc(300px * (295 / 365));
+               }
+
+
+
+
+
+.findTextbox_bg {width: 320px;
+height: calc(320px * (460 / 400));
+              
+                      }
+
+.findTextbox_bg .findTextbox {padding: 25px;}
+
+.findTextbox h3 {
+                 font-size: 20px;
+                 font-weight: 900;
+                 margin-top: -40px;}
+
+
+
+
+.findUpper {
+            padding: 0px;
+            margin-bottom: 10px;
+            margin-top: 65px;
+             min-height: 160px; 
+        
+        }
+
+.findList_txt strong {
+                      font-size: 20px;
+                      font-weight: 900;
+                      min-width: 10px; 
+                    }
+
+.findList_txt p {
+                 font-size: 18px;
+                 
+                 margin-left: 40px;
+                 }
+
+.findLower {margin: -5px 0 -30px 0;
+            
+}
+.findLower p {
+                font-size: 16px;
+               
+                }
+
+
+.findLower_tap {
+                height: 50px;
+               
+                }
+
+
+.findLower_tap a {
+    
+   
+    font-size: 26px;
+ 
+    
+    
+
+}
+
+
+
+
+
+
+
+.videoBox .subject_left {
+    width: 80%;
+    left: 0%;
+  
+   
+    
+}     
+
+.videoBox .subject_left .subject_txt {
+   
+    margin-left: 10px;
+    
+  }
+
+
+
+
+  .video {
+    width: 96%;
+    
+
+
+}
+
+.video .titleBox:nth-child(odd) {
+    padding-right: 5px;
+ 
+}
+
+.video .titleBox:nth-child(even) {
+    padding-left: 5px;
+   
+}
+
+
+.video .titleBox a img {
+   
+    margin-bottom: 15px;
+    
+    padding: 5px;
+}
+
+.video .titleBox a h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+   
+
+}
+
+.video .titleBox a p {
+    
+    margin-bottom: 10px;
+    font-size: 12px;
+   
+}
+
+
+
+
+.info .info_001 {width: 100%;
+                 height: 1040px;
+                 margin: 0 auto;
+                 display: block;
+                }
+
+
+
+
+
+                   
+   .info .info_001 .txt {
+                         width: 100%;
+                         height: 100%;
+                         top: -30%;
+                         left: 0;
+                        
+                         }
+   
+   .info .info_001 .txt p {font-size: 21px;
+                           margin-bottom: 5px;
+     }
+   .info .info_001 .txt h2 {font-size: 51px;
+                            margin-bottom: 10px;}
+   
+   
+   
+   .info .info_001 .img_info {position: relative;
+                              width: 100%;
+                             
+                              top: -70%;
+                              right: -3%;
+                              z-index: 111;
+   
+                              
+                             }
+
+
+.info .info_002 {
+                 height: 490px;
+                 padding: 30px 60px; /* 텍스트 여백 */
+              
+                 font-size: 16px;
+                
+                 line-height: 1.0;
+                }
+
+.info .info_002 img {
+                     width: 98%;
+                     height: 100%;
                   }
 
 

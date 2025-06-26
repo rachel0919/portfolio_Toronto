@@ -421,6 +421,7 @@ body {background-color: #e6e6e6;
   overflow: hidden; /* 텍스트가 넘칠 경우 숨김 처리 */
   color: #3f3f3f;
   cursor: pointer;
+  padding: 0;
 
 }
 .bottom-nav>div h2 { 
@@ -499,6 +500,7 @@ body {background-color: #e6e6e6;
                bottom: -10vh; 
                display: flex;
                justify-content: center;
+               flex-direction: row;
 }
 .contentsArea .contentsBox {width: 533px;
                             height: 580px;
@@ -695,6 +697,7 @@ opacity: 0.2;
                bottom: -10vh; 
                display: flex;
                justify-content: center;
+             
 }
 .publishingPage .contentsArea .contentsBox {width: 533px;
                             height: 580px;

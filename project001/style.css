@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 ul,
@@ -1030,6 +1031,23 @@ position: fixed;
   padding-top: 43px;
 }
 
+
+.newmember .subject_left.subject_txt h2 {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    color: #785379;
+}
+
+.newmember .subject_left .subject_txt p {
+    font-size: 22px;
+    font-weight: normal;
+   font-family: "Inter", sans-serif;
+    color: #888888;
+}
+
+
+
 .newmember .iBtn {
     position: relative;
 }
@@ -1216,7 +1234,7 @@ position: fixed;
 
 
 
-
+/* ##########################################
 
 .card a {
     display: flex;
@@ -1242,17 +1260,50 @@ position: fixed;
     margin-bottom: 8px;
     width: auto;
    
-    text-align: center; /* 텍스트를 가운데 정렬 */
+   
 }
 
 .card .status .status_txt {
    
   
     display: flex;
-    text-align: center; /* 텍스트를 가운데 정렬 */
+    flex-wrap: nowrap;
+    text-align: center; /* 텍스트를 가운데 정렬
 }
 
+############# */
 
+.card a {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card .status {
+    position: absolute;
+    display: flex;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    background-color: #ED7E48;
+    color: #fff;
+    padding: 1px 15px;
+    border-radius: 20px;
+    font-size: 22px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 8px;
+    width: auto;
+    justify-content: center; /* 가운데 정렬 */
+}
+
+.card .status .status_txt {
+    display: inline-block; /* 텍스트가 한 줄로 배치되도록 설정 */
+    white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+    padding-left: 15px;
+    margin-right: 10px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
 
 
 .card .name {
@@ -1261,11 +1312,11 @@ position: fixed;
     font-size: 28px;
     color: #785379;
     padding: 0;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .card .location {
-    font-size: 22px;
+    font-size: 18px;
     color: #3D3D3D;
     font-family: "Inter", sans-serif;
     margin-top: -2%;
@@ -1328,11 +1379,11 @@ position: fixed;
     font-size: 28px;
     color: #FAF6EB;
     padding: 0;
-    margin-top: 10px;
+ 
 }
 
 .card:hover  .location {
-    font-size: 22px;
+    
     color: #FAF6EB;
     font-family: "Inter", sans-serif;
     margin-top: -2%;
@@ -1392,7 +1443,7 @@ position: fixed;
 .slider_second .con_box .con1 img {
     position: absolute;
     bottom: -5%;
-    left: -5%;
+    left: 0%;
 }
 
 .con1 .txtBox_rescue {
@@ -1402,7 +1453,7 @@ position: fixed;
 }
 
 .con1 .txtBox_rescue .txt_main {
-    font-size: 71px;
+    font-size: 81px;
     color: #FAF6EB;
     font-family: "Darumadrop One", sans-serif;
 
@@ -1420,7 +1471,7 @@ position: fixed;
     font-size: 26px;
     color: #FAF6EB;
     font-family: "Inter", sans-serif;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .con1 .listBox {
@@ -1467,7 +1518,8 @@ position: fixed;
 
 
 .con1 .listBox ul li .text_list {
-    font-size: 26px;
+    font-size: 18px;
+     text-transform: uppercase; 
     color: #785379;
     font-weight: bold;
     font-family: "Inter", sans-serif;
@@ -1604,11 +1656,11 @@ position: fixed;
 .con3 .rescue-request {width: 60%;
                        position: absolute;
                        top: 30%;
-                       left: 15%;
+                       left: 8%;
                        }
 
 .con3 .rescue-request h1 {color: #ED7E48;
-                          font-size: 71px;
+                          font-size: 78px;
                           font-family: "Darumadrop One", sans-serif;
                           
                           /*text-shadow:
@@ -1616,7 +1668,7 @@ position: fixed;
                           1px -1px 0 #ED7E48,
                           -1px 1px 0 #ED7E48,
                           1px 1px 0 #ED7E48;*/
-                          margin-bottom: 30px;
+                          margin-bottom: 10px;
                               
                           
     
@@ -1635,7 +1687,7 @@ position: fixed;
 .con3 .simple-steps {width: 40%;
                      position: absolute;
                      top: 20%;
-                     right: -3%;
+                     right: 0%;
                      z-index: 1;}
 .con3 .simple-steps h2 {color: #ED7E48;
     font-size: 36px;
@@ -1643,10 +1695,12 @@ position: fixed;
     display: inline;
     padding: 4px 8px;
     font-family: "Inter", sans-serif;
-    margin-left: 16%;
+   
     z-index: 1;
     position: absolute;
-    top: -6%;
+    top: -5%;
+    left: 50%;
+    transform: translateX(-60%);
     
     }
 .simple-steps ul {border: #ED7E48 1px solid;
@@ -1768,7 +1822,7 @@ height: 100%;
 .find_leftside .subject_left .subject_txt {
   width: 100%;
   margin-left: 220px;
-  padding-top: 25px;
+  padding-top: 40px;
 }
 
 
@@ -1934,40 +1988,62 @@ overflow: hidden;
                  font-family: "Inter", sans-serif;
                  font-size: 28px;
                  font-weight: bold;
-                 margin-top: -10px;}
+                 margin-top: -10px;
+                 margin-bottom: 10px;
+                }
 
 
 .findTextbox_bg .findList_txt {display: flex;
                                align-items: baseline;
-                               line-height: 1.8;
+                               line-height: 1.5;
+                               
                            }
 
 .findUpper {border-bottom: 1px solid #3D3D3D;
             padding: -10px;
             margin-bottom: 10px;
-            margin-top: 65px;}
+            margin-top: 65px;
+            min-height: 180px; 
+          }
 
 .findList_txt strong {color: #3D3D3D;
                       font-family: "Inter", sans-serif;
                       font-size: 22px;
                       font-weight: bold;
-                      min-width: 80px; 
-                      display: inline-block;}
+                      min-width: 85px; 
+                      display: inline-block;
+                    }
 
 .findList_txt p {color: #3D3D3D;
                  font-family: "Inter", sans-serif;
                  font-size: 22px;
                  font-weight: normal;
-                 margin-left: 60px;
+                 margin-left: 50px;
                  }
 
-.findLower {margin-bottom: 10px;}
+.findLower {margin: -5px 0 -10px 0;
+            
+}
 .findLower p {color: #3D3D3D;
                 font-family: "Inter", sans-serif;
                 font-size: 16px;
                 font-weight: normal;
+                margin-bottom: 20px;
+                text-align: center;
                 }
-.findLower p i {}
+
+.placeFind {display: flex;
+            margin-bottom: -30px;
+            justify-content: center;
+}
+.placeFind>i {font-size: 25px;
+              vertical-align: bottom;
+              margin-top: 6px;
+              padding: 0 8px;
+              opacity: 0.4;
+}
+.placeFind>p {text-align: left;}
+
 
 .findLower_tap {margin-top: 20px;
                 background-color: #785379;
@@ -2108,6 +2184,11 @@ position: fixed;
   color: #3D3D3D;
 }
 
+.findPopupNoticed>p:nth-child(2) {color: #785379;
+                                  font-weight: 900;
+                                  font-family: "Inter", sans-serif;
+}
+
 
 
 .findPopupR>div .findPopupLower { 
@@ -2179,7 +2260,7 @@ position: fixed;
 }
 
 .videoBox .subject_left {
-    width: 40%;
+    width: 45%;
     height: 165px;
     background-color: #F6EBD9;
     border-top-right-radius: 500px;
@@ -2191,7 +2272,7 @@ position: fixed;
 .videoBox .subject_left .subject_txt {
     width: 100%;
     margin-left: 220px;
-    padding-top: 25px;
+    padding-top: 40px;
 }
 
 .subject_left .subject_txt h2 {
@@ -2277,7 +2358,7 @@ position: fixed;
 .video .titleBox a p {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 26px;
+    font-size: 21px;
     margin-left: 15px;
     margin-right: 15px;
     color: #5B5B5B;

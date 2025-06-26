@@ -1,0 +1,397 @@
+/* set to language */
+
+@charset 'utf-8';
+
+
+
+ /* reset css */
+ * {margin: 0;
+    padding: 0;
+}
+
+ul, ol {list-style: none;
+        
+}
+
+img {vertical-align: bottom;
+     border: none;   
+}
+
+body {background-color: #e6e6e6;
+    font-family: 'Pretendard', sans-serif;
+    width: 100vw;
+    height: auto;   /* 페이지가 100% 높이를 가지도록 설정 */
+   
+    color: #3C3C3C;  
+    
+}
+
+
+
+#wrap {position: relative;}
+
+
+
+@media (max-width:700px) 
+{
+
+
+
+/* lnb 설정####################################### */
+
+
+  
+  .lnbButton {
+    
+    font-size: 10vw;
+    
+    
+  }
+  
+
+
+ 
+  .lnbList {
+   
+    font-size: 6vw;
+    
+    
+  }
+
+    .lnbContent {
+  
+    left: 10vw; /* 기본적으로 숨김 */
+    
+  }
+  
+
+  
+
+
+  
+ 
+
+/* 상단주석(?) 설정####################################### */
+
+
+
+
+.upperText p:nth-child(2) {font-size: 2.8vw;
+                           
+
+}
+
+.upperText a:nth-child(3) i {font-size: 3.2vw;} 
+.upperText i {
+  margin-right: 1.5vw; /* 아이콘과 텍스트 간 간격 */
+}
+
+
+
+.upperText i:hover::after {
+ 
+  font-size: 3.2vw;
+
+}
+
+
+/* hero-section 설정####################################### */
+
+
+
+
+
+.heroText .nameReveal>img {transform: scale(0.8);}
+
+
+
+
+
+
+
+
+
+.tagline em>p {
+    transform: translateY(0.4vh); 
+}
+
+
+
+
+
+
+/* bottom-nav 설정####################################### */
+
+
+.bottom-nav>div { 
+    
+    margin: 0vw;  
+   padding: 0 12vw;
+    border-radius: 4.604vw;
+
+}
+.bottom-nav>div h2 { 
+    
+    font-size: 3vw;
+    
+   
+    
+
+}
+
+.bottom-nav>div:hover {
+    color: #fff;
+    background-color: #151515;
+
+
+
+}
+
+
+
+
+/* uxuiPage########################################## */
+
+.uxuiPage {width: 100vw;
+           height: auto; 
+          
+          overflow: scroll;
+          
+   
+        }
+.uxuiPageBg {
+             position: fixed;
+             
+            }
+    
+.subjectT h2 {
+              margin-bottom: 10vh;
+
+
+}            
+
+.contentsArea {height: 100vh;
+               flex-direction: column;
+                bottom: 0vh; 
+         
+               justify-content: space-evenly;
+}
+
+
+.contentsArea .contentsBox {
+                            transform: scale(0.9);
+                           
+                            
+                            margin: 0px 70px;
+
+
+                          
+                            
+}
+
+
+
+/* ######################################################################### */
+
+/* profilePage######################################## */
+
+.profilePage {width: 100vw;
+              height: 100vh;
+              position: fixed;
+              /* overflow: hidden; */
+              position: relative;
+}
+
+
+
+
+.profileBg {width: 100%;
+            height: 100%;
+            background-image: url(img/profile_txt_002.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: 0;
+}
+
+
+.proTextBox {position: absolute;
+             width: 92vw;
+             height: 68vh;
+             top: 53%;
+             left: 50%;
+             transform: translate(-50%,-38%);
+             /* background-color: red; */
+             z-index: 1;
+             display: flex;
+            
+}
+
+.proLeftside {width: 30%;
+              height: 100%;
+              position: relative;
+              top: 20vh;
+              left: 6vw;
+              
+              
+}
+
+.proLeftside p {font-size: 16px;
+                font-weight: 500;
+                font-family: "Inter", sans-serif;
+                color: #696969;
+                margin: 10px 0;
+             
+              }
+.proLeftside .proContactB {display: flex;}
+.proContactB .iconB {width: 22px;
+                     height: 22px;
+                     opacity: 0.5;
+                     margin-right: 0.4vw;
+                     cursor: pointer;
+                     transition: all 0.2s;
+}
+.proContactB .iconB img {width: 100%;
+                         height: 100%;
+}
+
+
+.proContactB .iconB:hover {opacity: 0.8;}
+
+
+
+
+
+
+.proRightside {width: 70%;
+                 height: 100%;
+                 overflow: hidden;
+
+               
+                 
+                 
+} 
+
+
+
+.proRightB {width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+           
+}
+
+.proRightB>p {text-align: right;
+              margin-right: 60px;
+              padding-bottom: 3px;
+              font-size: 21px;
+              font-family: "Inter", sans-serif;
+              opacity: 0;
+              font-weight: 200;
+              letter-spacing: -1px;
+
+}
+
+.proUpper {display: flex;
+  border-top: 1px solid #000;
+  margin: 0 50px 0 150px;
+  justify-content: space-between;
+  padding: 8px 30px;
+  align-items: center;
+
+}
+.proUpper h2 {font-family: "Inter", sans-serif;
+              font-size: 40px;
+              font-weight: 700;
+              color: #000;
+
+}
+
+
+
+
+
+.circleI {color: #000;
+  /* border: 3px solid #000; */
+  border-radius: 50%;
+  transition: transform 0.3s ease-in;
+  transform: rotateZ(0deg);
+
+ 
+}
+.circleI i {font-size: 30px;
+    padding: 5px 7px; 
+    
+}
+
+
+.circleI:hover {transform: rotateZ(90deg);}
+
+
+
+.proLower { margin: 0 50px 0 150px;
+            padding: 3px 30px;
+            height: 0px; /* 초기 높이 설정 (숨기기) */
+            overflow: hidden; /* 내용이 넘어가면 숨기기 */
+           
+            transition: all 0.3s ease-out;
+            display: block; /* 항상 표시되지만, visibility로 숨김 처리 */
+          }
+
+
+
+.proRightside .proRightB:nth-child(1) .proLower.on {height: 100px;}
+.proRightside .proRightB:nth-child(2) .proLower.on {height: 380px;
+                                                    transition: all 0.5s ease-out;
+}
+.proRightside .proRightB:nth-child(3) .proLower.on {height: 110px;}
+.proRightside .proRightB:nth-child(4) .proLower.on {height: 220px;}
+.proRightside .proRightB:nth-child(5) .proLower.on {height: 150px;}
+
+
+
+.proLower p {font-size: 19px;
+             color: #696969;
+             font-family: "Inter", sans-serif;
+             font-weight: 200; 
+             letter-spacing: -1px;
+
+
+}
+
+.proLower em {font-style: normal;
+              font-weight: 500;
+}
+
+.proLower span {opacity: 0.8;
+                font-size: 16px;
+}
+.proLower>div {margin-top: 3px;
+               margin-bottom: 20px;
+}
+
+.proLower.contact {
+}
+.proLower.contact>div {display: flex;
+                       flex-direction: column; 
+}
+
+.proLower.contact>div span {width: 80px;
+                            height: auto;
+                            display: inline-block;
+                           
+}
+
+
+
+
+
+
+
+
+
+    
+}
+
+
