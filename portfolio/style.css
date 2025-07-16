@@ -474,67 +474,69 @@ body {background-color: #e6e6e6;
            transform: translateX(-50%);
 
            width: 88vw;
-           border-bottom: 0.7px solid #3C3C3C; 
+        border-bottom: 0.0365vh solid #3C3C3C;
             
 }            
-.subjectT h2 {font-size: 40px;
-              font-family: 'Silver Garden'; 
-              display: inline-block;
-              position: relative;
-              left: 2vw;
-              margin-bottom: -1vh;
-
+.subjectT h2 { font-size: 2.08vw;         
+  font-family: 'Silver Garden'; 
+  display: inline-block;
+  position: relative;
+  left: 2vw;
+  margin-bottom: -0.93vh; 
 
 }            
-.subjectT p {font-size: 20px;
-             font-family: "Inter", sans-serif; 
-             display: inline-block;
-             font-weight: 200;
+.subjectT p {font-size: 1.04vw;         
+  font-family: "Inter", sans-serif; 
+  display: inline-block;
+  font-weight: 200;
 }  
 
 
 
-.contentsArea {height: 90vh;
-               width: 100vw;
+.contentsArea {height: 65vh;
+               width: 80vw;
                position: relative;
-               bottom: -10vh; 
+               left: 50%;
+               bottom: -15vh;
+               transform: translateX(-50%); 
                display: flex;
                justify-content: center;
                flex-direction: row;
 }
-.contentsArea .contentsBox {width: 533px;
-                            height: 580px;
+.contentsArea .contentsBox { width: 27.3vw;          
+  height: 58vh;
                             background-color: #fff;
-                            border: 0.5px solid #B9B9B9;
-                            border-radius: 20px;
-                            padding: 10px;
-                            box-sizing: border-box;
-                            margin: 50px 100px;
-
+                            border: 0.05vw solid #B9B9B9;
+  border-radius: 1vw;
+  padding: 0.5vw;
+  box-sizing: border-box;
+  margin: 2vh 5vw;
 
                           
                             
 }
 
-.contentsArea .contentsBox:hover {box-shadow: 3px 3px 15px #b8b8b8;
+.contentsArea .contentsBox:hover { box-shadow: 0.28vw 0.28vw 1.38vw #b8b8b8;
                                   cursor: pointer;
 }
 
-.contentsBox .imgBox {width: 510px;
-                      height: 405px;
+.contentsBox .imgBox {          
+  height: 40vh;     
                       background-color: #B9B9B9;
-                      border: 0.5px solid #B9B9B9;
-                      border-radius: 20px;
+                     border: 0.05vw solid #B9B9B9;
+  border-radius: 1vw;
                       box-sizing: border-box;
                       overflow: hidden;
                      }
 
-.contentsBox .imgBox img {width: 100%;
-                          height: auto;
+.contentsBox .imgBox img { width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-
+/*  */
 .contentsBox .textBox {display: flex;
-                       padding: 15px 30px; 
+                       padding: 1.5vh 1.5vw;  
                        display: flex;
                        justify-content: space-between; 
                        align-items: center;
@@ -543,26 +545,28 @@ body {background-color: #e6e6e6;
 .contentsBox .leftside {color: #3C3C3C;
                         display: flex;
                         flex-direction: column;    
-                        margin-top: 25px;
+                          margin: 3vh 0vw;  
+                          
 }
 .contentsBox .leftside em {font-family: 'Silver Garden';
-                           font-size: 48px;
+                         font-size: 2.5vw;  
                            font-style: italic; 
 }
 .contentsBox .leftside span {font-family: "Inter", sans-serif; 
-                             font-size: 16px;
+                            font-size: 1vw;  
                              font-weight: 300;
-                             margin-top: 0px;
+                             margin-top: 0;
 }
 .contentsBox .rightside {color: #3C3C3C;
-                         border: 3px solid #3C3C3C;
-                         border-radius: 50%;
-                         position: relative;
-                         top: 2vh;
+                          border: 0.2vw solid #3C3C3C;
+  border-radius: 50%;
+  position: relative;
+  top: 1.83vh;             
 }
-.contentsBox .rightside i {font-size: 30px;
-                           padding: 5px 7px; 
+.contentsBox .rightside i {font-size: 1.5vw;        
+  padding: 0.4vh 0.5vw;  
 }
+
 
 
 
@@ -594,7 +598,7 @@ body {background-color: #e6e6e6;
           
           text-align: center;
         }
-.closeB i {font-size: 40px;}
+.closeB i {font-size: 2.08vw;}
 
 
 .closeB:hover {opacity: 1;}
@@ -616,7 +620,7 @@ body {background-color: #e6e6e6;
           
 }
 .footerC>p {margin: 0; /* 기본 margin을 없애고 */
-  font-size: 14px; /* 글자 크기 설정 (선택적) */}
+   font-size: 0.73vw; /* 글자 크기 설정 (선택적) */}
 
 
  
@@ -671,19 +675,19 @@ opacity: 0.2;
            transform: translateX(-50%);
 
            width: 88vw;
-           border-bottom: 0.7px solid #3C3C3C; 
+           border-bottom: 0.036vw solid #3C3C3C;
             
 }            
-.subjectT h2 {font-size: 40px;
+.subjectT h2 {font-size: 2.08vw;
               font-family: 'Silver Garden'; 
               display: inline-block;
               position: relative;
               left: 2vw;
-              margin-bottom: -1vh;
+              margin-bottom: 0.5vh;
 
 
 }            
-.subjectT p {font-size: 20px;
+.subjectT p {font-size: 1.04vw;
              font-family: "Inter", sans-serif; 
              display: inline-block;
              font-weight: 200;
@@ -691,77 +695,34 @@ opacity: 0.2;
 
 
 
-.publishingPage .contentsArea {height: 90vh;
-               width: 100vw;
+.publishingPage .contentsArea {height: 65vh;
+               width: 80vw;
                position: relative;
-               bottom: -10vh; 
+               left: 50%;
+               bottom: -15vh;
+               transform: translateX(-50%); 
                display: flex;
                justify-content: center;
+               flex-direction: row;
              
 }
-.publishingPage .contentsArea .contentsBox {width: 533px;
-                            height: 580px;
+
+
+
+.publishingPage .contentsArea .contentsBox {width: 27.3vw;          
+  height: 58vh;
                             background-color: #fff;
-                            border: 0.5px solid #B9B9B9;
-                            border-radius: 20px;
-                            padding: 10px;
-                            box-sizing: border-box;
-                            margin: 50px 10px;
+                            border: 0.05vw solid #B9B9B9;
+  border-radius: 1vw;
+  padding: 0.5vw;
+  box-sizing: border-box;
+  margin: 2vh 0.5vw;
+
 
 
                           
                             
 }
-
-.contentsArea .contentsBox:hover {box-shadow: 3px 3px 15px #b8b8b8;
-                                  cursor: pointer;
-}
-
-.contentsBox .imgBox {width: 510px;
-                      height: 405px;
-                      background-color: #B9B9B9;
-                      border: 0.5px solid #B9B9B9;
-                      border-radius: 20px;
-                      box-sizing: border-box;
-                      overflow: hidden;
-                     }
-
-.contentsBox .imgBox img {}
-
-.contentsBox .textBox {display: flex;
-                       padding: 15px 30px; 
-                       display: flex;
-                       justify-content: space-between; 
-                       align-items: center;
-                       
-}
-.contentsBox .leftside {color: #3C3C3C;
-                        display: flex;
-                        flex-direction: column;  
-                         margin-top: 25px; 
-}
-.contentsBox .leftside em {font-family: 'Silver Garden';
-                           font-size: 48px;
-                           font-style: italic; 
-}
-.contentsBox .leftside span {font-family: "Inter", sans-serif; 
-                             font-size: 16px;
-                             font-weight: 300;
-                             margin-top: 0px;
-}
-.contentsBox .rightside {color: #3C3C3C;
-                         border: 3px solid #3C3C3C;
-                         border-radius: 50%;
-                         position: relative;
-                         top: 2vh;
-}
-.contentsBox .rightside i {font-size: 30px;
-                           padding: 5px 7px; 
-}
-
-
-
-
 
 
 
@@ -788,22 +749,22 @@ height: auto;}
 
 
 
-.publishingSub1 .linkB {position: absolute;
+.publishingSub1 .linkB {  position: absolute;
   top: 85vh;
-  right: 5vw;
+  right: 5.5vw;
   z-index: 5;
   display: flex;
-  border: 0.5px solid #555555;
-  border-radius: 50px;
-  padding: 3px 9px;
+  border: 0.026vw solid #555555;
+ border-radius: 2.6vw;
+  padding: 0.16vw 0.47vw;
   color: #8a8a8a;
   background-color: transparent;
   cursor: pointer;
 }
-.publishingSub1 .linkB>i {margin-right: 2px;
-    font-size: 13px;
-    transform: rotateZ(-15deg);
-    margin-top: 3px;
+.publishingSub1 .linkB>i { margin-right: 0.10vw;
+  font-size: 0.68vw;
+  transform: rotateZ(-15deg);
+  margin-top: 0.21vw;
     
 }
 .publishingSub1 .linkB>p {}
@@ -835,21 +796,22 @@ height: auto;}
 
 
 
-.publishingSub2 .linkB {position: absolute;
+.publishingSub2 .linkB {
+position: absolute;
   top: 91vh;
-  left: 8.5vw;
+  left: 8.7vw;
   z-index: 5;
   display: flex;
-  border: 0.5px solid #fff;
-  border-radius: 50px;
-  padding: 3px 9px;
+  border: 0.026vw solid #fff;
+  border-radius: 2.6vw;
+  padding: 0.16vw 0.47vw;
   color: #eca8a8;
   cursor: pointer;
 }
-.publishingSub2 .linkB>i {margin-right: 2px;
-    font-size: 13px;
-    transform: rotateZ(-15deg);
-    margin-top: 3px;
+.publishingSub2 .linkB>i {margin-right: 0.10vw;
+  font-size: 0.68vw;
+  transform: rotateZ(-15deg);
+  margin-top: 0.16vw;
     
 }
 .publishingSub2 .linkB>p {}
@@ -870,7 +832,7 @@ height: auto;}
   color: #fff;
   text-align: center;
 }
-.publishingSub2>.closeB i {font-size: 40px;}
+.publishingSub2>.closeB i {font-size: 2.08vw;  }
 
 
 .publishingSub2>.closeB:hover {opacity: 1;}
@@ -897,7 +859,7 @@ height: auto;}
           
 }
 .publishingSub2>.footerC>p {margin: 0; /* 기본 margin을 없애고 */
-  font-size: 14px; /* 글자 크기 설정 (선택적) */}
+    font-size: 0.73vw;}
 
 
 
@@ -924,21 +886,20 @@ height: auto;}
 
 
 .publishingSub3 .linkB {position: absolute;
-                        top: 89vh;
-                        right: 6.5vw;
-                        z-index: 5;
-                        display: flex;
-                        border: 0.5px solid #555555;
-                        border-radius: 50px;
-                        padding: 3px 9px;
-                        color: #8a8a8a;
-                        cursor: pointer;
+  top: 89vh;
+  right: 6.8vw;
+  z-index: 5;
+  display: flex;
+  border: 0.026vw solid #555555;
+  border-radius: 2.6vw;
+  padding: 0.16vw 0.47vw;
+  color: #8a8a8a;
+  cursor: pointer;
 }
-.publishingSub3 .linkB>i {margin-right: 2px;
-                          font-size: 13px;
-                          transform: rotateZ(-15deg);
-                          margin-top: 3px;
-                          
+.publishingSub3 .linkB>i { margin-right: 0.10vw;
+  font-size: 0.68vw;
+  transform: rotateZ(-15deg);
+  margin-top: 0.16vw;
 }
 .publishingSub3 .linkB>p {}
 
@@ -993,20 +954,20 @@ height: auto;}
               
 }
 
-.proLeftside p {font-size: 16px;
-                font-weight: 500;
-                font-family: "Inter", sans-serif;
-                color: #696969;
-                margin: 10px 0;
+.proLeftside p {font-size: 0.83vw;         
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: #696969;
+  margin: 0.52vw 0;
              
               }
 .proLeftside .proContactB {display: flex;}
-.proContactB .iconB {width: 22px;
-                     height: 22px;
-                     opacity: 0.5;
-                     margin-right: 0.4vw;
-                     cursor: pointer;
-                     transition: all 0.2s;
+.proContactB .iconB {  width: 1.15vw;              
+  height: 1.15vw;           
+  opacity: 0.5;
+  margin-right: 0.4vw;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 .proContactB .iconB img {width: 100%;
                          height: 100%;
@@ -1039,28 +1000,28 @@ height: auto;}
 }
 
 .proRightB>p {text-align: right;
-              margin-right: 60px;
-              padding-bottom: 3px;
-              font-size: 21px;
-              font-family: "Inter", sans-serif;
-              opacity: 0;
-              font-weight: 200;
-              letter-spacing: -1px;
+  margin-right: 3.13vw;
+  padding-bottom: 0.16vw;
+  font-size: 1.09vw;
+  font-family: "Inter", sans-serif;
+  opacity: 0;
+  font-weight: 200;
+  letter-spacing: -0.05vw;
 
 }
 
-.proUpper {display: flex;
-  border-top: 1px solid #000;
-  margin: 0 50px 0 150px;
+.proUpper { display: flex;
+ border-top: 0.05vw solid #000;
+  margin: 0 2.60vw 0 7.81vw;
   justify-content: space-between;
-  padding: 8px 30px;
+  padding: 0.42vw 1.56vw;
   align-items: center;
 
 }
-.proUpper h2 {font-family: "Inter", sans-serif;
-              font-size: 40px;
-              font-weight: 700;
-              color: #000;
+.proUpper h2 {  font-family: "Inter", sans-serif;
+  font-size: 2.08vw;
+  font-weight: 700;
+  color: #000;
 
 }
 
@@ -1069,15 +1030,15 @@ height: auto;}
 
 
 .circleI {color: #000;
-  /* border: 3px solid #000; */
+
   border-radius: 50%;
   transition: transform 0.3s ease-in;
   transform: rotateZ(0deg);
 
  
 }
-.circleI i {font-size: 30px;
-    padding: 5px 7px; 
+.circleI i {font-size: 1.56vw;
+  padding: 0.26vw 0.36vw;
     
 }
 
@@ -1086,32 +1047,38 @@ height: auto;}
 
 
 
-.proLower { margin: 0 50px 0 150px;
-            padding: 3px 30px;
-            height: 0px; /* 초기 높이 설정 (숨기기) */
-            overflow: hidden; /* 내용이 넘어가면 숨기기 */
-           
-            transition: all 0.3s ease-out;
-            display: block; /* 항상 표시되지만, visibility로 숨김 처리 */
+.proLower { margin: 0 2.60vw 0 7.81vw;
+  padding: 0.16vw 1.56vw;
+  height: 0vw; /* 초기 숨김 */
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  display: block;
           }
 
 
 
-.proRightside .proRightB:nth-child(1) .proLower.on {height: 100px;}
-.proRightside .proRightB:nth-child(2) .proLower.on {height: 380px;
-                                                    transition: all 0.5s ease-out;
+
+.proRightside .proRightB:nth-child(1) .proLower.on {
+  height: 5.21vw;
 }
-.proRightside .proRightB:nth-child(3) .proLower.on {height: 110px;}
-.proRightside .proRightB:nth-child(4) .proLower.on {height: 220px;}
-.proRightside .proRightB:nth-child(5) .proLower.on {height: 150px;}
-
-
-
-.proLower p {font-size: 19px;
-             color: #696969;
-             font-family: "Inter", sans-serif;
-             font-weight: 200; 
-             letter-spacing: -1px;
+.proRightside .proRightB:nth-child(2) .proLower.on {
+  height: 19.79vw;
+  transition: all 0.5s ease-out;
+}
+.proRightside .proRightB:nth-child(3) .proLower.on {
+  height: 5.73vw;
+}
+.proRightside .proRightB:nth-child(4) .proLower.on {
+  height: 11.46vw;
+}
+.proRightside .proRightB:nth-child(5) .proLower.on {
+  height: 7.81vw;
+}
+.proLower p { font-size: 0.99vw;
+  color: #696969;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  letter-spacing: -0.05vw;
 
 
 }
@@ -1120,11 +1087,11 @@ height: auto;}
               font-weight: 500;
 }
 
-.proLower span {opacity: 0.8;
-                font-size: 16px;
+.proLower span { opacity: 0.8;
+  font-size: 0.83vw;
 }
-.proLower>div {margin-top: 3px;
-               margin-bottom: 20px;
+.proLower>div {margin-top: 0.16vw;
+  margin-bottom: 1.04vw;
 }
 
 .proLower.contact {
@@ -1133,7 +1100,7 @@ height: auto;}
                        flex-direction: column; 
 }
 
-.proLower.contact>div span {width: 80px;
+.proLower.contact>div span {width: 4.17vw;
                             height: auto;
                             display: inline-block;
                            
