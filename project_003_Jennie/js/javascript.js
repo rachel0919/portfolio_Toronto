@@ -212,12 +212,18 @@ $(".close").click(function() {
 
 // article부분########################################################
 $('article').click(function(e){
-    e.preventDefault(); 
+     e.stopPropagation();
     $('article').removeClass('on');
     $(this).addClass('on')
 
 
 })
+
+
+// article 외 영역 클릭 시
+$(document).click(function() {
+    $('article').removeClass('on');
+});
 
 
 

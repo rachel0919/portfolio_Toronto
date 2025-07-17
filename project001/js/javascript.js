@@ -136,7 +136,7 @@ $('.newmember>.iBtn>ul>li:nth-child(2)').click(function(e){
   if(num<4) num++;
  if(num == 4){
 
-    alert('마지막페이지입니다')
+    alert('You have met them all!')
 
   }
  

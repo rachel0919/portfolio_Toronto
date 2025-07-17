@@ -674,8 +674,11 @@ z-index: 1;
     0% {
         transform:  translateX(-15vw) translateY(1vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
     }
-    100% {
-        transform:  translateX(45vw) translateY(1vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    10% {
+        transform:  translateX(42vw) translateY(15vh) translateZ(8vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
+     100% {
+        transform:  translateX(38vw) translateY(1vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
     }
 }
 
@@ -683,9 +686,13 @@ z-index: 1;
     0% {
         transform: translateX(10vw) translateY(-53vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
     }
-    100% {
-        transform: translateX(-30vw) translateY(-53vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    10% {
+        transform: translateX(-30vw) translateY(-33vh) translateZ(8vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
     }
+    100% {
+        transform: translateX(-28vw) translateY(-53vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
+
 }
 @keyframes fadeIn1 {
 
@@ -703,10 +710,10 @@ z-index: 1;
              scale: 1.1;
              top: 50%;
              left: 50%;
-             transform: translateX(45vw) translateY(1vh) translateZ(0vw);
+             transform: translateX(38vw) translateY(1vh) translateZ(0vw);
              transition: all 1.5s;
              z-index: 1;
-             animation: zoomInOut1 1s ease-in-out;  
+             animation: zoomInOut1 18s ease-in-out;  
 }
 
 
@@ -720,10 +727,10 @@ z-index: 1;
              scale: 0.65;
              top: 50%;
              left: 50%; 
-             transform: translateX(-30vw) translateY(-53vh) translateZ(0vw);
+             transform: translateX(-28vw) translateY(-53vh) translateZ(0vw);
              transition: all 1.5s;  
              z-index: 1;
-             animation: zoomInOut2 1s ease-in-out;  
+             animation: zoomInOut2 18s ease-in-out;  
             }
 /* .imgBg_001K img:hover {transform: translateZ(1000px);} */
 /* .imgBg_002K img:hover {transform: translateZ(1000px);} */
@@ -857,14 +864,20 @@ z-index: 1;
     0% {
         transform:  translateX(-15vw) translateY(1vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
     }
+      10% {
+        transform:  translateX(60vw) translateY(-40vh) translateZ(10vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+    }
     100% {
-        transform:  translateX(70vw) translateY(-50vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
+        transform:  translateX(60vw) translateY(-50vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
     }
 }
 
 @keyframes zoomInOut4 {
     0% {
         transform: translateX(10vw) translateY(-53vh) translateZ(40vw); /* 처음에 이미지가 커져 있음 */
+    }
+      10% {
+        transform: translateX(-25vw) translateY(-15vh) translateZ(10vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
     }
     100% {
         transform: translateX(-25vw) translateY(-25vh) translateZ(0vw); /* 애니메이션 끝나면 원래 크기로 돌아감 */
@@ -879,10 +892,10 @@ z-index: 1;
              scale: 0.75;
              top: 50%;
              left: 50%;
-             transform: translateX(70vw) translateY(-50vh);
+             transform: translateX(60vw) translateY(-50vh);
              transition: all 1.5s;
              z-index: 1; 
-             animation: zoomInOut3 1s ease-in-out;   
+             animation: zoomInOut3 20s ease-in-out;   
 }
 
 
@@ -899,7 +912,7 @@ z-index: 1;
              transform: translateX(-25vw) translateY(-25vh);
              transition: all 1.5s;  
              z-index: 1;
-             animation: zoomInOut4 1s ease-in-out;  
+             animation: zoomInOut4 20s ease-in-out;  
             }
 /* .imgBg_001E img:hover {transform: translateZ(1000px);} */
 /* .imgBg_002E img:hover {transform: translateZ(1000px);} */
@@ -940,6 +953,32 @@ z-index: 1;
                         
 
 }
+
+
+
+.storiesPage .scrollBtn {width: 100vw;
+                         height: 10vh;
+                         position: relative;
+                         bottom: -15vh;
+                         filter: invert(100%);
+                         font-size: 1vw;
+                         
+}
+.scrollBtn .scrollBtnInner {display: flex;
+                         position: absolute;
+                         left: 50%;
+                         transform: translateX(-50%);
+                         bottom: -2vh;
+                         opacity: 0.5;
+                        
+                        }
+
+
+.scrollBtnInner>img {transform: rotate(-90deg);
+
+}
+.scrollBtnInner>p {margin: 0 0.5vw;}
+
 .upperBtn>div { cursor: pointer;
                 position: relative;
                 z-index: 5;
@@ -1011,12 +1050,12 @@ z-index: 1;
                                height: 575px;
                                margin: 10px;
                                margin-top: -300px;
-                               /* transition: all 0.5s; */
+                               
                                position: relative;
                                top: 50%;
                                overflow: hidden;
                                filter: grayscale(60%);
-                               transition: transform 0.5s ease;
+                               transition: transform 1.5s;
                                cursor: pointer;
                             }
 
@@ -2416,6 +2455,7 @@ z-index: 1;
             align-items: center;
             color: #000;
             transition: transform 0.8s ease, filter 0.8s ease;
+            opacity: 0.6;
           }
           
           .moreBtn p {
@@ -2426,6 +2466,9 @@ z-index: 1;
           
           .moreBtn img {
             font-size: 16px;
+            margin-right: 0.5vw;
+
+            
           }
           
           /* 움직임은 안쪽에만 적용 */
@@ -2732,11 +2775,12 @@ transform: translateX(-32vw) translateY(-5vh) scale(1.1);
             
             
 }
-.mvListBox>div {width: 19.6vw;
+/* ################################# */
+.mvListBox>div {width: 20vw;
                 height: 23.85vh;
                 overflow: hidden;
                 position: relative;
-             
+                left: 1.7vw;
                 
                 margin-left: 0.47vw;
                 
