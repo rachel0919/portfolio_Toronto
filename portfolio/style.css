@@ -924,7 +924,7 @@ height: auto;}
 
 .profileBg {width: 100%;
             height: 100%;
-            background-image: url(img/profile_txt_002.png);
+            background-image: url(img/profileWithoutTxt.png);
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -935,8 +935,8 @@ height: auto;}
 
 .proTextBox {position: absolute;
              width: 92vw;
-             height: 68vh;
-             top: 53%;
+             height: 90vh;
+             top: 50%;
              left: 50%;
              transform: translate(-50%,-38%);
              /* background-color: red; */
@@ -944,24 +944,52 @@ height: auto;}
              display: flex;
             
 }
-
 .proLeftside {width: 30%;
               height: 100%;
-              position: relative;
-              top: 20vh;
-              left: 6vw;
-              
-              
+              display: flex;
+              flex-direction: column;
+              margin-left: 5vw;
+
+}
+.proLeftside .proLogo {width: 100%;
+                       height: 40%;
+                       position: relative;
+}
+.proLeftside .proLogo img {position: absolute;
+                           width: 90%;
+                           height: auto;
+                           top: 0;
+                           left: o; 
 }
 
-.proLeftside p {font-size: 0.83vw;         
+.proLeftside .proSkills {width: 100%;
+                       height: 45%;
+                        position: relative;
+                      }
+.proLeftside .proSkills img {position: absolute;
+                             left: 0;
+                             bottom: 0; 
+                             
+                             margin-bottom: 20vh;
+                             margin-left: 2vw;
+}
+
+
+.proLeftsideCon {width: 100%;
+                 height: 15%;
+                margin-top: 3vh;
+                margin-left: 2vw;
+               
+                }
+
+.proLeftsideCon p {font-size: 0.83vw;         
   font-weight: 500;
   font-family: "Inter", sans-serif;
   color: #696969;
   margin: 0.52vw 0;
              
               }
-.proLeftside .proContactB {display: flex;}
+.proLeftsideCon .proContactB {display: flex;}
 .proContactB .iconB {  width: 1.15vw;              
   height: 1.15vw;           
   opacity: 0.5;
@@ -1099,10 +1127,23 @@ height: auto;}
 .proLower.contact>div {display: flex;
                        flex-direction: column; 
 }
+.proLower.contact>div>p {margin: 0.3vh 0;}
 
 .proLower.contact>div span {width: 4.17vw;
                             height: auto;
                             display: inline-block;
                            
+}
+
+.proLower.contact>div>p>a {color: #696969;
+                           border: 0.05vw solid #696969;
+                           text-decoration: none;
+                           padding: 0.1vh 0.3vw;
+                           border-radius: 999px;
+                           background-color: transparent;
+}
+
+.proLower.contact>div>p>a:hover {background-color: #696969;
+  color: #fff;
 }
 
