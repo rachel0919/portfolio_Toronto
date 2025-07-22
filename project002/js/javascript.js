@@ -513,7 +513,19 @@ $('.deMain .miI').click(function () {
 
 
 
+// 상세페이지 이미지 슬라이드
+  const slideBtns = document.querySelectorAll('.slideBar > div');
+  const imgbox = document.querySelector('.deImgbox');
 
+  slideBtns.forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+      imgbox.style.transform = `translateX(-${idx * 110}%)`;
+
+      // 활성화 표시 클래스 변경
+      slideBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
 
 
 

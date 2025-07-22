@@ -343,10 +343,31 @@ $(document).ready(function() {
 
 
 
+      // lnb mobile######################
+  
 
 
 
 
+if (window.innerWidth <= 900) {
+  
+  
+// 터치 또는 클릭 시 메뉴 닫기
+document.addEventListener('click', function (e) {
+  const isLnbOpen = lnbContent.style.transform === 'translateX(0vw)';
+  const isClickInsideMenu = e.target.closest('.lnbContent') || e.target.closest('.lnbButton');
+
+  if (isLnbOpen && !isClickInsideMenu) {
+    // 메뉴 닫기
+    lnbContent.style.transform = 'translateX(-100%)';
+    lnbButton.style.opacity = '0.5';
+    slideInProgress = false;
+  }
+});
+
+
+
+}
 
 
 
