@@ -372,7 +372,7 @@ body {background-color: #e6e6e6;
 
 
 .publishingSub1 .linkB { 
-  top: 21.5vh;
+  top: 15.5vh;
   right: 7.5vw;
   
   padding: 0.16vw 0.47vw;
@@ -391,7 +391,7 @@ body {background-color: #e6e6e6;
 
 .publishingSub2 .linkB {
 
-  top: 56vh;
+  top: 48vh;
   left: 5vw;
  
   padding: 0.16vw 0.47vw;
@@ -410,8 +410,8 @@ body {background-color: #e6e6e6;
 
 
 
-.publishingSub3 .linkB { top: 20vh;
-  right: 84vw;
+.publishingSub3 .linkB { top: 19vh;
+  right: 86vw;
   
   padding: 0.16vw 0.47vw;
 }
