@@ -442,6 +442,20 @@ body {background-color: #e6e6e6;
 
 }
 
+/* 전체 컨셉뷰 미디어쿼리 설정 */
+.desktopImg {
+  display: block;
+}
+.mobileImg {
+  display: none;
+}
+
+
+.line1,
+.line2 {
+  display: inline;
+}
+
 
 
 
@@ -587,6 +601,8 @@ body {background-color: #e6e6e6;
 .uxuiSub1Bg>img {width: 100%;
   height: auto;}
 
+  
+
 
 .closeB {position: fixed;
           z-index: 50;
@@ -610,6 +626,7 @@ body {background-color: #e6e6e6;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  flex-direction: row;
   justify-content: space-between; /* 양끝으로 배치 */
   width: 97vw; 
   opacity: 0.8;
@@ -767,7 +784,7 @@ height: auto;}
   margin-top: 0.21vw;
     
 }
-.publishingSub1 .linkB>p {}
+.publishingSub1 .linkB>p {font-size: 0.8vw;}
 
 
 .publishingSub1 .linkB:hover {color: #fff;
@@ -814,7 +831,7 @@ position: absolute;
   margin-top: 0.16vw;
     
 }
-.publishingSub2 .linkB>p {}
+.publishingSub2 .linkB>p {font-size: 0.8vw;}
 
 
 .publishingSub2 .linkB:hover {color: #fff;
@@ -901,7 +918,7 @@ height: auto;}
   transform: rotateZ(-15deg);
   margin-top: 0.16vw;
 }
-.publishingSub3 .linkB>p {}
+.publishingSub3 .linkB>p {font-size: 0.8vw;}
 
 
 .publishingSub3 .linkB:hover {color: #fff;
@@ -962,15 +979,17 @@ height: auto;}
                            left: o; 
 }
 
-.proLeftside .proSkills {width: 100%;
-                       height: 45%;
+.proLeftside .proSkills {width: 90%;
+                       height: 30%;
                         position: relative;
                       }
 .proLeftside .proSkills img {position: absolute;
                              left: 0;
-                             bottom: 0; 
+                             bottom: 0;
+                             width: 80%;
+                             height: auto; 
                              
-                             margin-bottom: 20vh;
+                             margin-bottom: 5vh;
                              margin-left: 2vw;
 }
 
@@ -1087,7 +1106,7 @@ height: auto;}
 
 
 .proRightside .proRightB:nth-child(1) .proLower.on {
-  height: 5.21vw;
+  height: 7vw;
 }
 .proRightside .proRightB:nth-child(2) .proLower.on {
   height: 19.79vw;

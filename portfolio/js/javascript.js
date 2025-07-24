@@ -192,11 +192,12 @@ $(document).ready(function() {
       $('.uxuiSub1 .closeB').click(function(e){
 
         e.preventDefault();
+       
         $(".uxuiSub1").removeClass("on"); 
         $(".uxuiPage").addClass("on");
         $(".lnbButton").show();
 
-
+         $('.uxuiPage').scrollTop(0);
 
        }) 
 
@@ -205,10 +206,12 @@ $(document).ready(function() {
       $('.uxuiSub2 .closeB').click(function(e){
 
         e.preventDefault();
+       
         $(".uxuiSub2").removeClass("on"); 
         $(".uxuiPage").addClass("on");
         $(".lnbButton").show();
 
+        $('.uxuiPage').scrollTop(0);
 
 
        }) 
@@ -219,39 +222,43 @@ $(document).ready(function() {
        $('.publishingSub1 .closeB').click(function(e){
 
         e.preventDefault();
+        
         $(".publishingSub1").removeClass("on"); 
         $(".publishingPage").addClass("on");
         $(".lnbButton").show();
 
-
+        $('.publishingPage').scrollTop(0);
 
        })
     
        $('.publishingSub2 .closeB').click(function(e){
 
         e.preventDefault();
+        
         $(".publishingSub2").removeClass("on"); 
         $(".publishingPage").addClass("on");
         $(".lnbButton").show();
 
-
+        $('.publishingPage').scrollTop(0);
 
        })
 
        $('.publishingSub3 .closeB').click(function(e){
 
         e.preventDefault();
+       
         $(".publishingSub3").removeClass("on"); 
         $(".publishingPage").addClass("on");
         $(".lnbButton").show();
 
+        $('.publishingPage').scrollTop(0);
 
 
        })
 
 
 
-
+console.log($('.publishingPage').scrollTop());
 
 
 

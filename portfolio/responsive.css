@@ -165,13 +165,29 @@ body {background-color: #e6e6e6;
 
 }
 
+/* 전체 컨셉뷰 미디어쿼리 설정 */
+
+ .desktopImg {
+    display: none;
+  }
+  .mobileImg {
+    display: block;
+  }
+
+
+  .line1,
+  .line2 {
+    display: block;
+  }
+
 
 
 
 /* uxuiPage########################################## */
 
 .uxuiPage {width: 100vw;
-           height: auto; 
+              height: 100vh;        /* fallback */
+  height: 100dvh;       /* 실제 대응 */
           
           overflow: scroll;
           
@@ -251,7 +267,8 @@ body {background-color: #e6e6e6;
 
 
 .publishingPage {width: 100vw;
-           height: auto; 
+            height: 100vh;        /* fallback */
+  height: 100dvh;       /* 실제 대응 */
           
           overflow: scroll;
    position: relative; 
@@ -280,6 +297,134 @@ body {background-color: #e6e6e6;
                           
                             
 }
+
+
+
+/* 컨셉뷰들 아이콘 푸터 설정############## */
+
+
+
+
+.closeB {
+          top: 5.5vh;
+          right: 10vw;
+          
+         
+        }
+.closeB i {font-size: 7vw;}
+
+.footerC { 
+  bottom: 10vh;
+  
+  flex-direction: column;
+  
+  
+  
+ 
+         
+          
+}
+.footerC>p {margin: 0 2.5vw; /* 기본 margin을 없애고 */
+   font-size: 2.5vw; /* 글자 크기 설정 (선택적) */}
+
+
+.publishingSub1 .footerC { 
+  bottom: 3vh;
+  
+
+         
+          
+}
+
+
+
+
+.publishingSub2>.closeB { top: 5.5vh;
+          right: 10vw;
+}
+.publishingSub2>.closeB i {font-size: 7vw;  }
+
+
+
+
+
+
+.publishingSub2>.footerC { bottom: 1vh;
+  
+  flex-direction: column;
+  
+     opacity: 0.3;    
+          
+}
+
+
+
+.publishingSub3 .footerC { 
+  bottom: 2vh;
+  
+  
+  
+         
+          
+}
+
+/* position for link */
+
+
+.publishingSub1 .linkB { 
+  top: 21.5vh;
+  right: 7.5vw;
+  
+  padding: 0.16vw 0.47vw;
+  
+}
+.publishingSub1 .linkB>i { margin-right: 0.10vw;
+  font-size: 1.6vw;
+  
+  margin-top: 0.5vw;
+    
+}
+.publishingSub1 .linkB>p {font-size: 2vw;}
+
+
+
+
+.publishingSub2 .linkB {
+
+  top: 56vh;
+  left: 5vw;
+ 
+  padding: 0.16vw 0.47vw;
+ 
+}
+.publishingSub2 .linkB>i {
+  margin-right: 0.10vw;
+  font-size: 1.6vw;
+  
+    margin-top: 0.5vw;
+    
+}
+.publishingSub2 .linkB>p {font-size: 2vw;}
+
+
+
+
+
+.publishingSub3 .linkB { top: 20vh;
+  right: 84vw;
+  
+  padding: 0.16vw 0.47vw;
+}
+.publishingSub3 .linkB>i {  margin-right: 0.10vw;
+  font-size: 1.6vw;
+  
+    margin-top: 0.5vw;
+}
+.publishingSub3 .linkB>p {font-size: 2vw;}
+
+
+
+
 
 
 
